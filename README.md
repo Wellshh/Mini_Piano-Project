@@ -1,4 +1,5 @@
 ### Mini_Piano Project
+About version control:
 - To update the local version of your code, use `git` command:
   ```git
   git remote add Mini_Piano https://github.com/Wellshh/Mini_Piano-Project.git
@@ -13,4 +14,5 @@
    git push Mini_Piano master:main
    # if there is error saying that you have to pull the code before push, use this:
    git push -f Mini_Piano master:main
+   # If you succeed, you will see # Already up to date.
   ```
