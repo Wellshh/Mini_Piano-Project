@@ -1,4 +1,7 @@
 ### Mini_Piano Project
+> When writing code, please write some comments for collaborators to easy understand!!!!.
+
+
 About version control:
 - To update the local version of your code, use `git` command:
   ```git
