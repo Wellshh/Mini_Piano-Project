@@ -21,31 +21,41 @@
 
 
 module Buzzer(
-input wire clk, //Clock signal
-input wire [3:0] note,
-output wire speaker
+input clk,
+input rst_n,
+output speaker
+
     );
-wire [31:0] notes [7:0];
-reg [31:0] counter;
-reg pwm;
-    assign notes[1] = 381680;
-    assign notes[2] = 340136;
-    assign notes[3] = 303030;
-    assign notes[4] = 285714;
-    assign notes[5] = 255102;
-    assign notes[6] = 227273;
-    assign notes[7] = 202429;
-initial begin
-pwm = 0;
-end
-always @(posedge clk) begin
-if(counter < notes[note] || note == 4'b0000) begin
-counter <= counter + 1'b1;
-end else begin
-pwm = ~pwm; // pwm is low active
-counter <= 0;
-end 
-end
-assign speaker = pwm;
+    wire [6:0] cnt;
+    wire [6:0] music;
+    wire [31:0] divider;
+    
+    Speed_Control u1(
+    .clk(clk),
+    .rst_n(rst_n),
+    .cnt(cnt)
+    );
+    
+    Library u2(
+    .clk(clk),
+    .rst_n(rst_n),
+    .cnt(cnt),
+    .music(music)
+    );
+    
+    Frequency_Divider u3(
+    .clk(clk),
+    .rst_n(rst_n),
+    .music(music),
+    .divider(divider)
+    );
+    
+    Wave_Generator(
+    .clk(clk),
+    .rst_n(rst_n),
+    .divider(divider),
+    .speaker(speaker)
+    );
+
 
 endmodule
