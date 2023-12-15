@@ -50,7 +50,7 @@ output speaker
     .divider(divider)
     );
     
-    Wave_Generator(
+    Wave_Generator u4(
     .clk(clk),
     .rst_n(rst_n),
     .divider(divider),
