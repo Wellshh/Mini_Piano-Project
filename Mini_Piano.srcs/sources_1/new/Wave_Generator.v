@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//��ģ����Ը��ݷ�Ƶ���õ���Ƶ�������Ӧ������
+//本模块可以根据分频器得到的频率输出相应的音符
 module Wave_Generator (
     input clk,
     input rst_n,
@@ -32,9 +32,9 @@ module Wave_Generator (
     if (rst_n == 1'b1) cnt <= 32'b0;
     else if (cnt < divider - 1'b1) cnt <= cnt + 1'b1;
     else
-      cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//��divider�����λ�жϣ�����ϸ���ȿ���
+      cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//对divider的最低位判断，进行细粒度控制
   end
-  //ͨ��cnt����speaker���������������ע���ǵ͵�ƽ�����
+  //ͨ通过cnt控制speaker，蜂鸣器的输出，注意是低电平输出。
   always @(posedge clk, negedge rst_n) begin
     if (rst_n == 1'b1) speaker <= 1'b0;
     else if (cnt < divider[31:1]) speaker <= 1'b0;

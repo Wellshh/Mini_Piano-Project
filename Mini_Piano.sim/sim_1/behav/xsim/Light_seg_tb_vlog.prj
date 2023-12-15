@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Mini_Piano.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../Mini_Piano.srcs/sources_1/new/Light_seg_Display.v" \
+"../../../../Mini_Piano.srcs/sim_1/new/Light_seg_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

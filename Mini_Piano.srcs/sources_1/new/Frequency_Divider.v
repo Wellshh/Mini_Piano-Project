@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//��ģ���Ƿ�Ƶ������֤�������ܹ������ȷ����Ƶ��
+//本模块是分频器，保证蜂鸣器能够输出正确的音频。
 module Frequency_Divider (
     input clk,
     input rst_n,
@@ -29,7 +29,7 @@ module Frequency_Divider (
   reg [31:0] frequency;
   always @(*) begin
     case (music)
-      7'd0: frequency = 32'd1;  //���ĵ��������Ҫ��Ƶ
+      7'd0: frequency = 32'd1;  //空拍的情况不需要分频
 
       7'd1: frequency = 32'd262;
       7'd2: frequency = 32'd294;

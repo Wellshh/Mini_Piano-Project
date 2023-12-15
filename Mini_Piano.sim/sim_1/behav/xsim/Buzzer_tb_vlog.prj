@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Mini_Piano.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../Mini_Piano.srcs/sources_1/new/Buzzer.v" \
+"../../../../Mini_Piano.srcs/sources_1/new/Frequency_Divider.v" \
+"../../../../Mini_Piano.srcs/sources_1/new/Library.v" \
+"../../../../Mini_Piano.srcs/sources_1/new/Speed_Control.v" \
+"../../../../Mini_Piano.srcs/sources_1/new/Wave_Generator.v" \
+"../../../../Mini_Piano.srcs/sim_1/new/Buzzer_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

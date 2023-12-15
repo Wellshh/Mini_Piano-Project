@@ -23,13 +23,14 @@
 module Light_seg_Display (
     input clk,
     input rst_n,
-    input [5:0] sentence[7:0],  //�ⲿ���룬������Ҫ��ʾʲô��ĸ
-    output reg [7:0] sel,  //λѡ�źţ�����8��������ĸ�����
-    output reg [7:0] seg//��ѡ�źţ��ĸ�����ܵ�λѡ�ź��ǹ����ģ�ֻ��ͬʱ��ʾ�����������������ʾ���ֻ���ĸ��
+    //input [5:0] senten[7:0],  //输入端口不能使用数组
+    output reg [7:0] sel,  //位选信号，决定8段数码管哪根亮。
+    output reg [7:0] seg//段选信号，四根数码管的位选信号是公共的，只能同时显示。决定单根数码管显示数字或字母。
 );
-  parameter T_5ms = 1;//ÿ��0.05��ˢ��һ�Σ��������۵��Ӿ���������
+  parameter T_5ms = 50_0000;//每隔0.05秒刷新一次，利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
   reg [31:0] count;
   wire is_Reaching_5ms;
+  reg [5:0] sentence[7:0];
 
   always @(posedge clk, negedge rst_n) begin
     if (rst_n == 1'b1) count <= 32'd0;
@@ -74,7 +75,7 @@ module Light_seg_Display (
   y = 8'b0100_1110,  //"Y"
   z = 8'b1101_1011,  //"Z"
   nothing = 8'b0000_0000;
-
+//以下是一坨大便，不用管，我想实现根据输入动态调整。
   always @(*) begin
     case (sentence[0])
       6'b000000: seg[0] = zero;
@@ -432,17 +433,17 @@ module Light_seg_Display (
     Light_seg seg_7(in_7,tub_control_7);
     */
 
-  //״̬��
-  reg [2:0] state;
-  reg [2:0] nextstate;
-  parameter S0 = 3'd0,S1 = 3'd1,S2 = 3'd2,S3 = 3'd3,S4 = 3'd4,S5 = 3'd5,S6 = 3'd6,S7 = 3'd7,S8 = 3'd8;//����״̬��Si��ʾ��i�����������
+  //״状态机
+  reg [3:0] state;
+  reg [3:0] nextstate;
+  parameter S0 = 4'd0,S1 = 4'd1,S2 = 4'd2,S3 = 4'd3,S4 = 4'd4,S5 = 4'd5,S6 = 4'd6,S7 = 4'd7,S8 = 4'd8;//定义状态，Si表示第i根数码管亮。
 
-  //����ʽ״̬��
+  //三段式状态机
   always @(posedge clk or negedge rst_n) begin
     if (rst_n) state <= S0;
     else state <= nextstate;
   end
-  //ʵ�ֶ�̬ɨ��
+  //实现动态扫描
   always @(*) begin
     case (state)
       S0: if (is_Reaching_5ms) nextstate <= S1;
@@ -466,40 +467,40 @@ module Light_seg_Display (
     endcase
   end
 
-  //�������λѡ�źźͶ�ѡ�źŵ��߼�
+  //实现静态扫描
   always @(posedge clk or negedge rst_n) begin
     if (rst_n) begin
       sel <= 8'b0000_0000;
-      //seg <= 8'b0000_0000;
+      seg <= 8'b0000_0000;
     end else begin
       case (state)
         S0: begin
           sel <= 8'b0000_0000;
-        end  //seg <= nothing; end
+        seg <= nothing; end
         S1: begin
           sel <= 8'b1000_0000;
-        end  //seg <= l; end
+        seg <= l; end
         S2: begin
           sel <= 8'b0100_0000;
-        end  //seg <= i; end 
+        seg <= i; end 
         S3: begin
           sel <= 8'b0010_0000;
-        end  //seg <= t; end
+        seg <= t; end
         S4: begin
           sel <= 8'b0001_0000;
-        end  //seg <= t; end
+        seg <= t; end
         S5: begin
           sel <= 8'b0000_1000;
-        end  //seg <= l; end
+        seg <= l; end
         S6: begin
           sel <= 8'b0000_0100;
-        end  //seg <= e; end
+        seg <= e; end
         S7: begin
           sel <= 8'b0000_0010;
-        end  //seg <= nothing; end
+        seg <= nothing; end
         S8: begin
           sel <= 8'b0000_0001;
-        end  //seg <= nothing; end
+        seg <= nothing; end
       endcase
     end
   end
