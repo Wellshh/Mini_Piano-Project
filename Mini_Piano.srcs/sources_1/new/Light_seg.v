@@ -19,16 +19,16 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//本模块是基本的数码管显示模块，需要显示0-9数字和26个英文字母。
+//本模块是基本的数码管显示模块，需要显示0-9数字和26个英文字母。一共36个字符，A从10开始。
 module Light_seg(
 input [5:0] in_numbers_words,
-output tub_sel,
+//output tub_sel,
 output reg [7:0] tub_control
     );
-    assign tub_sel = 1'b1;
+    //assign tub_sel = 1'b1;
     always @(*) begin
         case (in_numbers_words)
-            6'b000_000: tub_control = 8'b1111_1100; //"0"
+        6'b000_000: tub_control = 8'b1111_1100; //"0"
         6'b000_001: tub_control = 8'b0110_0000; //"1"
         6'b000_010: tub_control = 8'b1101_1010; //"2"
         6'b000_011: tub_control = 8'b1111_0010; //"3"

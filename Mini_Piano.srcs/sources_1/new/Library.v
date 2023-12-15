@@ -32,7 +32,7 @@ always @(posedge clk,negedge rst_n) begin
     if(rst_n == 1'b0)
         music <= 7'd0;
     else
-        case(cnt)//TODO:后续通过状态指针存入另一首歌
+        case(cnt)//TODO:后续通过状态指针存入另一首歌,case(cnt,flag)
             7'd0: music <= 7'd0;
             7'd1: music <= 7'd0;
             7'd2: music <= 7'd0;
