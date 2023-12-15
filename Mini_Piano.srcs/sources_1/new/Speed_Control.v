@@ -19,40 +19,32 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//±¾Ä£¿é¿ØÖÆÁË¸èÇú²¥·ÅÊ±µÄÕûÌå²¥·Å½Ú×à¡¢ËÙ¶È,Í¨¹ı¼ÆÊıÆ÷²úÉúÕûÊ×¸èµÄ½ÚÅÄ¿ìÂı¡£
-//ÔÚĞ¡ĞÇĞÇÖĞ£¬Ã¿¸öËÄÅÄÎª1s£¬ÓĞ8¸öÒô·û£¬ËùÒÔÃ¿¸öÒô·û²¥·ÅµÄÊ±¼äÓ¦¸ÃÊÇ1/8Ãë,ÈÃcntÃ¿1/8Ãë¼ÓÒ»À´²¥·ÅÏÂÒ»¸öÒô·û¡£
-module Speed_Control(
-input clk,
-input rst_n,
-output reg [6:0] cnt
-    );
- //Ê×ÏÈ½«Ê±ÖÓÖÜÆÚÍ¨¹ıdividerµ÷µ½1/8Ãë
-    parameter T_125ms = 1250_0000;
-    //parameter T_125ms = 10;
-    reg [31:0] count;
-    wire is_Reaching_125ms;//ÅĞ¶ÏÊÇ·ñµ½´ïÒ»¸ö1/8µÄÖÜÆÚ
-    
-    always @(posedge clk,negedge rst_n) begin
-        if (rst_n == 1'b0)
-            count <= 32'd0;
-        else 
-        if (count < T_125ms - 1'b1)
-            count <= count + 1'b1;
-        else 
-            count <= 32'd0;
-     end
-     
-     assign is_Reaching_125ms = (count == T_125ms - 1'b1) ? 1'b1 : 1'b0;
-     
-     always @ (posedge clk, negedge rst_n) begin
-        if (rst_n == 1'b0)
-            cnt <= 7'd0;
-        else 
-            if (is_Reaching_125ms == 1'b1)
-                cnt <= cnt + 1'b1;
-            else 
-                cnt <= cnt;
-      end
-    
-    
+//ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½å²¥ï¿½Å½ï¿½ï¿½à¡¢ï¿½Ù¶ï¿½,Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¸ï¿½Ä½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1sï¿½ï¿½ï¿½ï¿½8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½Ê±ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½1/8ï¿½ï¿½,ï¿½ï¿½cntÃ¿1/8ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+module Speed_Control (
+    input clk,
+    input rst_n,
+    output reg [6:0] cnt
+);
+  //ï¿½ï¿½ï¿½È½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½dividerï¿½ï¿½ï¿½ï¿½1/8ï¿½ï¿½
+  parameter T_125ms = 1250_0000;
+  //parameter T_125ms = 10;
+  reg [31:0] count;
+  wire is_Reaching_125ms;  //ï¿½Ğ¶ï¿½ï¿½Ç·ñµ½´ï¿½Ò»ï¿½ï¿½1/8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+  always @(posedge clk, negedge rst_n) begin
+    if (rst_n == 1'b1) count <= 32'd0;
+    else if (count < T_125ms - 1'b1) count <= count + 1'b1;
+    else count <= 32'd0;
+  end
+
+  assign is_Reaching_125ms = (count == T_125ms - 1'b1) ? 1'b1 : 1'b0;
+
+  always @(posedge clk, negedge rst_n) begin
+    if (rst_n == 1'b1) cnt <= 7'd0;
+    else if (is_Reaching_125ms == 1'b1) cnt <= cnt + 1'b1;
+    else cnt <= cnt;
+  end
+
+
 endmodule

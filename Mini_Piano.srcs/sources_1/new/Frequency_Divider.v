@@ -19,51 +19,49 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//±¾Ä£¿éÊÇ·ÖÆµÆ÷£¬±£Ö¤·äÃùÆ÷ÄÜ¹»Êä³öÕýÈ·µÄÒôÆµ¡£
-module Frequency_Divider(
-input clk,
-input rst_n,
-input [6:0] music,
-output reg [31:0] divider
-    );
-    reg [31:0] frequency;
-    always @(*) begin
-    case(music)
-          7'd0    :frequency =     32'd1;//¿ÕÅÄµÄÇé¿ö²»ÐèÒª·ÖÆµ
-          
-          7'd1    : frequency =    32'd262;
-          7'd2    : frequency =    32'd294;
-          7'd3    : frequency =    32'd330;
-          7'd4    : frequency =    32'd349;
-          7'd5    : frequency =    32'd392;
-          7'd6    : frequency =    32'd440;
-          7'd7    : frequency =    32'd494;
-          
-          7'd8    : frequency =    32'd523;
-          7'd9    : frequency =    32'd587;
-          7'd10   : frequency =    32'd659;
-          7'd11   : frequency =    32'd699;
-          7'd12   : frequency =    32'd784;
-          7'd13   : frequency =    32'd880;
-          7'd14   : frequency =    32'd988;
-          
-          7'd15   : frequency =    32'd1050;
-          7'd16   : frequency =    32'd1175;
-          7'd17   : frequency =    32'd1319;
-          7'd18   : frequency =    32'd1397;
-          7'd19   : frequency =    32'd1568;
-          7'd20   : frequency =    32'd1760;
-          7'd21   : frequency =    32'd1976;
-          endcase
-      end
-      
-      always @(posedge clk,negedge rst_n) begin
-        if(rst_n == 1'b0)
-            divider <= 32'd1_0000_0000;
-        else 
-            divider <= 1_0000_0000/frequency;
-        end
-      
-          
-    
+//ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ç·ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½
+module Frequency_Divider (
+    input clk,
+    input rst_n,
+    input [6:0] music,
+    output reg [31:0] divider
+);
+  reg [31:0] frequency;
+  always @(*) begin
+    case (music)
+      7'd0: frequency = 32'd1;  //ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Æµ
+
+      7'd1: frequency = 32'd262;
+      7'd2: frequency = 32'd294;
+      7'd3: frequency = 32'd330;
+      7'd4: frequency = 32'd349;
+      7'd5: frequency = 32'd392;
+      7'd6: frequency = 32'd440;
+      7'd7: frequency = 32'd494;
+
+      7'd8:  frequency = 32'd523;
+      7'd9:  frequency = 32'd587;
+      7'd10: frequency = 32'd659;
+      7'd11: frequency = 32'd699;
+      7'd12: frequency = 32'd784;
+      7'd13: frequency = 32'd880;
+      7'd14: frequency = 32'd988;
+
+      7'd15: frequency = 32'd1050;
+      7'd16: frequency = 32'd1175;
+      7'd17: frequency = 32'd1319;
+      7'd18: frequency = 32'd1397;
+      7'd19: frequency = 32'd1568;
+      7'd20: frequency = 32'd1760;
+      7'd21: frequency = 32'd1976;
+    endcase
+  end
+
+  always @(posedge clk, negedge rst_n) begin
+    if (rst_n == 1'b1) divider <= 32'd1_0000_0000;
+    else divider <= 1_0000_0000 / frequency;
+  end
+
+
+
 endmodule
