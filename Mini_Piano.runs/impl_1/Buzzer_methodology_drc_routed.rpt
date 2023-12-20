@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Dec 20 16:16:48 2023
+| Date         : Wed Dec 20 19:06:52 2023
 | Host         : dell running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Buzzer_methodology_drc_routed.rpt -pb Buzzer_methodology_drc_routed.pb -rpx Buzzer_methodology_drc_routed.rpx
 | Design       : Buzzer
@@ -23,48 +23,49 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 67
+             Violations found: 78
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 67         |
+| TIMING-20 | Warning  | Non-clocked latch           | 11         |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-17#1 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[0]/C is not reached by a timing clock
+The clock pin k1/group_next_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[0]_rep/C is not reached by a timing clock
+The clock pin k1/group_next_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[0]_rep__0/C is not reached by a timing clock
+The clock pin k1/group_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[1]/C is not reached by a timing clock
+The clock pin k1/group_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#5 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[1]_rep/C is not reached by a timing clock
+The clock pin k1/note_out_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[2]/C is not reached by a timing clock
+The clock pin k1/note_out_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Warning
 Non-clocked sequential cell  
-The clock pin k1/note_out_reg[2]_rep/C is not reached by a timing clock
+The clock pin k1/note_out_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Warning
@@ -365,6 +366,61 @@ Related violations: <none>
 TIMING-17#67 Warning
 Non-clocked sequential cell  
 The clock pin u4/speaker_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[0] cannot be properly analyzed as its control pin u3/frequency_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[10] cannot be properly analyzed as its control pin u3/frequency_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[1] cannot be properly analyzed as its control pin u3/frequency_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[2] cannot be properly analyzed as its control pin u3/frequency_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[3] cannot be properly analyzed as its control pin u3/frequency_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[4] cannot be properly analyzed as its control pin u3/frequency_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[5] cannot be properly analyzed as its control pin u3/frequency_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[6] cannot be properly analyzed as its control pin u3/frequency_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[7] cannot be properly analyzed as its control pin u3/frequency_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[8] cannot be properly analyzed as its control pin u3/frequency_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch u3/frequency_reg[9] cannot be properly analyzed as its control pin u3/frequency_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 

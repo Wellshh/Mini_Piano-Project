@@ -35,6 +35,8 @@ module Buzzer (
   wire [ 6:0] cnt;
   wire [ 6:0] music;
   wire [31:0] divider;
+  
+  wire [1:0] group;
 
   Speed_Control u1 (
       .clk  (clk),
@@ -55,14 +57,16 @@ module Buzzer (
    .higher(higher),
    .lower(lower),
    .note(note_in),
-   .note_out(music)
+   .note_out(music),
+   .group(group)
    );/**/
 
   Frequency_Divider u3 (
       .clk(clk),
       .rst_n(rst_n),
       .music(music),
-      .divider(divider)
+      .divider(divider),
+      .group(group)
   );
 
   Wave_Generator u4 (

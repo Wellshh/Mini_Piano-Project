@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed Dec 20 16:16:49 2023
+| Date             : Wed Dec 20 19:06:52 2023
 | Host             : dell running 64-bit major release  (build 9200)
 | Command          : report_power -file Buzzer_power_routed.rpt -pb Buzzer_power_summary_routed.pb -rpx Buzzer_power_routed.rpx
 | Design           : Buzzer
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 21.147 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 21.105 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 20.661                           |
+| Dynamic (W)              | 20.619                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 4.8                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     7.993 |     1023 |       --- |             --- |
-|   LUT as Logic |     6.580 |      694 |     20800 |            3.34 |
-|   CARRY4       |     1.358 |      203 |      8150 |            2.49 |
-|   Register     |     0.050 |       67 |     41600 |            0.16 |
+| Slice Logic    |     7.804 |     1098 |       --- |             --- |
+|   LUT as Logic |     6.387 |      746 |     20800 |            3.59 |
+|   CARRY4       |     1.380 |      206 |      8150 |            2.53 |
+|   Register     |     0.031 |       78 |     41600 |            0.19 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     6.653 |      896 |       --- |             --- |
-| I/O            |     6.015 |       19 |       210 |            9.05 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |     6.280 |      937 |       --- |             --- |
+| I/O            |     6.535 |       21 |       210 |           10.00 |
 | Static Power   |     0.486 |          |           |                 |
-| Total          |    21.147 |          |           |                 |
+| Total          |    21.105 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    15.023 |      14.682 |      0.341 |
-| Vccaux    |       1.800 |     0.272 |       0.219 |      0.053 |
-| Vcco33    |       3.300 |     1.693 |       1.692 |      0.001 |
+| Vccint    |       1.000 |    14.468 |      14.128 |      0.341 |
+| Vccaux    |       1.800 |     0.291 |       0.238 |      0.053 |
+| Vcco33    |       3.300 |     1.838 |       1.837 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,10 +138,10 @@ Table of Contents
 +--------+-----------+
 | Name   | Power (W) |
 +--------+-----------+
-| Buzzer |    20.661 |
-|   k1   |     0.186 |
-|   u3   |    13.039 |
-|   u4   |     1.320 |
+| Buzzer |    20.619 |
+|   k1   |     0.057 |
+|   u3   |    13.406 |
+|   u4   |     0.512 |
 +--------+-----------+
 
 

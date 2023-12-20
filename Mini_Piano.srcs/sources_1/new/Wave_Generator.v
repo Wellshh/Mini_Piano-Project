@@ -31,8 +31,8 @@ module Wave_Generator (
   always @(posedge clk, negedge rst_n) begin
     if (~rst_n) cnt <= 32'b0;
     else if (cnt < divider - 1'b1) cnt <= cnt + 1'b1;
-    else
-      cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//对divider的最低位判断，进行细粒度控制
+    //else cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//对divider的最低位判断，进行细粒度控制
+    else cnt<=32'd0;
   end
   //?通过cnt控制speaker，蜂鸣器的输出，注意是低电平输出。
   always @(posedge clk, negedge rst_n) begin
