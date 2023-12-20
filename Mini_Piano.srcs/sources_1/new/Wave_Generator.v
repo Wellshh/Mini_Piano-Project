@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//æœ¬æ¨¡å—å¯ä»¥æ ¹æ®åˆ†é¢‘å™¨å¾—åˆ°çš„é¢‘ç‡è¾“å‡ºç›¸åº”çš„éŸ³ç¬¦
+//±¾Ä£¿é¿ÉÒÔ¸ù¾İ·ÖÆµÆ÷µÃµ½µÄÆµÂÊÊä³öÏàÓ¦µÄÒô·û
 module Wave_Generator (
     input clk,
     input rst_n,
@@ -29,14 +29,14 @@ module Wave_Generator (
   reg [31:0] cnt;
 
   always @(posedge clk, negedge rst_n) begin
-    if (rst_n == 1'b1) cnt <= 32'b0;
+    if (~rst_n) cnt <= 32'b0;
     else if (cnt < divider - 1'b1) cnt <= cnt + 1'b1;
     else
-      cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//å¯¹dividerçš„æœ€ä½ä½åˆ¤æ–­ï¼Œè¿›è¡Œç»†ç²’åº¦æ§åˆ¶
+      cnt <= (divider[0] == 1'b1) ? 32'd0 : cnt + 1'b1;//¶ÔdividerµÄ×îµÍÎ»ÅĞ¶Ï£¬½øĞĞÏ¸Á£¶È¿ØÖÆ
   end
-  //Í¨é€šè¿‡cntæ§åˆ¶speakerï¼Œèœ‚é¸£å™¨çš„è¾“å‡ºï¼Œæ³¨æ„æ˜¯ä½ç”µå¹³è¾“å‡ºã€‚
+  //?Í¨¹ıcnt¿ØÖÆspeaker£¬·äÃùÆ÷µÄÊä³ö£¬×¢ÒâÊÇµÍµçÆ½Êä³ö¡£
   always @(posedge clk, negedge rst_n) begin
-    if (rst_n == 1'b1) speaker <= 1'b0;
+    if (~rst_n) speaker <= 1'b0;
     else if (cnt < divider[31:1]) speaker <= 1'b0;
     else speaker <= 1'b1;
   end

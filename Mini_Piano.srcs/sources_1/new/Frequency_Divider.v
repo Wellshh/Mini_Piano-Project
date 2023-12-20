@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//æœ¬æ¨¡å—æ˜¯åˆ†é¢‘å™¨ï¼Œä¿è¯èœ‚é¸£å™¨èƒ½å¤Ÿè¾“å‡ºæ­£ç¡®çš„éŸ³é¢‘ã€‚
+//±¾Ä£¿éÊÇ·ÖÆµÆ÷£¬±£Ö¤·äÃùÆ÷ÄÜ¹»Êä³öÕıÈ·µÄÒôÆµ¡£
 module Frequency_Divider (
     input clk,
     input rst_n,
@@ -29,7 +29,7 @@ module Frequency_Divider (
   reg [31:0] frequency;
   always @(*) begin
     case (music)
-      7'd0: frequency = 32'd1;  //ç©ºæ‹çš„æƒ…å†µä¸éœ€è¦åˆ†é¢‘
+      7'd0: frequency = 32'd1;  //¿ÕÅÄµÄÇé¿ö²»ĞèÒª·ÖÆµ
 
       7'd1: frequency = 32'd262;
       7'd2: frequency = 32'd294;
@@ -58,7 +58,7 @@ module Frequency_Divider (
   end
 
   always @(posedge clk, negedge rst_n) begin
-    if (rst_n == 1'b1) divider <= 32'd1_0000_0000;
+    if (~rst_n) divider <= 32'd1_0000_0000;
     else divider <= 1_0000_0000 / frequency;
   end
 

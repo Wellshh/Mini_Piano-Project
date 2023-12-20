@@ -21,6 +21,8 @@
 
 
 module Led(
-
+input [7:0] led_in,
+output [7:0] led_out
     );
+    assign led_out = led_in;
 endmodule

@@ -23,11 +23,11 @@
 module Light_seg_Display (
     input clk,
     input rst_n,
-    //input [5:0] senten[7:0],  //è¾“å…¥ç«¯å£ä¸èƒ½ä½¿ç”¨æ•°ç»„
-    output reg [7:0] sel,  //ä½é€‰ä¿¡å·ï¼Œå†³å®š8æ®µæ•°ç ç®¡å“ªæ ¹äº®ã€‚
-    output reg [7:0] seg//æ®µé€‰ä¿¡å·ï¼Œå››æ ¹æ•°ç ç®¡çš„ä½é€‰ä¿¡å·æ˜¯å…¬å…±çš„ï¼Œåªèƒ½åŒæ—¶æ˜¾ç¤ºã€‚å†³å®šå•æ ¹æ•°ç ç®¡æ˜¾ç¤ºæ•°å­—æˆ–å­—æ¯ã€‚
+    //input [5:0] senten[7:0],  //ÊäÈë¶Ë¿Ú²»ÄÜÊ¹ÓÃÊı×é
+    output reg [7:0] sel,  //Î»Ñ¡ĞÅºÅ£¬¾ö¶¨8¶ÎÊıÂë¹ÜÄÄ¸ùÁÁ¡£
+    output reg [7:0] seg//¶ÎÑ¡ĞÅºÅ£¬ËÄ¸ùÊıÂë¹ÜµÄÎ»Ñ¡ĞÅºÅÊÇ¹«¹²µÄ£¬Ö»ÄÜÍ¬Ê±ÏÔÊ¾¡£¾ö¶¨µ¥¸ùÊıÂë¹ÜÏÔÊ¾Êı×Ö»ò×ÖÄ¸¡£
 );
-  parameter T_5ms = 50_0000;//æ¯éš”0.05ç§’åˆ·æ–°ä¸€æ¬¡ï¼Œåˆ©ç”¨äººçœ¼çš„è§†è§‰æš‚ç•™ç°è±¡ã€‚è¦è·‘testbenchå¯ä»¥ç›´æ¥è®¾ä¸º1ã€‚
+  parameter T_5ms = 50_0000;//Ã¿¸ô0.05ÃëË¢ĞÂÒ»´Î£¬ÀûÓÃÈËÑÛµÄÊÓ¾õÔİÁôÏÖÏó¡£ÒªÅÜtestbench¿ÉÒÔÖ±½ÓÉèÎª1¡£
   reg [31:0] count;
   wire is_Reaching_5ms;
   reg [5:0] sentence[7:0];
@@ -75,7 +75,7 @@ module Light_seg_Display (
   y = 8'b0100_1110,  //"Y"
   z = 8'b1101_1011,  //"Z"
   nothing = 8'b0000_0000;
-//ä»¥ä¸‹æ˜¯ä¸€å¨å¤§ä¾¿ï¼Œä¸ç”¨ç®¡ï¼Œæˆ‘æƒ³å®ç°æ ¹æ®è¾“å…¥åŠ¨æ€è°ƒæ•´ã€‚
+//ÒÔÏÂÊÇÒ»Ûç´ó±ã£¬²»ÓÃ¹Ü£¬ÎÒÏëÊµÏÖ¸ù¾İÊäÈë¶¯Ì¬µ÷Õû¡£
   always @(*) begin
     case (sentence[0])
       6'b000000: seg[0] = zero;
@@ -433,17 +433,17 @@ module Light_seg_Display (
     Light_seg seg_7(in_7,tub_control_7);
     */
 
-  //×´çŠ¶æ€æœº
+  //?×´Ì¬»ú
   reg [3:0] state;
   reg [3:0] nextstate;
-  parameter S0 = 4'd0,S1 = 4'd1,S2 = 4'd2,S3 = 4'd3,S4 = 4'd4,S5 = 4'd5,S6 = 4'd6,S7 = 4'd7,S8 = 4'd8;//å®šä¹‰çŠ¶æ€ï¼ŒSiè¡¨ç¤ºç¬¬iæ ¹æ•°ç ç®¡äº®ã€‚
+  parameter S0 = 4'd0,S1 = 4'd1,S2 = 4'd2,S3 = 4'd3,S4 = 4'd4,S5 = 4'd5,S6 = 4'd6,S7 = 4'd7,S8 = 4'd8;//¶¨Òå×´Ì¬£¬Si±íÊ¾µÚi¸ùÊıÂë¹ÜÁÁ¡£
 
-  //ä¸‰æ®µå¼çŠ¶æ€æœº
+  //Èı¶ÎÊ½×´Ì¬»ú
   always @(posedge clk or negedge rst_n) begin
     if (rst_n) state <= S0;
     else state <= nextstate;
   end
-  //å®ç°åŠ¨æ€æ‰«æ
+  //ÊµÏÖ¶¯Ì¬É¨Ãè
   always @(*) begin
     case (state)
       S0: if (is_Reaching_5ms) nextstate <= S1;
@@ -467,7 +467,7 @@ module Light_seg_Display (
     endcase
   end
 
-  //å®ç°é™æ€æ‰«æ
+  //ÊµÏÖ¾²Ì¬É¨Ãè
   always @(posedge clk or negedge rst_n) begin
     if (rst_n) begin
       sel <= 8'b0000_0000;

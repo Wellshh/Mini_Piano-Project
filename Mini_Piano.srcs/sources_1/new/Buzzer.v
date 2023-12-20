@@ -19,13 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//èœ‚é¸£å™¨çš„é¡¶å±‚æ¨¡å—
+//·äÃùÆ÷µÄ¶¥²ãÄ£¿é
 module Buzzer (
+    input [7:0] note_in,
+    input higher,lower,
+    
     input  clk,
     input  rst_n,
-    output speaker
+    output speaker,
+    
+    output [7:0] led_out
 
 );
+
   wire [ 6:0] cnt;
   wire [ 6:0] music;
   wire [31:0] divider;
@@ -35,13 +41,22 @@ module Buzzer (
       .rst_n(rst_n),
       .cnt  (cnt)
   );
-
+/*
   Library u2 (
       .clk  (clk),
       .rst_n(rst_n),
       .cnt  (cnt),
       .music(music)
   );
+  /**/
+   Keyboard k1(
+   .clk(clk),
+   .rst(rst_n),
+   .higher(higher),
+   .lower(lower),
+   .note(note_in),
+   .note_out(music)
+   );/**/
 
   Frequency_Divider u3 (
       .clk(clk),
@@ -55,6 +70,10 @@ module Buzzer (
       .rst_n(rst_n),
       .divider(divider),
       .speaker(speaker)
+  );
+  Led l1(
+  .led_in(note_in),
+  .led_out(led_out)
   );
 
 

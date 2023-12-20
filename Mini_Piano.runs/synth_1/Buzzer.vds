@@ -1,0 +1,386 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Dec 20 16:15:03 2023
+# Process ID: 6748
+# Current directory: E:/Mini_Piano/Mini_Piano.runs/synth_1
+# Command line: vivado.exe -log Buzzer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Buzzer.tcl
+# Log file: E:/Mini_Piano/Mini_Piano.runs/synth_1/Buzzer.vds
+# Journal file: E:/Mini_Piano/Mini_Piano.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Buzzer.tcl -notrace
+Command: synth_design -top Buzzer -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12388 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 329.738 ; gain = 100.027
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Buzzer' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
+INFO: [Synth 8-638] synthesizing module 'Speed_Control' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v:24]
+	Parameter T_125ms bound to: 12500000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Speed_Control' (1#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v:24]
+INFO: [Synth 8-638] synthesizing module 'Keyboard' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v:41]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v:53]
+WARNING: [Synth 8-6014] Unused sequential element group_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v:35]
+INFO: [Synth 8-256] done synthesizing module 'Keyboard' (2#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
+INFO: [Synth 8-638] synthesizing module 'Frequency_Divider' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:31]
+INFO: [Synth 8-256] done synthesizing module 'Frequency_Divider' (3#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'Wave_Generator' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Wave_Generator' (4#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:23]
+INFO: [Synth 8-638] synthesizing module 'Led' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Led' (5#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Buzzer' (6#1) [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
+WARNING: [Synth 8-3331] design Keyboard has unconnected port higher
+WARNING: [Synth 8-3331] design Keyboard has unconnected port lower
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 382.137 ; gain = 152.426
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 382.137 ; gain = 152.426
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Mini_Piano/Mini_Piano.srcs/constrs_1/new/Buzzer_cs.xdc]
+Finished Parsing XDC File [E:/Mini_Piano/Mini_Piano.srcs/constrs_1/new/Buzzer_cs.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Mini_Piano/Mini_Piano.srcs/constrs_1/new/Buzzer_cs.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Buzzer_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Buzzer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 710.043 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "is_Reaching_125ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v:44]
+INFO: [Synth 8-5546] ROM "note_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "frequency" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'frequency_reg' [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:32]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   9 Input      7 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Speed_Control 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Keyboard 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   9 Input      7 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+Module Frequency_Divider 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	  23 Input      1 Bit        Muxes := 1     
+Module Wave_Generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element u1/count_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v:36]
+WARNING: [Synth 8-6014] Unused sequential element u1/cnt_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v:44]
+INFO: [Synth 8-5546] ROM "k1/note_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element u4/cnt_reg was removed.  [E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:32]
+WARNING: [Synth 8-3331] design Buzzer has unconnected port higher
+WARNING: [Synth 8-3331] design Buzzer has unconnected port lower
+INFO: [Synth 8-3886] merging instance 'k1/note_out_reg[5]' (FDCE) to 'k1/note_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'k1/note_out_reg[6]' (FDCE) to 'k1/note_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'k1/note_out_reg[3]' (FDCE) to 'k1/note_out_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\k1/note_out_reg[4] )
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[11]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[12]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[13]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[14]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[15]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[16]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[17]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[18]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[19]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[20]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[21]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[22]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[23]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[24]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[25]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[26]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[27]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[28]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[29]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u3/frequency_reg[30]' (LD) to 'u3/frequency_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u3/frequency_reg[31] )
+INFO: [Synth 8-3886] merging instance 'u3/divider_reg[27]' (FDC) to 'u3/divider_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u3/divider_reg[28]' (FDC) to 'u3/divider_reg[29]'
+INFO: [Synth 8-3886] merging instance 'u3/divider_reg[29]' (FDC) to 'u3/divider_reg[30]'
+INFO: [Synth 8-3886] merging instance 'u3/divider_reg[30]' (FDC) to 'u3/divider_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u3/divider_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u3/frequency_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u3/frequency_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[31]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[10]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[9]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[8]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[7]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[6]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[5]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[4]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[3]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[2]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[1]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/frequency_reg[0]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (u3/divider_reg[31]) is unused and will be removed from module Buzzer.
+WARNING: [Synth 8-3332] Sequential element (k1/note_out_reg[4]) is unused and will be removed from module Buzzer.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 710.043 ; gain = 480.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   203|
+|3     |LUT1   |    27|
+|4     |LUT2   |   355|
+|5     |LUT3   |    62|
+|6     |LUT4   |   112|
+|7     |LUT5   |   184|
+|8     |LUT6   |     7|
+|9     |FDCE   |    55|
+|10    |FDPE   |    12|
+|11    |IBUF   |    10|
+|12    |OBUF   |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |  1037|
+|2     |  k1     |Keyboard          |    31|
+|3     |  u3     |Frequency_Divider |   853|
+|4     |  u4     |Wave_Generator    |   133|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 731.801 ; gain = 174.184
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 731.801 ; gain = 502.090
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 213 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 731.801 ; gain = 506.473
+INFO: [Common 17-1381] The checkpoint 'E:/Mini_Piano/Mini_Piano.runs/synth_1/Buzzer.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Buzzer_utilization_synth.rpt -pb Buzzer_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 731.801 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 16:15:35 2023...
