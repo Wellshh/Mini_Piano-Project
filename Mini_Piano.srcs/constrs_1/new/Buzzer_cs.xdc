@@ -20,5 +20,33 @@ set_property PACKAGE_PIN H4 [get_ports {led_out[3]}]
 set_property PACKAGE_PIN J3 [get_ports {led_out[2]}]
 set_property PACKAGE_PIN J2 [get_ports {led_out[1]}]
 set_property PACKAGE_PIN K2 [get_ports {led_out[0]}]
+set_property PACKAGE_PIN G2  [get_ports {sel[7]}]
+set_property PACKAGE_PIN C2 [get_ports {sel[6]}]
+set_property PACKAGE_PIN C1 [get_ports {sel[5]}]
+set_property PACKAGE_PIN H1 [get_ports {sel[4]}]
+set_property PACKAGE_PIN G1 [get_ports {sel[3]}]
+set_property PACKAGE_PIN F1 [get_ports {sel[2]}]
+set_property PACKAGE_PIN E1 [get_ports {sel[1]}]
+set_property PACKAGE_PIN G6 [get_ports {sel[0]}]
+set_property PACKAGE_PIN D4 [get_ports {seg_2[7]}]
+set_property PACKAGE_PIN E3 [get_ports {seg_2[6]}]
+set_property PACKAGE_PIN D3 [get_ports {seg_2[5]}]
+set_property PACKAGE_PIN F4 [get_ports {seg_2[4]}]
+set_property PACKAGE_PIN F3 [get_ports {seg_2[3]}]
+set_property PACKAGE_PIN E2 [get_ports {seg_2[2]}]
+set_property PACKAGE_PIN D2 [get_ports {seg_2[1]}]
+set_property PACKAGE_PIN H2 [get_ports {seg_2[0]}]
+set_property PACKAGE_PIN B4 [get_ports {seg[7]}]
+set_property PACKAGE_PIN A4 [get_ports {seg[6]}]
+set_property PACKAGE_PIN A3 [get_ports {seg[5]}]
+set_property PACKAGE_PIN B1 [get_ports {seg[4]}]
+set_property PACKAGE_PIN A1 [get_ports {seg[3]}]
+set_property PACKAGE_PIN B3 [get_ports {seg[2]}]
+set_property PACKAGE_PIN B2 [get_ports {seg[1]}]
+set_property PACKAGE_PIN D5 [get_ports {seg[0]}]
+
+
+
+
 
 

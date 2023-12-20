@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:E:/Xilinx/Vivado/2017.4/bin
+  PATH=D:/Xilinx_Vivado_SDK_2017.4_1216_1/SDK/2017.4/bin;D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/bin
 else
-  PATH=E:/Xilinx/Vivado/2017.4/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2017.4/ids_lite/ISE/lib/nt64:E:/Xilinx/Vivado/2017.4/bin:$PATH
+  PATH=D:/Xilinx_Vivado_SDK_2017.4_1216_1/SDK/2017.4/bin;D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/ids_lite/ISE/bin/nt64;D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/ids_lite/ISE/lib/nt64:D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/Mini_Piano/Mini_Piano.runs/impl_1'
+HD_PWD='C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
-EAStep vivado -log Buzzer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Buzzer.tcl -notrace
+/bin/touch .init_design.begin.rst
+EAStep vivado -log Controller.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Controller.tcl -notrace
 
 

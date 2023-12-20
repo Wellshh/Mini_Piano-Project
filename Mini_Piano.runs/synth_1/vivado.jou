@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Dec 20 16:15:03 2023
-# Process ID: 6748
-# Current directory: E:/Mini_Piano/Mini_Piano.runs/synth_1
-# Command line: vivado.exe -log Buzzer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Buzzer.tcl
-# Log file: E:/Mini_Piano/Mini_Piano.runs/synth_1/Buzzer.vds
-# Journal file: E:/Mini_Piano/Mini_Piano.runs/synth_1\vivado.jou
+# Start of session at: Wed Dec 20 21:30:56 2023
+# Process ID: 17104
+# Current directory: C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1
+# Command line: vivado.exe -log Controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Controller.tcl
+# Log file: C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1/Controller.vds
+# Journal file: C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Buzzer.tcl -notrace
+source Controller.tcl -notrace

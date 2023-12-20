@@ -27,7 +27,7 @@ module Speed_Control (
     output reg [6:0] cnt
 );
   //首先将时钟周期通过divider调到1/8秒
-  parameter T_125ms = 1250_0000;
+  parameter T_125ms = 1_0000_0000;
   //parameter T_125ms = 10;
   reg [31:0] count;
   wire is_Reaching_125ms;  //判断是否到达一个1/8的周期

@@ -23,7 +23,6 @@
 module Buzzer (
     input [7:0] note_in,
     input higher,lower,
-    
     input  clk,
     input  rst_n,
     output speaker,
@@ -32,8 +31,8 @@ module Buzzer (
 
 );
 
-  wire [ 6:0] cnt;
-  wire [ 6:0] music;
+  wire [6:0] cnt;
+  wire [6:0] music;
   wire [31:0] divider;
 
   Speed_Control u1 (
@@ -41,14 +40,14 @@ module Buzzer (
       .rst_n(rst_n),
       .cnt  (cnt)
   );
-/*
+
   Library u2 (
       .clk  (clk),
       .rst_n(rst_n),
       .cnt  (cnt),
       .music(music)
   );
-  /**/
+  
    Keyboard k1(
    .clk(clk),
    .rst(rst_n),
@@ -56,7 +55,7 @@ module Buzzer (
    .lower(lower),
    .note(note_in),
    .note_out(music)
-   );/**/
+   );/*
 
   Frequency_Divider u3 (
       .clk(clk),
