@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28044 
+INFO: Helper process launched with PID 30784 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 388.980 ; gain = 99.555
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 387.527 ; gain = 98.211
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'MiniPiano' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v:23]
 INFO: [Synth 8-638] synthesizing module 'Buzzer' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
@@ -120,7 +120,7 @@ WARNING: [Synth 8-3331] design Library has unconnected port select_mode[2]
 WARNING: [Synth 8-3331] design Library has unconnected port select_mode[1]
 WARNING: [Synth 8-3331] design Library has unconnected port select_mode[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 441.125 ; gain = 151.699
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.613 ; gain = 150.297
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -130,7 +130,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 441.125 ; gain = 151.699
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.613 ; gain = 150.297
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -146,22 +146,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 772.582 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 772.703 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "is_Reaching_125ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:51]
@@ -208,7 +208,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/We
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Light_seg_Display'
 WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:164]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -497,7 +497,7 @@ INFO: [Synth 8-3886] merging instance 'light/display_reg[0][3]' (FDE) to 'light/
 INFO: [Synth 8-3886] merging instance 'light/display_reg[1][4]' (FDE) to 'light/display_reg[6][5]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -509,13 +509,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 772.582 ; gain = 483.156
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 772.703 ; gain = 483.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -527,7 +527,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -551,7 +551,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -564,7 +564,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -576,25 +576,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -641,11 +641,11 @@ Report Instance Areas:
 |8     |  light  |Light_seg_Display |   136|
 +------+---------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 796.816 ; gain = 175.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 796.816 ; gain = 507.391
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 797.816 ; gain = 175.410
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 249 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -659,8 +659,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 189 Infos, 33 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 797.094 ; gain = 520.586
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 797.816 ; gain = 521.078
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1/MiniPiano.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MiniPiano_utilization_synth.rpt -pb MiniPiano_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 797.094 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 23:38:00 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 797.816 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 22 00:08:19 2023...

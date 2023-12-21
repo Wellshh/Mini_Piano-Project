@@ -32,7 +32,7 @@ output reg [1:0] group
     );
     reg [1:0] group_next;
     
-    always @(posedge clk,negedge rst)begin
+    always @(posedge clk,negedge rst) begin
         if(~rst)
         group<=2'd2;
         else

@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
+<<<<<<< HEAD
 	<Run Id="synth_1" LaunchDir="C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+=======
+	<Run Id="impl_1" LaunchDir="E:/Mini_Piano/Mini_Piano.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design"/>
+>>>>>>> f8154fb7166af3de49182a978e1e889f3abbfc96
 </Runs>
 

@@ -72,8 +72,6 @@ module Buzzer (
    .note_out(music_freemode),
    .group(group)
    );
-   
-
   Frequency_Divider u3 (
       .clk(clk),
       .rst_n(rst_n),
