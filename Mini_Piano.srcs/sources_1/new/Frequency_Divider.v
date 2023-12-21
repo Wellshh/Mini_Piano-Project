@@ -23,44 +23,93 @@
 module Frequency_Divider (
     input clk,
     input rst_n,
-    input [6:0] music,
-    output reg [31:0] divider
+    input [2:0] select_mode,
+    input [6:0] music_freemode,
+    input [6:0] music_playmode,
+    output reg [31:0] divider,
+    input [1:0] group,
+    input [1:0] control_group
 );
+reg [6:0] music_select;
+reg [1:0] change_group;
+//状态切换部分，后续在这个地方加入学习模式。
+always @(posedge clk) begin
+case(select_mode)
+    3'b011: music_select <= music_freemode; 
+    3'b010: music_select<= music_playmode;
+    default: music_select <= music_freemode;
+endcase//必须用always block不能用assign block，因为assign只会执行一次，后续无法完成状态切换。
+end
+
+//模式切换时输入的group信号进行切换
+always @(*) begin
+    case(select_mode)
+        3'b011: change_group <= group;
+        3'b010: change_group <= control_group;
+        default: change_group <= group;
+    endcase
+end
+
+
+
+
+//assign music = music_playmode;
+//assign music = music_freemode;
   reg [31:0] frequency;
   always @(*) begin
-    case (music)
-      7'd0: frequency = 32'd1;  //空拍的情况不需要分频
-
-      7'd1: frequency = 32'd262;
-      7'd2: frequency = 32'd294;
-      7'd3: frequency = 32'd330;
-      7'd4: frequency = 32'd349;
-      7'd5: frequency = 32'd392;
-      7'd6: frequency = 32'd440;
-      7'd7: frequency = 32'd494;
-
-      7'd8:  frequency = 32'd523;
-      7'd9:  frequency = 32'd587;
-      7'd10: frequency = 32'd659;
-      7'd11: frequency = 32'd699;
-      7'd12: frequency = 32'd784;
-      7'd13: frequency = 32'd880;
-      7'd14: frequency = 32'd988;
-
-      7'd15: frequency = 32'd1050;
-      7'd16: frequency = 32'd1175;
-      7'd17: frequency = 32'd1319;
-      7'd18: frequency = 32'd1397;
-      7'd19: frequency = 32'd1568;
-      7'd20: frequency = 32'd1760;
-      7'd21: frequency = 32'd1976;
-    endcase
-  end
+    case (music_select)
+        7'd0: frequency = 32'd1;  //空拍的情况不需要分频
+       
+        7'd1:
+        case(change_group)
+        2'd1:frequency = 32'd262;
+        2'd2:frequency = 32'd523;
+        2'd3:frequency = 32'd1046;
+        endcase
+        7'd2:
+        case(change_group)
+        2'd1:frequency = 32'd294;
+        2'd2:frequency = 32'd587;
+        2'd3:frequency = 32'd1175;
+        endcase
+        7'd3:
+        case(change_group)
+        2'd1:frequency = 32'd330;
+        2'd2:frequency = 32'd659;
+        2'd3:frequency = 32'd1318;
+        endcase
+        7'd4:
+        case(change_group)
+        2'd1:frequency = 32'd349;
+        2'd2:frequency = 32'd698;
+        2'd3:frequency = 32'd1397;
+        endcase
+        7'd5:
+        case(change_group)
+        2'd1:frequency = 32'd392;
+        2'd2:frequency = 32'd784;
+        2'd3:frequency = 32'd1568;
+        endcase
+        7'd6:
+        case(change_group)
+        2'd1:frequency = 32'd440;
+        2'd2:frequency = 32'd880;
+        2'd3:frequency = 32'd1760;
+        endcase
+        7'd7:
+        case(change_group)
+        2'd1:frequency = 32'd494;
+        2'd2:frequency = 32'd988;
+        2'd3:frequency = 32'd1976;
+        endcase
+      endcase
+ end
 
   always @(posedge clk, negedge rst_n) begin
     if (~rst_n) divider <= 32'd1_0000_0000;
-    else divider <= 1_0000_0000 / frequency;
+    else divider <= 32'd1_0000_0000 / frequency;
   end
+  
 
 
 

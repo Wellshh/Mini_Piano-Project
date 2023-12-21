@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Controller.tcl
+EAStep vivado -log MiniPiano.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MiniPiano.tcl

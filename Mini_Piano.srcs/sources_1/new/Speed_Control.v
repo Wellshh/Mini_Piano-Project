@@ -24,26 +24,33 @@
 module Speed_Control (
     input clk,
     input rst_n,
+    input [2:0] select_mode,
+    input start_play,//添加开关信号
     output reg [6:0] cnt
 );
   //首先将时钟周期通过divider调到1/8秒
   parameter T_125ms = 1_0000_0000;
-  //parameter T_125ms = 10;
+//  parameter T_125ms = 1;
   reg [31:0] count;
   wire is_Reaching_125ms;  //判断是否到达一个1/8的周期
 
   always @(posedge clk, negedge rst_n) begin
-    if (~rst_n) count <= 32'd0;
+    if (~rst_n || select_mode != 3'b010) count <= 32'd0;
     else if (count < T_125ms - 1'b1) count <= count + 1'b1;
     else count <= 32'd0;
   end
+  
+//  always @(posedge clk) begin
+//  if(select_mode != 3'b010) cnt <= 7'd0;
+//  else cnt <= cnt;
+//  end
 
   assign is_Reaching_125ms = (count == T_125ms - 1'b1) ? 1'b1 : 1'b0;
 
   always @(posedge clk, negedge rst_n) begin
-    if (~rst_n) cnt <= 7'd0;
+    if (~rst_n || select_mode != 3'b010 || start_play == 1'b0) cnt <= 7'd0;//只有当开关信号为1时才开始计数
     else if (is_Reaching_125ms == 1'b1) cnt <= cnt + 1'b1;
-    else cnt <= cnt;
+    else cnt <= cnt;//有点小瑕疵，切换模式会导致时钟信号
   end
 
 

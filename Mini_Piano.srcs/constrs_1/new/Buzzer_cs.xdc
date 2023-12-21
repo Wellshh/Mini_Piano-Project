@@ -44,6 +44,17 @@ set_property PACKAGE_PIN A1 [get_ports {seg[3]}]
 set_property PACKAGE_PIN B3 [get_ports {seg[2]}]
 set_property PACKAGE_PIN B2 [get_ports {seg[1]}]
 set_property PACKAGE_PIN D5 [get_ports {seg[0]}]
+set_property PACKAGE_PIN R3 [get_ports {select_mode[2]}]
+set_property PACKAGE_PIN T3 [get_ports {select_mode[1]}]
+set_property PACKAGE_PIN T5 [get_ports {select_mode[0]}]
+set_property PACKAGE_PIN L1 [get_ports {mode_light[2]}]
+set_property PACKAGE_PIN M1 [get_ports {mode_light[1]}]
+set_property PACKAGE_PIN K3 [get_ports {mode_light[0]}]
+set_property PACKAGE_PIN U3 [get_ports {start_play}]
+set_property PACKAGE_PIN K1 [get_ports {play_led}]
+set_property PACKAGE_PIN R15 [get_ports {songs_select}]
+
+
 
 
 

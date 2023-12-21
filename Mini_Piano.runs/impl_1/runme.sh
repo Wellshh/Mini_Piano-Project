@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log Controller.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Controller.tcl -notrace
+EAStep vivado -log MiniPiano.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source MiniPiano.tcl -notrace
 
 

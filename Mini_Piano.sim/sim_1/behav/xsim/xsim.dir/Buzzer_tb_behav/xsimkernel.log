@@ -1,7 +1,4 @@
-Running: xsim.dir/Buzzer_tb_behav/xsimk.exe -simmode gui -wdb Buzzer_tb_behav.wdb -simrunnum 0 -socket 52587
+Running: xsim.dir/Buzzer_tb_behav/xsimk.exe -simmode gui -wdb Buzzer_tb_behav.wdb -simrunnum 0 -socket 55029
 Design successfully loaded
-Design Loading Memory Usage: 9172 KB (Peak: 9172 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 9580 KB (Peak: 9580 KB)
-Simulation CPU Usage: 31 ms
+Design Loading Memory Usage: 9880 KB (Peak: 9880 KB)
+Design Loading CPU Usage: 155 ms
