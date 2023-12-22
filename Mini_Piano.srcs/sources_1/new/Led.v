@@ -25,6 +25,7 @@ input clk,
 input rst_n,
 input [7:0] led_in,
 input [7:0] led_in_playmode,
+input [7:0] led_in_learning_mode,
 input [2:0] select_mode,
 output reg [7:0] led_out
     );
@@ -34,6 +35,7 @@ output reg [7:0] led_out
         case(select_mode) 
             3'b011: led <= led_in;
             3'b010: led <= led_in_playmode;
+            3'b101: led <= led_in_learning_mode;
             default: led <= led_in;
         endcase    
     end

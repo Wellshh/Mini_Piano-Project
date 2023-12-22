@@ -19,19 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//自由模式只会显示Free
 module Light_seg_Display (
     input clk,
     input rst_n,
     input [2:0] select_mode,
     input [1:0] State_of_songs,//传入歌曲选择信号
     input start_play,
+    input enable,
     output reg [7:0] sel,  //位选信号，决定8段数码管哪根亮。
     output reg [7:0] seg,//段选信号，四根数码管的位选信号是公共的，只能同时显示。决定单根数码管显示数字或字母。
     output reg [7:0] seg_2
 );
-  parameter T_5ms = 10_00;//利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
-  parameter Freemode = 3'b011,Playmode = 3'b010;
+  parameter T_5ms = 1_0000;//利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
+  parameter Freemode = 3'b011,Playmode = 3'b010,Learning_mode = 3'b101;
   parameter zero = 8'b1111_1100,  //"0"
     one = 8'b0110_0000,  //"1"
     two = 8'b1101_1010,  //"2"
@@ -83,8 +83,9 @@ module Light_seg_Display (
   end
   always @(posedge clk) begin
     case(mode)
-        Freemode: if(select_mode == Playmode) next_mode <= Playmode; else next_mode <= Freemode;
-        Playmode: if(select_mode == Freemode) next_mode <= Freemode; else next_mode <= Playmode;
+        Freemode: if(select_mode == Playmode) next_mode <= Playmode; else if(select_mode == Learning_mode) next_mode <= Learning_mode; else next_mode <= Freemode;
+        Playmode: if(select_mode == Freemode) next_mode <= Freemode; else if(select_mode == Learning_mode) next_mode <= Learning_mode; else next_mode <= Playmode;
+        Learning_mode: if(select_mode == Freemode) next_mode <= Freemode; else if(select_mode == Playmode) next_mode <= Playmode; else next_mode <= Learning_mode;
     endcase
   end
 //状态机，模式切换
@@ -136,14 +137,24 @@ module Light_seg_Display (
                                             display[0] = y;
                                           end 
                                 endcase    
-                              end 
+                              end
+        Learning_mode: begin//学习模式的显示有点问题
+                         display[7] = l;
+                         display[6] = e;
+                         display[5] = a;
+                         display[4] = r;
+                         display[3] = n;
+                         display[2] = i;
+                         display[1] = n;
+                         display[0] = g;
+                       end
                   endcase  
                   end 
         
     endcase 
     end
   always @(posedge clk, negedge rst_n) begin
-    if (rst_n == 1'b0) count <= 32'd0;
+    if (rst_n == 1'b0 || enable == 1'b0 ) count <= 32'd0;
     else if (count < T_5ms - 1'b1) count <= count + 1'b1;
     else count <= 32'd0;
   end
@@ -155,7 +166,7 @@ module Light_seg_Display (
 
   //三段式状态机
   always @(posedge clk or negedge rst_n) begin
-    if (rst_n == 1'b0) state <= S0;
+    if (rst_n == 1'b0 || enable == 1'b0) state <= S0;
     else state <= nextstate;
   end
   //实现动态扫描

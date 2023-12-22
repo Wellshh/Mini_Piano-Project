@@ -24,10 +24,19 @@ module Wave_Generator (
     input clk,
     input rst_n,
     input [31:0] divider,
+    input [2:0] select_mode,
     output reg speaker
 );
   reg [31:0] cnt;
-
+  //enable信号，当不是三种模式时让不让蜂鸣器输出。
+//  reg enable;
+//  always @(*) begin
+//    case(select_mode)
+//    3'b011,3'b010,3'b101: enable <= 1'b1;
+//    default: enable <= 1'b0;    
+//    endcase
+//  end
+  
   always @(posedge clk, negedge rst_n) begin
     if (~rst_n) cnt <= 32'b0;
     else if (cnt < divider - 1'b1) cnt <= cnt + 1'b1;

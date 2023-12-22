@@ -26,6 +26,7 @@ module Library (
     input [6:0] cnt,  //存储曲子中的所有音符的计数器
     input [2:0] select_mode,
     input songs_select, //应该用一位实现时序逻辑,并利用按钮实现。
+    input [6:0] keyboard_input, //键盘输入用于与曲库中的音符进行比较
     output reg [6:0] music,  //存储各个音高的音符
     output reg [1:0] control_group,
     output reg [7:0] led_playmode,
@@ -33,8 +34,27 @@ module Library (
 );
 parameter Little_Star = 2'd0,Happy_Birthday = 2'd1; 
 reg [1:0] next_State_of_songs;
-//状态机,实现切换歌曲的逻辑。
+reg [6:0] cnt_learning_mode;//学习模式的cnt，实现用户输入匹配曲库内音符才能播放下一个音符的操作。
+reg [6:0] real_cnt;//切换后的计数器
 
+//根据模式选择计数器
+    always @(*) begin
+        if(select_mode != 3'b101) real_cnt <= cnt;
+        else real_cnt <= cnt_learning_mode;
+    end
+ //学习模式计数器递增逻辑，需要比对用户的输入和曲谱中的音符(状态机)
+    always @(*) begin
+        if(~rst_n) cnt_learning_mode <= 7'd0;
+        else if(keyboard_input == music) cnt_learning_mode <= cnt_learning_mode + 1'b1;
+        else cnt_learning_mode <= cnt_learning_mode;
+    end
+// reg cnt_state,cnt_next_state;
+// parameter Match = 1'b1, Not_Match = 1'b0; 
+//    always @(*) begin
+//        if(~rst_n) cnt_state <= 
+    
+
+//状态机,实现切换歌曲的逻辑。
 //时序逻辑
     always @(posedge clk,negedge rst_n) begin
         if(~rst_n) State_of_songs <= Little_Star;
@@ -57,7 +77,7 @@ reg [1:0] next_State_of_songs;
      else
         case(State_of_songs)
         Little_Star:
-        case (cnt)  //TODO:后续通过状态指针存入另一首歌,case(cnt,flag)
+        case (real_cnt)  //TODO:后续通过状态指针存入另一首歌,case(cnt,flag)
          7'd0: begin music <= 7'd0; control_group <= 2'd2; end
          7'd1:  begin music <= 7'd0; control_group <= 2'd2;end
          7'd2:  begin music <= 7'd0; control_group <= 2'd2; end
@@ -116,7 +136,7 @@ reg [1:0] next_State_of_songs;
          7'd43:begin music <= 7'd0; control_group <= 2'd2; end
        endcase
        Happy_Birthday:
-            case(cnt)
+            case(real_cnt)
                  7'd0: begin music <= 7'd0; control_group <= 2'd2; end
                  7'd1:  begin music <= 7'd0; control_group <= 2'd2;end
                  7'd2:  begin music <= 7'd0; control_group <= 2'd2; end

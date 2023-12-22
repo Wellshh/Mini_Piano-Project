@@ -14,28 +14,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 30784 
+INFO: Helper process launched with PID 31248 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 387.527 ; gain = 98.211
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 387.926 ; gain = 97.195
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MiniPiano' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v:23]
+INFO: [Synth 8-638] synthesizing module 'MiniPiano' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v:21]
 INFO: [Synth 8-638] synthesizing module 'Buzzer' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
 INFO: [Synth 8-638] synthesizing module 'Speed_Control' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:24]
 	Parameter T_125ms bound to: 100000000 - type: integer 
-CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register cnt_reg in module Speed_Control. [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:51]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register count_reg in module Speed_Control. [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:39]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register cnt_reg in module Speed_Control. [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:52]
 INFO: [Synth 8-256] done synthesizing module 'Speed_Control' (1#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:24]
+INFO: [Synth 8-638] synthesizing module 'Keyboard' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:44]
+INFO: [Synth 8-256] done synthesizing module 'Keyboard' (2#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
 INFO: [Synth 8-638] synthesizing module 'Library' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:23]
 	Parameter Little_Star bound to: 2'b00 
 	Parameter Happy_Birthday bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:46]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:60]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:119]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:58]
-WARNING: [Synth 8-5788] Register control_group_reg in module Library is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:61]
-INFO: [Synth 8-256] done synthesizing module 'Library' (2#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:23]
-INFO: [Synth 8-638] synthesizing module 'Keyboard' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:43]
-INFO: [Synth 8-256] done synthesizing module 'Keyboard' (3#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Keyboard.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:66]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:80]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:139]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:78]
+WARNING: [Synth 8-5788] Register control_group_reg in module Library is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:81]
+INFO: [Synth 8-256] done synthesizing module 'Library' (3#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:23]
+INFO: [Synth 8-638] synthesizing module 'Learning_Mode' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Learning_Mode.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Learning_Mode' (4#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Learning_Mode.v:23]
 INFO: [Synth 8-638] synthesizing module 'Frequency_Divider' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:64]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:70]
@@ -45,16 +48,17 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Well
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:94]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:100]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:60]
-INFO: [Synth 8-256] done synthesizing module 'Frequency_Divider' (4#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Frequency_Divider' (5#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:23]
 INFO: [Synth 8-638] synthesizing module 'Wave_Generator' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Wave_Generator' (5#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Wave_Generator' (6#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:23]
 INFO: [Synth 8-638] synthesizing module 'Led' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Led' (6#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Buzzer' (7#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
-INFO: [Synth 8-638] synthesizing module 'Light_seg_Display' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:23]
-	Parameter T_5ms bound to: 1000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Led' (7#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Buzzer' (8#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Buzzer.v:23]
+INFO: [Synth 8-638] synthesizing module 'Light_seg_Display' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:22]
+	Parameter T_5ms bound to: 10000 - type: integer 
 	Parameter Freemode bound to: 3'b011 
 	Parameter Playmode bound to: 3'b010 
+	Parameter Learning_mode bound to: 3'b101 
 	Parameter zero bound to: 8'b11111100 
 	Parameter one bound to: 8'b01100000 
 	Parameter two bound to: 8'b11011010 
@@ -102,25 +106,31 @@ INFO: [Synth 8-638] synthesizing module 'Light_seg_Display' [C:/Users/Wells/Desk
 	Parameter S7 bound to: 4'b0111 
 	Parameter S8 bound to: 4'b1000 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:85]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:117]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:93]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:163]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:191]
-WARNING: [Synth 8-5788] Register seg_reg in module Light_seg_Display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:189]
-WARNING: [Synth 8-5788] Register seg_2_reg in module Light_seg_Display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:209]
-INFO: [Synth 8-256] done synthesizing module 'Light_seg_Display' (8#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:23]
+WARNING: [Synth 8-151] case item 3'b101 is unreachable [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:141]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:118]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:94]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:174]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:202]
+WARNING: [Synth 8-5788] Register seg_reg in module Light_seg_Display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:200]
+WARNING: [Synth 8-5788] Register seg_2_reg in module Light_seg_Display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:220]
+INFO: [Synth 8-256] done synthesizing module 'Light_seg_Display' (9#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:22]
 INFO: [Synth 8-638] synthesizing module 'Led_Display_Mode' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led_Display_Mode.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Led_Display_Mode' (9#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led_Display_Mode.v:23]
-INFO: [Synth 8-256] done synthesizing module 'MiniPiano' (10#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Led_Display_Mode' (10#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Led_Display_Mode.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MiniPiano' (11#1) [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v:21]
 WARNING: [Synth 8-3331] design Led has unconnected port clk
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[2]
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[1]
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[0]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port clk
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port rst_n
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[2]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[1]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[0]
 WARNING: [Synth 8-3331] design Keyboard has unconnected port select_mode[2]
 WARNING: [Synth 8-3331] design Keyboard has unconnected port select_mode[1]
 WARNING: [Synth 8-3331] design Keyboard has unconnected port select_mode[0]
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[2]
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[1]
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.613 ; gain = 150.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 439.863 ; gain = 149.133
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -130,7 +140,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 439.613 ; gain = 150.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 439.863 ; gain = 149.133
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -146,34 +156,34 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 772.703 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 772.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 772.410 ; gain = 481.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 772.410 ; gain = 481.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 772.410 ; gain = 481.680
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "is_Reaching_125ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:51]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:39]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:52]
+INFO: [Synth 8-5546] ROM "note_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "led_playmode" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "music" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "music" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "control_group" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "note_out" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:32]
+INFO: [Synth 8-5546] ROM "led_learning_mode" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:41]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Light_seg_Display'
-INFO: [Synth 8-5544] ROM "next_mode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "next_mode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_mode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "is_Reaching_5ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -189,9 +199,11 @@ INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "nextstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enable" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_learning_mode_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Library.v:47]
 WARNING: [Synth 8-327] inferring latch for variable 'frequency_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v:61]
-WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:164]
-WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:164]
+WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:175]
+WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:175]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -206,9 +218,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'nextstate_reg' [C:/Users/We
                       S8 |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Light_seg_Display'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:164]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_reg' [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v:175]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 772.410 ; gain = 481.680
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,11 +234,10 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     27 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 2     
 	                8 Bit    Registers := 11    
 	                7 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
@@ -234,32 +245,34 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 7     
-	   2 Input     27 Bit        Muxes := 2     
-	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 8     
-	   8 Input      8 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 7     
+	   8 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 2     
 	   6 Input      8 Bit        Muxes := 6     
-	   4 Input      8 Bit        Muxes := 1     
 	   9 Input      8 Bit        Muxes := 3     
+	  10 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
 	  37 Input      7 Bit        Muxes := 1     
 	  47 Input      7 Bit        Muxes := 1     
-	   9 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
 	  19 Input      4 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 10    
-	  39 Input      2 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	  39 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 12    
+	  10 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
 	  45 Input      1 Bit        Muxes := 1     
 	  39 Input      1 Bit        Muxes := 2     
-	   9 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 2     
 	   8 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -267,25 +280,41 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module MiniPiano 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module Speed_Control 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     27 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     27 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Keyboard 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	  10 Input      7 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	  10 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module Library 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
 +---Registers : 
 	                7 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
 	  37 Input      7 Bit        Muxes := 1     
 	  47 Input      7 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
@@ -293,19 +322,11 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 5     
 	  45 Input      1 Bit        Muxes := 1     
 	  39 Input      1 Bit        Muxes := 2     
-Module Keyboard 
+Module Learning_Mode 
 Detailed RTL Component Info : 
-+---Registers : 
-	                7 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
 +---Muxes : 
-	   9 Input      7 Bit        Muxes := 1     
-	   9 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   9 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
 Module Frequency_Divider 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -313,7 +334,7 @@ Detailed RTL Component Info :
 	                7 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 7     
-	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
@@ -327,17 +348,18 @@ Detailed RTL Component Info :
 Module Led 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 Module Light_seg_Display 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	                8 Bit    Registers := 11    
 	                3 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
 	   6 Input      8 Bit        Muxes := 6     
 	   2 Input      8 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 1     
@@ -345,10 +367,12 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
 	  19 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -366,14 +390,19 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "is_Reaching_125ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:51]
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:32]
-INFO: [Synth 8-5546] ROM "k1/note_out" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:39]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v:52]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v:41]
 INFO: [Synth 8-5545] ROM "light/is_Reaching_5ms" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design Led has unconnected port clk
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[2]
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[1]
-WARNING: [Synth 8-3331] design Library has unconnected port select_mode[0]
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[2]
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[1]
+WARNING: [Synth 8-3331] design Wave_Generator has unconnected port select_mode[0]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port clk
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port rst_n
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[2]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[1]
+WARNING: [Synth 8-3331] design Learning_Mode has unconnected port select_mode[0]
 INFO: [Synth 8-3886] merging instance 'light/count_reg[30]' (FDC) to 'light/count_reg[31]'
 INFO: [Synth 8-3886] merging instance 'light/count_reg[31]' (FDC) to 'light/count_reg[29]'
 INFO: [Synth 8-3886] merging instance 'light/count_reg[29]' (FDC) to 'light/count_reg[28]'
@@ -391,22 +420,11 @@ INFO: [Synth 8-3886] merging instance 'light/count_reg[18]' (FDC) to 'light/coun
 INFO: [Synth 8-3886] merging instance 'light/count_reg[17]' (FDC) to 'light/count_reg[16]'
 INFO: [Synth 8-3886] merging instance 'light/count_reg[16]' (FDC) to 'light/count_reg[15]'
 INFO: [Synth 8-3886] merging instance 'light/count_reg[15]' (FDC) to 'light/count_reg[14]'
-INFO: [Synth 8-3886] merging instance 'light/count_reg[14]' (FDC) to 'light/count_reg[13]'
-INFO: [Synth 8-3886] merging instance 'light/count_reg[13]' (FDC) to 'light/count_reg[12]'
-INFO: [Synth 8-3886] merging instance 'light/count_reg[12]' (FDC) to 'light/count_reg[11]'
-INFO: [Synth 8-3886] merging instance 'light/count_reg[11]' (FDC) to 'light/count_reg[10]'
-INFO: [Synth 8-3886] merging instance 'light/count_reg[10]' (FDC) to 'buzzer/u3/divider_reg[31]'
+INFO: [Synth 8-3886] merging instance 'light/count_reg[14]' (FDC) to 'buzzer/u3/divider_reg[31]'
 INFO: [Synth 8-3886] merging instance 'buzzer/k1/note_out_reg[6]' (FDCE) to 'buzzer/k1/note_out_reg[3]'
-INFO: [Synth 8-3886] merging instance 'buzzer/k1/note_out_reg[5]' (FDCE) to 'buzzer/k1/note_out_reg[3]'
 INFO: [Synth 8-3886] merging instance 'buzzer/k1/note_out_reg[3]' (FDCE) to 'buzzer/k1/note_out_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buzzer/k1/note_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\light/next_mode_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\light/next_mode_reg[1] )
-INFO: [Synth 8-3886] merging instance 'buzzer/u1/count_reg[30]' (FDC) to 'buzzer/u3/divider_reg[31]'
-INFO: [Synth 8-3886] merging instance 'buzzer/u1/count_reg[31]' (FDC) to 'buzzer/u3/divider_reg[31]'
-INFO: [Synth 8-3886] merging instance 'buzzer/u1/count_reg[29]' (FDC) to 'buzzer/u3/divider_reg[31]'
-INFO: [Synth 8-3886] merging instance 'buzzer/u1/count_reg[28]' (FDC) to 'buzzer/u3/divider_reg[31]'
-INFO: [Synth 8-3886] merging instance 'buzzer/u1/count_reg[27]' (FDC) to 'buzzer/u3/divider_reg[31]'
+INFO: [Synth 8-3886] merging instance 'buzzer/k1/note_out_reg[4]' (FDCE) to 'buzzer/k1/note_out_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buzzer/k1/note_out_reg[5] )
 INFO: [Synth 8-3886] merging instance 'buzzer/u3/frequency_reg[11]' (LD) to 'buzzer/u3/frequency_reg[31]'
 INFO: [Synth 8-3886] merging instance 'buzzer/u3/frequency_reg[12]' (LD) to 'buzzer/u3/frequency_reg[31]'
 INFO: [Synth 8-3886] merging instance 'buzzer/u3/frequency_reg[13]' (LD) to 'buzzer/u3/frequency_reg[31]'
@@ -480,12 +498,10 @@ INFO: [Synth 8-3886] merging instance 'buzzer/u3/music_select_reg[5]' (FD) to 'b
 INFO: [Synth 8-3886] merging instance 'buzzer/u3/music_select_reg[3]' (FD) to 'buzzer/u3/music_select_reg[4]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\buzzer/u3/music_select_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\light/seg_2_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (buzzer/k1/note_out_reg[5]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (buzzer/u2/music_reg[4]) is unused and will be removed from module MiniPiano.
-WARNING: [Synth 8-3332] Sequential element (buzzer/k1/note_out_reg[4]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (buzzer/u3/frequency_reg[31]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (buzzer/u3/music_select_reg[4]) is unused and will be removed from module MiniPiano.
-WARNING: [Synth 8-3332] Sequential element (light/next_mode_reg[2]) is unused and will be removed from module MiniPiano.
-WARNING: [Synth 8-3332] Sequential element (light/next_mode_reg[1]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (light/seg_reg[0]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (light/seg_2_reg[0]) is unused and will be removed from module MiniPiano.
 WARNING: [Synth 8-3332] Sequential element (light/display_reg[4][5]) is unused and will be removed from module MiniPiano.
@@ -495,9 +511,18 @@ INFO: [Synth 8-3886] merging instance 'light/display_reg[3][1]' (FDE) to 'light/
 INFO: [Synth 8-3886] merging instance 'light/display_reg[2][1]' (FDE) to 'light/display_reg[7][5]'
 INFO: [Synth 8-3886] merging instance 'light/display_reg[0][3]' (FDE) to 'light/display_reg[3][6]'
 INFO: [Synth 8-3886] merging instance 'light/display_reg[1][4]' (FDE) to 'light/display_reg[6][5]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[3][6]' (FDE) to 'light/display_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[2][6]' (FDE) to 'light/display_reg[5][1]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[0][7]' (FDE) to 'light/display_reg[3][7]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[3][7]' (FDE) to 'light/display_reg[7][7]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[2][7]' (FDE) to 'light/display_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[4][1]' (FDE) to 'light/display_reg[6][5]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[5][1]' (FDE) to 'light/display_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[4][6]' (FDE) to 'light/display_reg[7][6]'
+INFO: [Synth 8-3886] merging instance 'light/display_reg[0][6]' (FDE) to 'light/display_reg[1][7]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 772.410 ; gain = 481.680
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -509,13 +534,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 772.922 ; gain = 482.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 772.703 ; gain = 483.387
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 773.742 ; gain = 483.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -527,7 +552,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -551,7 +576,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -564,7 +589,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -576,25 +601,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -611,18 +636,18 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   213|
-|3     |LUT1   |    49|
-|4     |LUT2   |   430|
-|5     |LUT3   |   280|
-|6     |LUT4   |    83|
-|7     |LUT5   |    46|
-|8     |LUT6   |    76|
-|9     |FDCE   |   109|
+|2     |CARRY4 |   218|
+|3     |LUT1   |    51|
+|4     |LUT2   |   452|
+|5     |LUT3   |   287|
+|6     |LUT4   |    77|
+|7     |LUT5   |    63|
+|8     |LUT6   |    53|
+|9     |FDCE   |    86|
 |10    |FDPE   |    21|
-|11    |FDRE   |    34|
+|11    |FDRE   |    69|
 |12    |LD     |    15|
-|13    |LDC    |     4|
+|13    |LDC    |    11|
 |14    |IBUF   |    17|
 |15    |OBUF   |    37|
 +------+-------+------+
@@ -631,36 +656,36 @@ Report Instance Areas:
 +------+---------+------------------+------+
 |      |Instance |Module            |Cells |
 +------+---------+------------------+------+
-|1     |top      |                  |  1415|
-|2     |  buzzer |Buzzer            |  1223|
+|1     |top      |                  |  1458|
+|2     |  buzzer |Buzzer            |  1239|
 |3     |    k1   |Keyboard          |    22|
-|4     |    u1   |Speed_Control     |   108|
-|5     |    u2   |Library           |    18|
+|4     |    u1   |Speed_Control     |    74|
+|5     |    u2   |Library           |    68|
 |6     |    u3   |Frequency_Divider |   937|
 |7     |    u4   |Wave_Generator    |   138|
-|8     |  light  |Light_seg_Display |   136|
+|8     |  light  |Light_seg_Display |   161|
 +------+---------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 797.816 ; gain = 175.410
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 797.816 ; gain = 508.500
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 801.270 ; gain = 177.992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 801.270 ; gain = 510.539
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 249 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 261 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 19 instances were transformed.
+  A total of 26 instances were transformed.
   LD => LDCE: 15 instances
-  LDC => LDCE: 4 instances
+  LDC => LDCE: 11 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-189 Infos, 33 Warnings, 1 Critical Warnings and 0 Errors encountered.
+188 Infos, 45 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 797.816 ; gain = 521.078
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 801.270 ; gain = 522.930
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1/MiniPiano.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MiniPiano_utilization_synth.rpt -pb MiniPiano_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 797.816 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 22 00:08:19 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 801.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 22 16:17:13 2023...

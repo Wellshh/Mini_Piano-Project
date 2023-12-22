@@ -27,6 +27,7 @@ input lower,
 input rst,
 input clk,
 input [2:0] select_mode,
+input enable,//添加全局enable信号
 output reg [6:0] note_out,
 output reg [1:0] group
     );
@@ -49,7 +50,7 @@ output reg [1:0] group
         
         
         always @(posedge clk,negedge rst) begin
-        if(~rst) note_out <= 7'd0;
+        if(~rst || enable == 1'b0) note_out <= 7'd0;
         else 
         case(note)
         8'b0000_0000: note_out <= 7'd0;

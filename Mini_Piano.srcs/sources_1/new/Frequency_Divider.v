@@ -35,7 +35,7 @@ reg [1:0] change_group;
 //状态切换部分，后续在这个地方加入学习模式。
 always @(posedge clk) begin
 case(select_mode)
-    3'b011: music_select <= music_freemode; 
+    3'b011,3'b101: music_select <= music_freemode; 
     3'b010: music_select<= music_playmode;
     default: music_select <= music_freemode;
 endcase//必须用always block不能用assign block，因为assign只会执行一次，后续无法完成状态切换。
