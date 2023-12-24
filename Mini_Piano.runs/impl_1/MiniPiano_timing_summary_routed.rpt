@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 24 13:10:04 2023
+| Date         : Sun Dec 24 22:45:52 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file MiniPiano_timing_summary_routed.rpt -rpx MiniPiano_timing_summary_routed.rpx -warn_on_violation
 | Design       : MiniPiano
@@ -52,9 +52,9 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 191 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 201 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 8 register/latch pins with no clock driven by root clock pin: rst_n (HIGH)
+ There are 9 register/latch pins with no clock driven by root clock pin: rst_n (HIGH)
 
  There are 12 register/latch pins with no clock driven by root clock pin: select_mode[0] (HIGH)
 
@@ -62,7 +62,7 @@ Table of Contents
 
  There are 12 register/latch pins with no clock driven by root clock pin: select_mode[2] (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: start_play (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: start_play (HIGH)
 
  There are 11 register/latch pins with no clock driven by root clock pin: buzzer/k1/group_reg[0]/Q (HIGH)
 
@@ -74,9 +74,9 @@ Table of Contents
 
  There are 11 register/latch pins with no clock driven by root clock pin: buzzer/k1/note_out_reg[2]/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: buzzer/u2/State_of_songs_reg[0]/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/State_of_songs_reg[0]/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: buzzer/u2/State_of_songs_reg[1]/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/State_of_songs_reg[1]/Q (HIGH)
 
  There are 11 register/latch pins with no clock driven by root clock pin: buzzer/u2/control_group_reg[0]/Q (HIGH)
 
@@ -98,6 +98,8 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: light/display_reg[7][1]/Q (HIGH)
 
+ There is 1 register/latch pin with no clock driven by root clock pin: light/display_reg[7][2]/Q (HIGH)
+
  There is 1 register/latch pin with no clock driven by root clock pin: light/display_reg[7][4]/Q (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: light/display_reg[7][5]/Q (HIGH)
@@ -106,23 +108,23 @@ Table of Contents
 
  There is 1 register/latch pin with no clock driven by root clock pin: light/display_reg[7][7]/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_C/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_C/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_LDC/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_LDC/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_P/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[0]_P/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_C/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_C/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_LDC/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_LDC/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_P/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[1]_P/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_C/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_C/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_LDC/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_LDC/Q (HIGH)
 
- There are 31 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_P/Q (HIGH)
+ There are 54 register/latch pins with no clock driven by root clock pin: light/mode_reg[2]_P/Q (HIGH)
 
 
 2. checking constant_clock
@@ -137,14 +139,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 457 pins that are not constrained for maximum delay. (HIGH)
+ There are 507 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 16 input ports with no input delay specified. (HIGH)
+ There are 17 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

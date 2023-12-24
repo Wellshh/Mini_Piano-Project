@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Sun Dec 24 13:09:48 2023
+| Date                      : Sun Dec 24 22:45:35 2023
 | Host                      : LegionWells running 64-bit major release  (build 9200)
 | Command                   : report_io -file MiniPiano_io_placed.rpt
 | Design                    : MiniPiano
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            61 |
+|            62 |
 +---------------+
 
 
@@ -342,7 +342,7 @@ Table of Contents
 | U17        |                   | High Range | IO_L17P_T2_A14_D30_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U18        |                   | High Range | IO_L17N_T2_A13_D29_14        | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V1         | stop_button       | High Range | IO_L7N_T1_34                 | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| V2         |                   | High Range | IO_L9N_T1_DQS_34             | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| V2         | show_level        | High Range | IO_L9N_T1_DQS_34             | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | V3         |                   |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | V4         |                   | High Range | IO_L10N_T1_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | V5         |                   | High Range | IO_L10P_T1_34                | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 24 13:10:03 2023
+| Date         : Sun Dec 24 22:45:50 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_drc -file MiniPiano_drc_routed.rpt -pb MiniPiano_drc_routed.pb -rpx MiniPiano_drc_routed.rpx
 | Design       : MiniPiano
@@ -54,52 +54,52 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net light/display_reg[7][6]_i_2_n_0 is a gated clock net sourced by a combinational pin light/display_reg[7][6]_i_2/O, cell light/display_reg[7][6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/mode_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/mode_reg[0]_LDC_i_1/O, cell light/mode_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net light/mode_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/mode_reg[0]_LDC_i_1/O, cell light/mode_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/mode_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/mode_reg[1]_LDC_i_1/O, cell light/mode_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net light/mode_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/mode_reg[1]_LDC_i_1/O, cell light/mode_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/mode_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/mode_reg[2]_LDC_i_1/O, cell light/mode_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net light/mode_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/mode_reg[2]_LDC_i_1/O, cell light/mode_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/nextstate is a gated clock net sourced by a combinational pin light/FSM_sequential_nextstate_reg[3]_i_2/O, cell light/FSM_sequential_nextstate_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net light/nextstate is a gated clock net sourced by a combinational pin light/FSM_sequential_nextstate_reg[3]_i_2/O, cell light/FSM_sequential_nextstate_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[1]_LDC_i_1/O, cell light/seg_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net light/seg_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/seg_reg[1]_LDC_i_1/O, cell light/seg_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[2]_LDC_i_1/O, cell light/seg_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net light/seg_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/seg_reg[4]_LDC_i_1/O, cell light/seg_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[4]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[4]_LDC_i_1/O, cell light/seg_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net light/seg_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/seg_reg[5]_LDC_i_1/O, cell light/seg_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[5]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[5]_LDC_i_1/O, cell light/seg_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net light/seg_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/seg_reg[6]_LDC_i_1/O, cell light/seg_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[6]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[6]_LDC_i_1/O, cell light/seg_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net light/seg_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin light/seg_reg[7]_LDC_i_1/O, cell light/seg_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net light/seg_reg[7]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin light/seg_reg[7]_LDC_i_1/O, cell light/seg_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

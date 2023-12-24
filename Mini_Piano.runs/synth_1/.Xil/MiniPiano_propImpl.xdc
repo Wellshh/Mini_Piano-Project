@@ -121,3 +121,5 @@ set_property src_info {type:XDC file:1 line:61 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN H5 [get_ports {led_record_out[1]}]
 set_property src_info {type:XDC file:1 line:62 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN H6 [get_ports {led_record_out[0]}]
+set_property src_info {type:XDC file:1 line:63 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V2 [get_ports {show_level}]

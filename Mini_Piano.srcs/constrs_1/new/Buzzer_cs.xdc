@@ -60,6 +60,8 @@ set_property PACKAGE_PIN J5 [get_ports {flag_start_out}]
 set_property PACKAGE_PIN K6 [get_ports {flag_play_out}]
 set_property PACKAGE_PIN H5 [get_ports {led_record_out[1]}]
 set_property PACKAGE_PIN H6 [get_ports {led_record_out[0]}]
+set_property PACKAGE_PIN V2 [get_ports {show_level}]
+
 
 
 

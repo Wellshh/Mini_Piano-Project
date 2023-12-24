@@ -27,7 +27,9 @@ input [2:0] select_mode,
 input start_play,
 output reg clk_out
     );
-    parameter period = 32'd2500_0000;
+//    parameter period = 32'd2500_0000;
+      parameter period = 32'd1_0000_0000;
+//      parameter period = 32'd4;
     reg [31:0] count;
     always @(posedge clk,negedge rst_n) begin
         if(~rst_n || select_mode != 3'b001 || start_play == 1'b0) begin

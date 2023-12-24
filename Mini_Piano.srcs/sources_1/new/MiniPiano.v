@@ -41,7 +41,6 @@ output [2:0] mode_light,
 output flag_start_out,
 output flag_play_out,
 output [1:0] led_record_out
-
   );
   wire [1:0] State_of_songs;
   reg enable;//创建全局enable信号
@@ -54,7 +53,7 @@ output [1:0] led_record_out
       endcase
     end
   Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,speaker,led_out,State_of_songs,flag_start_out,flag_play_out,user_state,user_level);
-  Light_seg_Display light (clk,rst_n,select_mode,State_of_songs,start_play,enable,sel,seg,seg_2);
+  Light_seg_Display light (clk,rst_n,select_mode,State_of_songs,start_play,enable,user_level,user_state,show_level,sel,seg,seg_2);
   Led_Display_Mode display (select_mode,mode_light);
   assign play_led = start_play;
   assign led_record_out = {start_button,stop_button};

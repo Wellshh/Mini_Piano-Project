@@ -36,6 +36,7 @@ module Library (
     output reg [1:0] State_of_songs,//将歌曲状态输出，方便数码管判定是哪首歌
     output reg [6:0] user_level,
     output reg [2:0] user_state
+//    output clk_out
 );
 parameter Little_Star = 2'd0,Happy_Birthday = 2'd1,His_Theme = 2'd2;
 parameter User_0 = 3'd0,User_1 = 3'd1,User_2 = 3'd2;
@@ -105,7 +106,7 @@ reg [2:0] user_next_state;
 //使用新的时间周期每隔1/4秒检测用户的输入，如果输入与对应的曲谱音符匹配，就让评分增加。注意更新的是相应用户的评分。
     clk_div cd1 (.clk(clk),.rst_n(rst_n),.select_mode(select_mode),.start_play(start_play),.clk_out(clk_out));
     always @(posedge clk_out,negedge rst_n) begin
-        if(~rst_n) level[user_state] <= 7'd0;
+        if(~rst_n) begin level[user_state] <= 7'd0;  end
         else if(keyboard_input == music) level[user_state] <= level[user_state] + 1'b1;
         else level[user_state] <= level[user_state];
     end
@@ -115,13 +116,7 @@ reg [2:0] user_next_state;
         if(show_level) user_level = level[user_state];
         else user_level = 7'd0;
     end
-
-        
-        
-
-    
-    
-
+  
 //状态机,实现切换歌曲的逻辑。
 //时序逻辑
     always @(posedge clk,negedge rst_n) begin

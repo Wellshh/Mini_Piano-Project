@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703394528">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703429075">
   <File Type="PWROPT-DCP" Name="MiniPiano_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="MiniPiano_power_routed.rpt"/>
   <File Type="PA-TCL" Name="MiniPiano.tcl"/>
@@ -101,6 +101,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Led_Display_Mode.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Level_Calculate.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

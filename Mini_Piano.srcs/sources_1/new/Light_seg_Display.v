@@ -270,10 +270,47 @@ module Light_seg_Display (
                                         display[1] = e;
                                         display[0] = e;
                                     end
-                                    
-                                    
-                                    
-                                    
+                                    D_Level: begin
+                                        display[7] = d;
+                                        display[6] = d;
+                                        display[5] = d;
+                                        display[4] = d;
+                                        display[3] = d;
+                                        display[2] = d;
+                                        display[1] = d;
+                                        display[0] = d;
+                                    end
+                                    C_Level: begin
+                                        display[7] = c;
+                                        display[6] = c;
+                                        display[5] = c;
+                                        display[4] = c;
+                                        display[3] = c;
+                                        display[2] = c;
+                                        display[1] = c;
+                                        display[0] = c;
+                                    end
+                                    B_Level: begin
+                                        display[7] = b;
+                                        display[6] = b;
+                                        display[5] = b;
+                                        display[4] = b;
+                                        display[3] = b;
+                                        display[2] = b;
+                                        display[1] = b;
+                                        display[0] = b;
+                                    end
+                                    A_Level: begin
+                                        display[7] = a;
+                                        display[6] = a;
+                                        display[5] = a;
+                                        display[4] = a;
+                                        display[3] = a;
+                                        display[2] = a;
+                                        display[1] = a;
+                                        display[0] = a;
+                                    end
+                                                  
                                 endcase
                                 
                                 end
