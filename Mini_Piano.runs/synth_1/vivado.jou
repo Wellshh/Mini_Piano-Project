@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Dec 23 21:36:26 2023
-# Process ID: 34168
+# Start of session at: Sun Dec 24 13:08:49 2023
+# Process ID: 13892
 # Current directory: C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1
 # Command line: vivado.exe -log MiniPiano.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MiniPiano.tcl
 # Log file: C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.runs/synth_1/MiniPiano.vds

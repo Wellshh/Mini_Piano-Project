@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sat Dec 23 21:37:25 2023
+| Date         : Sun Dec 24 13:09:48 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MiniPiano_control_sets_placed.rpt
 | Design       : MiniPiano
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              55 |           22 |
-| No           | No                    | Yes                    |             106 |           60 |
+| No           | No                    | No                     |              55 |           21 |
+| No           | No                    | Yes                    |             106 |           58 |
 | No           | Yes                   | No                     |              40 |           16 |
-| Yes          | No                    | No                     |              14 |            5 |
+| Yes          | No                    | No                     |              14 |            3 |
 | Yes          | No                    | Yes                    |              23 |           13 |
 | Yes          | Yes                   | No                     |               7 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,46 +45,46 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------+------------------------------------------+-------------------------------+------------------+----------------+
-|           Clock Signal           |               Enable Signal              |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+----------------------------------+------------------------------------------+-------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[0]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/seg_reg[1]_LDC_i_2_n_0  |                1 |              1 |
-|  light/mode_reg[2]_LDC_i_1_n_0   |                                          | light/mode_reg[2]_LDC_i_2_n_0 |                1 |              1 |
-|  light/mode_reg[0]_LDC_i_1_n_0   |                                          | light/mode_reg[0]_LDC_i_2_n_0 |                1 |              1 |
-|  light/mode_reg[1]_LDC_i_1_n_0   |                                          | light/mode_reg[1]_LDC_i_2_n_0 |                1 |              1 |
-|  light/seg_reg[4]_LDC_i_1_n_0    |                                          | light/seg_reg[4]_LDC_i_2_n_0  |                1 |              1 |
-|  light/seg_reg[1]_LDC_i_1_n_0    |                                          | light/seg_reg[1]_LDC_i_2_n_0  |                1 |              1 |
-|  light/seg_reg[6]_LDC_i_1_n_0    |                                          | light/seg_reg[6]_LDC_i_2_n_0  |                1 |              1 |
-|  light/seg_reg[5]_LDC_i_1_n_0    |                                          | light/seg_reg[5]_LDC_i_2_n_0  |                1 |              1 |
-|  light/seg_reg[7]_LDC_i_1_n_0    |                                          | light/seg_reg[7]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/seg_reg[5]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/seg_reg[6]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[1]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[0]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[2]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[1]_LDC_i_2_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/mode_reg[2]_LDC_i_1_n_0 |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/seg_reg[4]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   |                                          | light/seg_reg[7]_LDC_i_2_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | light/seg_reg[4]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | light/seg_reg[1]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | light/seg_reg[6]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | light/seg_reg[5]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | light/seg_reg[7]_LDC_i_1_n_0  |                1 |              1 |
-|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                     | buzzer/u4/cnt_reg[31]_0       |                2 |              3 |
-|  light/nextstate                 |                                          |                               |                2 |              4 |
-|  clk_IBUF_BUFG                   | buzzer/k1/cnt_learning_mode_reg[6][0]    | buzzer/u4/cnt_reg[31]_0       |                3 |              7 |
-|  clk_IBUF_BUFG                   | buzzer/u1/is_Reaching_125ms_carry__1_n_1 | buzzer/u1/cnt[6]_i_1_n_0      |                2 |              7 |
-|  clk_IBUF_BUFG                   | light/seg_2[7]_i_1_n_0                   |                               |                2 |              7 |
-|  clk_IBUF_BUFG                   | buzzer/u1/T_final_next                   |                               |                3 |              7 |
-|  clk_IBUF_BUFG                   | light/nextstate                          | buzzer/u4/cnt_reg[31]_0       |                3 |              8 |
-|  clk_IBUF_BUFG                   |                                          |                               |                5 |              9 |
-|  buzzer/k1/E[0]                  |                                          |                               |                4 |             11 |
-|  light/display_reg[7][6]_i_2_n_0 |                                          |                               |               11 |             31 |
-|  clk_IBUF_BUFG                   |                                          | buzzer/u1/count[0]_i_1__0_n_0 |                8 |             32 |
-|  clk_IBUF_BUFG                   |                                          | buzzer/u4/cnt_reg[31]_0       |               49 |             95 |
-+----------------------------------+------------------------------------------+-------------------------------+------------------+----------------+
++----------------------------------+----------------------------------------+-------------------------------+------------------+----------------+
+|           Clock Signal           |              Enable Signal             |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------------------------+----------------------------------------+-------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/seg_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  light/mode_reg[0]_LDC_i_1_n_0   |                                        | light/mode_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  light/mode_reg[1]_LDC_i_1_n_0   |                                        | light/mode_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  light/seg_reg[5]_LDC_i_1_n_0    |                                        | light/seg_reg[5]_LDC_i_2_n_0  |                1 |              1 |
+|  light/seg_reg[1]_LDC_i_1_n_0    |                                        | light/seg_reg[1]_LDC_i_2_n_0  |                1 |              1 |
+|  light/mode_reg[2]_LDC_i_1_n_0   |                                        | light/mode_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  light/seg_reg[4]_LDC_i_1_n_0    |                                        | light/seg_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  light/seg_reg[6]_LDC_i_1_n_0    |                                        | light/seg_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  light/seg_reg[7]_LDC_i_1_n_0    |                                        | light/seg_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/seg_reg[4]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/seg_reg[1]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/mode_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/seg_reg[7]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                        | light/seg_reg[6]_LDC_i_2_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | light/seg_reg[5]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | light/seg_reg[1]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | light/seg_reg[4]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | light/seg_reg[6]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | light/seg_reg[7]_LDC_i_1_n_0  |                1 |              1 |
+|  clk_IBUF_BUFG                   | light/seg[3]_i_1_n_0                   | buzzer/u4/cnt_reg[31]_0       |                2 |              3 |
+|  light/nextstate                 |                                        |                               |                3 |              4 |
+|  clk_IBUF_BUFG                   | buzzer/u2/cnt_learning_mode[6]_i_1_n_0 | buzzer/u4/cnt_reg[31]_0       |                2 |              7 |
+|  clk_IBUF_BUFG                   | buzzer/u1/T_final_next                 |                               |                1 |              7 |
+|  clk_IBUF_BUFG                   | buzzer/u1/sel                          | buzzer/u1/cnt0                |                2 |              7 |
+|  clk_IBUF_BUFG                   | light/seg_2[7]_i_1_n_0                 |                               |                2 |              7 |
+|  clk_IBUF_BUFG                   | light/nextstate                        | buzzer/u4/cnt_reg[31]_0       |                4 |              8 |
+|  clk_IBUF_BUFG                   |                                        |                               |                4 |              9 |
+|  buzzer/u2/E[0]                  |                                        |                               |                4 |             11 |
+|  light/display_reg[7][6]_i_2_n_0 |                                        |                               |               10 |             31 |
+|  clk_IBUF_BUFG                   |                                        | buzzer/u1/count[0]_i_1_n_0    |                8 |             32 |
+|  clk_IBUF_BUFG                   |                                        | buzzer/u4/cnt_reg[31]_0       |               47 |             95 |
++----------------------------------+----------------------------------------+-------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+

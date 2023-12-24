@@ -26,12 +26,17 @@ module Light_seg_Display (
     input [1:0] State_of_songs,//传入歌曲选择信号
     input start_play,
     input enable,
+    input [6:0] user_level,//从Library模块中传来的评分信号，需要在该模块中转换成能够显示的字母。
+    input [2:0] user_state,//当前的用户
+    input show_level,
     output reg [7:0] sel,  //位选信号，决定8段数码管哪根亮。
     output reg [7:0] seg,//段选信号，四根数码管的位选信号是公共的，只能同时显示。决定单根数码管显示数字或字母。
     output reg [7:0] seg_2
 );
   parameter T_5ms = 1_0000;//利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
-  parameter Freemode = 3'b011,Playmode = 3'b010,Learning_mode = 3'b101;
+  parameter Freemode = 3'b011,Playmode = 3'b010,Learning_mode = 3'b101,Practice_mode = 3'b001;
+  parameter User_0 = 3'd0,User_1 = 3'd1,User_2 = 3'd2;
+  parameter G_Level = 3'd0,F_Level = 3'd1,E_Level = 3'd2,D_Level = 3'd3,C_Level = 3'd4,B_Level = 3'd5,A_Level = 3'd6;
   parameter zero = 8'b1111_1100,  //"0"
     one = 8'b0110_0000,  //"1"
     two = 8'b1101_1010,  //"2"
@@ -74,7 +79,12 @@ module Light_seg_Display (
   reg [31:0] count;
   wire is_Reaching_5ms;
   reg [7:0] display [7:0]; //一个大小为8，且每一列都可以存8位的二维数组，记录每根数码管对应的段选信号。
+  wire [2:0] level;//转换后的得分
   
+  
+  //实例化评分计算模块
+    Level_Calculate calculate (.user_level(user_level),.level(level));
+    
   //判断是哪个模式,时序逻辑
   always @(posedge clk, negedge rst_n) begin
     if(~rst_n) mode <= select_mode;
@@ -83,9 +93,26 @@ module Light_seg_Display (
   end
   always @(posedge clk) begin
     case(mode)
-        Freemode: if(select_mode == Playmode) next_mode <= Playmode; else if(select_mode == Learning_mode) next_mode <= Learning_mode; else next_mode <= Freemode;
-        Playmode: if(select_mode == Freemode) next_mode <= Freemode; else if(select_mode == Learning_mode) next_mode <= Learning_mode; else next_mode <= Playmode;
-        Learning_mode: if(select_mode == Freemode) next_mode <= Freemode; else if(select_mode == Playmode) next_mode <= Playmode; else next_mode <= Learning_mode;
+        Freemode: 
+            if(select_mode == Playmode) next_mode <= Playmode; 
+            else if(select_mode == Learning_mode) next_mode <= Learning_mode; 
+            else if(select_mode == Practice_mode) next_mode <= Practice_mode;
+            else next_mode <= Freemode;
+        Playmode: 
+            if(select_mode == Freemode) next_mode <= Freemode; 
+            else if(select_mode == Learning_mode) next_mode <= Learning_mode; 
+            else if(select_mode == Practice_mode) next_mode <= Practice_mode;
+            else next_mode <= Playmode;
+        Learning_mode: 
+            if(select_mode == Freemode) next_mode <= Freemode; 
+            else if(select_mode == Playmode) next_mode <= Playmode; 
+            else if(select_mode == Practice_mode) next_mode <= Practice_mode;
+            else next_mode <= Learning_mode;
+        Practice_mode: 
+            if(select_mode == Freemode) next_mode <= Freemode;
+            else if(select_mode == Playmode) next_mode <= Playmode; 
+            else if(select_mode == Learning_mode) next_mode <= Learning_mode;
+            else next_mode <= Practice_mode;
     endcase
   end
 //状态机，模式切换
@@ -159,7 +186,100 @@ module Light_seg_Display (
                          display[2] = i;
                          display[1] = n;
                          display[0] = g;
-                       end   
+                       end
+         Practice_mode: begin
+                        case(start_play)
+                        //没有开始播放，选择用户
+                            1'b0: 
+                            case(user_state)
+                            User_0: begin 
+                                display[7] = u;
+                                display[6] = s;
+                                display[5] = e;
+                                display[4] = r;
+                                display[3] = one;
+                                display[2] = nothing;
+                                display[1] = nothing;
+                                display[0] = nothing;
+                            end
+                            User_1: begin
+                                display[7] = u;
+                                display[6] = s;
+                                display[5] = e;
+                                display[4] = r;
+                                display[3] = two;
+                                display[2] = nothing;
+                                display[1] = nothing;
+                                display[0] = nothing;
+                            end
+                            User_2: begin
+                                display[7] = u;
+                                display[6] = s;
+                                display[5] = e;
+                                display[4] = r;
+                                display[3] = three;
+                                display[2] = nothing;
+                                display[1] = nothing;
+                                display[0] = nothing;
+                            end
+                            endcase
+                        //开始练习模式的播放，一直显示Practice直到show_level
+                            1'b1: 
+                            case(show_level)
+                            //show_level没有激活，一直显示Practice
+                                1'b0:begin
+                                display[7] = p;
+                                display[6] = r;
+                                display[5] = a;
+                                display[4] = c;
+                                display[3] = t;
+                                display[2] = i;
+                                display[1] = c;
+                                display[0] = e;
+                                end
+                            //show_level被激活，展示用户的评分。    
+                                1'b1:begin
+                                case(level)
+                                    G_Level: begin
+                                        display[7] = g;
+                                        display[6] = g;
+                                        display[5] = g;
+                                        display[4] = g;
+                                        display[3] = g;
+                                        display[2] = g;
+                                        display[1] = g;
+                                        display[0] = g;
+                                    end
+                                    F_Level: begin
+                                        display[7] = f;
+                                        display[6] = f;
+                                        display[5] = f;
+                                        display[4] = f;
+                                        display[3] = f;
+                                        display[2] = f;
+                                        display[1] = f;
+                                        display[0] = f;
+                                    end
+                                    E_Level: begin
+                                        display[7] = e;
+                                        display[6] = e;
+                                        display[5] = e;
+                                        display[4] = e;
+                                        display[3] = e;
+                                        display[2] = e;
+                                        display[1] = e;
+                                        display[0] = e;
+                                    end
+                                    
+                                    
+                                    
+                                    
+                                endcase
+                                
+                                end
+                            endcase
+                        endcase
+                        end                 
     endcase 
     end
   always @(posedge clk, negedge rst_n) begin

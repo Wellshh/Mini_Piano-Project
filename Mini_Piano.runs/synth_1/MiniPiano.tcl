@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -40,6 +39,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Record.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Speed_Control.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/Wave_Generator.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/clk_div.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project/Mini_Piano.srcs/sources_1/new/MiniPiano.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sat Dec 23 21:37:55 2023
+| Date         : Sun Dec 24 13:10:03 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_drc -file MiniPiano_drc_routed.rpt -pb MiniPiano_drc_routed.pb -rpx MiniPiano_drc_routed.rpx
 | Design       : MiniPiano
@@ -49,7 +49,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net buzzer/k1/E[0] is a gated clock net sourced by a combinational pin buzzer/k1/frequency_reg[10]_i_2/O, cell buzzer/k1/frequency_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buzzer/u2/E[0] is a gated clock net sourced by a combinational pin buzzer/u2/frequency_reg[10]_i_2/O, cell buzzer/u2/frequency_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning

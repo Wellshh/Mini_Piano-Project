@@ -39,13 +39,13 @@ reg [1:0] change_group;
 //状态切换部分，后续在这个地方加入学习模式。
 always @(*) begin
     case(select_mode)
-        3'b011,3'b101: music_select = music_freemode; 
+        3'b011,3'b101,3'b001: music_select = music_freemode; 
         3'b010: music_select = music_playmode;
-        3'b001: 
-        case({flag_start_out,flag_play_out})
-            2'b00,2'b11,2'b10: music_select = music_freemode;
-            2'b01: music_select = music_recordmode;
-        endcase
+//        3'b001: 
+//        case({flag_start_out,flag_play_out})
+//            2'b00,2'b11,2'b10: music_select = music_freemode;
+//            2'b01: music_select = music_recordmode;
+//        endcase
     default: music_select = music_freemode;
     endcase//必须用always block不能用assign block，因为assign只会执行一次，后续无法完成状态切换。
 end
@@ -53,13 +53,13 @@ end
 //模式切换时输入的group信号进行切换
 always @(*) begin
     case(select_mode)
-        3'b011,3'b101: change_group = group;
+        3'b011,3'b101,3'b001: change_group = group;
         3'b010: change_group = control_group;
-        3'b001: 
-        case({flag_start_out,flag_play_out})
-            2'b00,2'b11,2'b10: change_group = group;
-            2'b01: change_group = record_group;
-        endcase
+//        3'b001: 
+//        case({flag_start_out,flag_play_out})
+//            2'b00,2'b11,2'b10: change_group = group;
+//            2'b01: change_group = record_group;
+//        endcase
         default: change_group = group;
     endcase
 end

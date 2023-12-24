@@ -34,7 +34,7 @@ output reg [7:0] led_out
         case(select_mode) 
             3'b011: led <= led_in;
             3'b010: led <= led_in_playmode;
-            3'b101: led <= led_in_learning_mode;
+            3'b101,3'b001: led <= led_in_learning_mode;
             default: led <= led_in;
         endcase    
     end

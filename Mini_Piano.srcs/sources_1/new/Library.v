@@ -27,15 +27,55 @@ module Library (
     input [2:0] select_mode,
     input songs_select, //应该用一位实现时序逻辑,并利用按钮实现。
     input [6:0] keyboard_input, //键盘输入用于与曲库中的音符进行比较
+    input [7:0] note,//键盘输入，用来检测用户输入是否有变化
+    input start_play,
+    input show_level,
     output reg [6:0] music,  //存储各个音高的音符
     output reg [1:0] control_group,
     output reg [7:0] led_playmode,
-    output reg [1:0] State_of_songs//将歌曲状态输出，方便数码管判定是哪首歌
+    output reg [1:0] State_of_songs,//将歌曲状态输出，方便数码管判定是哪首歌
+    output reg [6:0] user_level,
+    output reg [2:0] user_state
 );
 parameter Little_Star = 2'd0,Happy_Birthday = 2'd1,His_Theme = 2'd2;
+parameter User_0 = 3'd0,User_1 = 3'd1,User_2 = 3'd2;
 reg [1:0] next_State_of_songs;
 reg [6:0] cnt_learning_mode;//学习模式的cnt，实现用户输入匹配曲库内音符才能播放下一个音符的操作。
 reg [6:0] real_cnt;//切换后的计数器
+reg [6:0] input_cnt; //记录用户输入的计数器
+reg [6:0] input_music; //用户输入所对应的音符
+reg [6:0] level [2:0]; //记录用户的评级
+wire clk_out;//新的时钟
+reg button_select;
+reg [2:0] user_next_state;
+
+
+
+//对按钮功能的选择，根据不同的模式
+    always @(*) begin
+    if(select_mode == 3'b001) button_select = 1'b1;
+    else button_select = 1'b0;
+    end
+//选择用户的状态机，只有当button_select为一的时候才能切换，保证按键的功能不会冲突。
+    always @(posedge clk,negedge rst_n) begin
+        if(~rst_n) user_state <= User_0;
+        else user_state <= user_next_state;
+    end
+    //是否需要当start_play后不能切换
+    always @(posedge clk,posedge songs_select) begin
+        case(user_state)
+            User_0: if(songs_select && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
+            User_1: if(songs_select && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
+            User_2: if(songs_select && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
+        endcase
+    end
+    
+    
+    
+    
+    
+    
+
 
 //根据模式选择计数器
     always @(*) begin
@@ -52,6 +92,34 @@ reg [6:0] real_cnt;//切换后的计数器
 // parameter Match = 1'b1, Not_Match = 1'b0; 
 //    always @(*) begin
 //        if(~rst_n) cnt_state <= 
+
+////练习模式时，每当用户输入变化时，就让input_cnt指针递增。
+//always @(note) begin
+//    input_cnt = input_cnt + 1;
+//    if( keyboard_input ==  ) begin
+    
+//    end
+        
+//end
+
+//使用新的时间周期每隔1/4秒检测用户的输入，如果输入与对应的曲谱音符匹配，就让评分增加。注意更新的是相应用户的评分。
+    clk_div cd1 (.clk(clk),.rst_n(rst_n),.select_mode(select_mode),.start_play(start_play),.clk_out(clk_out));
+    always @(posedge clk_out,negedge rst_n) begin
+        if(~rst_n) level[user_state] <= 7'd0;
+        else if(keyboard_input == music) level[user_state] <= level[user_state] + 1'b1;
+        else level[user_state] <= level[user_state];
+    end
+    
+    //当按下show_level开关，展示相应用户的评分,将user_level传给display模块。
+    always @(*) begin
+        if(show_level) user_level = level[user_state];
+        else user_level = 7'd0;
+    end
+
+        
+        
+
+    
     
 
 //状态机,实现切换歌曲的逻辑。
@@ -64,11 +132,11 @@ reg [6:0] real_cnt;//切换后的计数器
  //组合逻辑，切换状态
     always @(posedge clk, posedge songs_select) begin
         case(State_of_songs)
-            Little_Star: if(songs_select) next_State_of_songs <= Happy_Birthday; 
+            Little_Star: if(songs_select && button_select == 1'b0) next_State_of_songs <= Happy_Birthday; 
                          else next_State_of_songs <= State_of_songs;
-            Happy_Birthday: if(songs_select) next_State_of_songs <= His_Theme; 
+            Happy_Birthday: if(songs_select && button_select == 1'b0 ) next_State_of_songs <= His_Theme; 
                             else next_State_of_songs <= State_of_songs;
-            His_Theme: if(songs_select) next_State_of_songs <= Little_Star;
+            His_Theme: if(songs_select && button_select == 1'b0) next_State_of_songs <= Little_Star;
                        else next_State_of_songs <= State_of_songs;
         endcase
     end

@@ -55,10 +55,10 @@ module Speed_Control (
   end
 
   always @(posedge clk, negedge rst_n) begin
-    if (~rst_n || select_mode != 3'b010 || enable == 1'b0 ) count <= 32'd0;
+    if (~rst_n || (select_mode != 3'b010 && select_mode != 3'b001) || enable == 1'b0 || start_play == 1'b0 ) count <= 32'd0;
     else if (count < T_final - 1'b1) count <= count + 1'b1;
     else count <= 32'd0;
-  end
+  end//增加判断条件，当为练习模式和自动播放模式的时候才行。
   
 //  always @(posedge clk) begin
 //  if(select_mode != 3'b010) cnt <= 7'd0;
@@ -68,7 +68,7 @@ module Speed_Control (
   assign is_Reaching_125ms = (count == T_final - 1'b1) ? 1'b1 : 1'b0;
 
   always @(posedge clk, negedge rst_n) begin
-    if (~rst_n || select_mode != 3'b010 || start_play == 1'b0 || enable == 1'b0) cnt <= 7'd0;//只有当开关信号为1时才开始计数
+    if (~rst_n || (select_mode != 3'b010 && select_mode != 3'b001 ) || start_play == 1'b0 || enable == 1'b0) cnt <= 7'd0;//只有当开关信号为1时才开始计数
     else if (is_Reaching_125ms == 1'b1) cnt <= cnt + 1'b1;
     else cnt <= cnt;//有点小瑕疵，切换模式会导致时钟信号
   end

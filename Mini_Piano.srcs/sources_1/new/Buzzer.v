@@ -32,11 +32,14 @@ module Buzzer (
     input start_button,
     input stop_button,
     input play_switch,//录音模式的开关，播放模式的开
+    input show_level,//数码管显示用户当前的评分记录
     output speaker,
     output [7:0] led_out,
     output [1:0] State_of_songs,
     output flag_start_out,
-    output flag_play_out
+    output flag_play_out,
+    output [2:0] user_state,
+    output [6:0] user_level
 );
     
   wire [6:0] cnt;
@@ -99,10 +102,15 @@ module Buzzer (
       .select_mode (select_mode),
       .songs_select (songs_select),
       .keyboard_input(music_freemode),
+      .note(note_in),
+      .start_play(start_play),
+      .show_level(show_level),
       .music(music_playmode),
       .control_group (control_group),
       .led_playmode(led_playmode),
-      .State_of_songs(State_of_songs)
+      .State_of_songs(State_of_songs),
+      .user_level(user_level),
+      .user_state(user_state)
   );
   
   Learning_Mode lm1(
