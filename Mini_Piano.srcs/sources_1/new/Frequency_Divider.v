@@ -26,27 +26,41 @@ module Frequency_Divider (
     input [2:0] select_mode,
     input [6:0] music_freemode,
     input [6:0] music_playmode,
+    input [6:0] music_recordmode,
     output reg [31:0] divider,
     input [1:0] group,
-    input [1:0] control_group
+    input [1:0] control_group,
+    input [1:0] record_group,
+    input flag_start_out,
+    input flag_play_out
 );
 reg [6:0] music_select;
 reg [1:0] change_group;
 //状态切换部分，后续在这个地方加入学习模式。
-always @(posedge clk) begin
-case(select_mode)
-    3'b011,3'b101: music_select <= music_freemode; 
-    3'b010: music_select<= music_playmode;
-    default: music_select <= music_freemode;
-endcase//必须用always block不能用assign block，因为assign只会执行一次，后续无法完成状态切换。
+always @(*) begin
+    case(select_mode)
+        3'b011,3'b101: music_select = music_freemode; 
+        3'b010: music_select = music_playmode;
+        3'b001: 
+        case({flag_start_out,flag_play_out})
+            2'b00,2'b11,2'b10: music_select = music_freemode;
+            2'b01: music_select = music_recordmode;
+        endcase
+    default: music_select = music_freemode;
+    endcase//必须用always block不能用assign block，因为assign只会执行一次，后续无法完成状态切换。
 end
 
 //模式切换时输入的group信号进行切换
 always @(*) begin
     case(select_mode)
-        3'b011: change_group <= group;
-        3'b010: change_group <= control_group;
-        default: change_group <= group;
+        3'b011,3'b101: change_group = group;
+        3'b010: change_group = control_group;
+        3'b001: 
+        case({flag_start_out,flag_play_out})
+            2'b00,2'b11,2'b10: change_group = group;
+            2'b01: change_group = record_group;
+        endcase
+        default: change_group = group;
     endcase
 end
 

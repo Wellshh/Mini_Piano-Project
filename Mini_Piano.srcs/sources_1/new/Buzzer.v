@@ -29,19 +29,29 @@ module Buzzer (
     input start_play,
     input songs_select,
     input enable,
+    input start_button,
+    input stop_button,
+    input play_switch,//录音模式的开关，播放模式的开
     output speaker,
     output [7:0] led_out,
-    output [1:0] State_of_songs
+    output [1:0] State_of_songs,
+    output flag_start_out,
+    output flag_play_out
 );
     
   wire [6:0] cnt;
   wire [6:0] music_freemode;
   wire [6:0] music_playmode;
+  wire [6:0] music_recordmode;
   wire [31:0] divider;
   wire [1:0] group;
   wire [1:0] control_group;
+  wire [1:0] record_group;
   wire [7:0] led_playmode;
   wire [7:0] led_learning_mode;
+//  wire flag_start_out;
+//  wire flag_play_out;//两个flag信号，判断是否是在录音模式，方便输出切换
+  
 
   Speed_Control u1 (
       .clk  (clk),
@@ -49,6 +59,8 @@ module Buzzer (
       .select_mode(select_mode),
       .start_play(start_play),
       .enable(enable),
+      .higher(higher),
+      .lower(lower),
       .cnt  (cnt)
   );
   Keyboard k1(
@@ -62,6 +74,23 @@ module Buzzer (
      .note_out(music_freemode),
      .group(group)
      );
+  
+  Record b1 (
+    .note(music_freemode),
+    .higher(higher),
+    .lower(lower),
+    .clk(clk),
+    .rst(rst_n),
+    .start(start_button),
+    .stop(stop_button),
+    .play(play_switch),
+    .select_mode(select_mode),
+    .enable(enable),
+    .input_note_record_out(music_recordmode),
+    .note_group_out(record_group),
+    .flag_start_out(flag_start_out),
+    .flag_play_out(flag_play_out)
+  );
 
   Library u2 (
       .clk  (clk),
@@ -91,9 +120,13 @@ module Buzzer (
       .select_mode(select_mode),
       .music_freemode(music_freemode),
       .music_playmode(music_playmode),
+      .music_recordmode(music_recordmode),
       .divider(divider),
       .group(group),
-      .control_group(control_group)
+      .control_group(control_group),
+      .record_group(record_group),
+      .flag_start_out(flag_start_out),
+      .flag_play_out(flag_play_out)
   );
 
   Wave_Generator u4 (
@@ -103,6 +136,7 @@ module Buzzer (
       .select_mode(select_mode),
       .speaker(speaker)
   );
+ 
   Led l1(
   .clk(clk),
   .rst_n(rst_n),

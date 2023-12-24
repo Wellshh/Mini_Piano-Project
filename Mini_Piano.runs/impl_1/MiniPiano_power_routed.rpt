@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Fri Dec 22 16:17:54 2023
+| Date             : Sat Dec 23 21:37:57 2023
 | Host             : LegionWells running 64-bit major release  (build 9200)
 | Command          : report_power -file MiniPiano_power_routed.rpt -pb MiniPiano_power_summary_routed.pb -rpx MiniPiano_power_routed.rpx
 | Design           : MiniPiano
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 27.421 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 30.402 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 26.935                           |
+| Dynamic (W)              | 29.916                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 4.8                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     8.251 |     1422 |       --- |             --- |
-|   LUT as Logic |     6.803 |      892 |     20800 |            4.29 |
-|   CARRY4       |     1.403 |      218 |      8150 |            2.67 |
-|   Register     |     0.039 |      202 |     41600 |            0.49 |
+| Slice Logic    |     8.434 |     1582 |       --- |             --- |
+|   LUT as Logic |     6.973 |      977 |     20800 |            4.70 |
+|   CARRY4       |     1.412 |      227 |      8150 |            2.79 |
+|   Register     |     0.042 |      245 |     41600 |            0.59 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       18 |       --- |             --- |
-| Signals        |     6.550 |     1199 |       --- |             --- |
-| I/O            |    12.134 |       54 |       210 |           25.71 |
+|   Others       |     0.000 |       17 |       --- |             --- |
+| Signals        |     6.868 |     1317 |       --- |             --- |
+| I/O            |    14.614 |       60 |       210 |           28.57 |
 | Static Power   |     0.486 |          |           |                 |
-| Total          |    27.421 |          |           |                 |
+| Total          |    30.402 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    15.206 |      14.865 |      0.341 |
-| Vccaux    |       1.800 |     0.496 |       0.442 |      0.053 |
-| Vcco33    |       3.300 |     3.417 |       3.416 |      0.001 |
+| Vccint    |       1.000 |    15.715 |      15.374 |      0.341 |
+| Vccaux    |       1.800 |     0.586 |       0.533 |      0.053 |
+| Vcco33    |       3.300 |     4.117 |       4.116 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,14 +138,14 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| MiniPiano |    26.935 |
-|   buzzer  |    14.468 |
-|     k1    |     0.100 |
-|     u1    |     0.026 |
-|     u2    |     0.320 |
-|     u3    |    13.380 |
-|     u4    |     0.641 |
-|   light   |     0.130 |
+| MiniPiano |    29.916 |
+|   buzzer  |    14.680 |
+|     k1    |     0.236 |
+|     u1    |     0.121 |
+|     u2    |     0.224 |
+|     u3    |    13.430 |
+|     u4    |     0.669 |
+|   light   |     0.386 |
 +-----------+-----------+
 
 

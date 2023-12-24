@@ -76,7 +76,7 @@ module Light_seg_Display (
   reg [7:0] display [7:0]; //一个大小为8，且每一列都可以存8位的二维数组，记录每根数码管对应的段选信号。
   
   //判断是哪个模式,时序逻辑
-  always @(*) begin
+  always @(posedge clk, negedge rst_n) begin
     if(~rst_n) mode <= select_mode;
     else 
         mode <= next_mode;
@@ -90,7 +90,7 @@ module Light_seg_Display (
   end
 //状态机，模式切换
 //根据对应的模式显示相应的数码管信号,需要改变计数器的信号。
-    always @(posedge clk) begin
+    always @(*) begin
     case(mode)
         Freemode: begin 
                     display[7] = f;
@@ -136,8 +136,20 @@ module Light_seg_Display (
                                             display[1] = a;
                                             display[0] = y;
                                           end 
-                                endcase    
-                              end
+                                    2'd2: begin
+                                            display[7] = h;
+                                            display[6] = i;
+                                            display[5] = s;
+                                            display[4] = t;
+                                            display[3] = h;
+                                            display[2] = e;
+                                            display[1] = m;
+                                            display[0] = e;
+                                          end
+                                endcase
+                                end    
+                  endcase    
+                  end
         Learning_mode: begin//学习模式的显示有点问题
                          display[7] = l;
                          display[6] = e;
@@ -147,10 +159,7 @@ module Light_seg_Display (
                          display[2] = i;
                          display[1] = n;
                          display[0] = g;
-                       end
-                  endcase  
-                  end 
-        
+                       end   
     endcase 
     end
   always @(posedge clk, negedge rst_n) begin
