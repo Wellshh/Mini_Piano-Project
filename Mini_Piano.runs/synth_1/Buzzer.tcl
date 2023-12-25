@@ -30,8 +30,8 @@ set_property ip_output_repo e:/Mini_Piano/Mini_Piano.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Frequency_Divider.v
+  E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Key_Adjustment.v
   E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v
-  E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Led.v
   E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Speed_Control.v
   E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v
   E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Buzzer.v

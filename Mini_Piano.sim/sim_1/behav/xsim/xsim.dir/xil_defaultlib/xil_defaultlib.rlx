@@ -4,4 +4,7 @@ Dec 15 2017
 21:07:18
 E:/Mini_Piano/Mini_Piano.sim/sim_1/behav/xsim/glbl.v,1702993815,verilog,,,,glbl,,,,,,,,
 E:/Mini_Piano/Mini_Piano.srcs/sim_1/new/Light_seg_tb.v,1702993815,verilog,,,,Light_seg_tb,,,,,,,,
+E:/Mini_Piano/Mini_Piano.srcs/sim_1/new/tb_ka.v,1703522308,verilog,,,,tb_ka,,,,,,,,
+E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Key_Adjustment.v,1703527582,verilog,,E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v,,Key_Adjustment,,,,,,,,
+E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Keyboard.v,1703073678,verilog,,E:/Mini_Piano/Mini_Piano.srcs/sim_1/new/tb_ka.v,,Keyboard,,,,,,,,
 E:/Mini_Piano/Mini_Piano.srcs/sources_1/new/Light_seg_Display.v,1702994333,verilog,,E:/Mini_Piano/Mini_Piano.srcs/sim_1/new/Light_seg_tb.v,,Light_seg_Display,,,,,,,,
