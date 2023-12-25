@@ -33,7 +33,7 @@ module Light_seg_Display (
     output reg [7:0] seg,//段选信号，四根数码管的位选信号是公共的，只能同时显示。决定单根数码管显示数字或字母。
     output reg [7:0] seg_2
 );
-  parameter T_5ms = 1_0000;//利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
+  parameter T_5ms = 1_000000;//利用人眼的视觉暂留现象。要跑testbench可以直接设为1。
   parameter Freemode = 3'b011,Playmode = 3'b010,Learning_mode = 3'b101,Practice_mode = 3'b001;
   parameter User_0 = 3'd0,User_1 = 3'd1,User_2 = 3'd2;
   parameter G_Level = 3'd0,F_Level = 3'd1,E_Level = 3'd2,D_Level = 3'd3,C_Level = 3'd4,B_Level = 3'd5,A_Level = 3'd6;

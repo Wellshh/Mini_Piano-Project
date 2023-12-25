@@ -49,6 +49,15 @@ reg [6:0] level [2:0]; //记录用户的评级
 wire clk_out;//新的时钟
 reg button_select;
 reg [2:0] user_next_state;
+wire songs_select_button_out;
+
+//对songs_select按键的消抖
+Button_Debounce b1 (
+.clk(clk),
+.reset(rst_n),
+.tx(songs_select),
+.bd_tx(songs_select_button_out)
+);
 
 
 
@@ -62,6 +71,7 @@ reg [2:0] user_next_state;
         if(~rst_n) user_state <= User_0;
         else user_state <= user_next_state;
     end
+    
     //是否需要当start_play后不能切换
     always @(posedge clk,posedge songs_select) begin
         case(user_state)
@@ -70,6 +80,14 @@ reg [2:0] user_next_state;
             User_2: if(songs_select && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
         endcase
     end
+//always @(posedge clk,posedge songs_select_button_out) begin
+//        case(user_state)
+//            User_0: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
+//            User_1: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
+//            User_2: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
+//        endcase
+//    end
+
     
     
     
@@ -112,9 +130,9 @@ reg [2:0] user_next_state;
     end
     
     //当按下show_level开关，展示相应用户的评分,将user_level传给display模块。
-    always @(*) begin
-        if(show_level) user_level = level[user_state];
-        else user_level = 7'd0;
+    always @(posedge clk_out) begin
+        if(show_level) user_level <= level[user_state];
+        else user_level <= 7'd0;
     end
   
 //状态机,实现切换歌曲的逻辑。
