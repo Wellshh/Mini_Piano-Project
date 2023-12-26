@@ -30,9 +30,7 @@ module Frequency_Divider (
     output reg [31:0] divider,
     input [1:0] group,
     input [1:0] control_group,
-    input [1:0] record_group,
-    input flag_start_out,
-    input flag_play_out
+    input [1:0] record_group
 );
 reg [6:0] music_select;
 reg [1:0] change_group;

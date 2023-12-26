@@ -36,8 +36,6 @@ module Buzzer (
     output speaker,
     output [7:0] led_out,
     output [1:0] State_of_songs,
-    output flag_start_out,
-    output flag_play_out,
     output [2:0] user_state,
     output [6:0] user_level
 );
@@ -90,9 +88,7 @@ module Buzzer (
     .select_mode(select_mode),
     .enable(enable),
     .input_note_record_out(music_recordmode),
-    .note_group_out(record_group),
-    .flag_start_out(flag_start_out),
-    .flag_play_out(flag_play_out)
+    .note_group_out(record_group)
   );
 
   Library u2 (
@@ -132,9 +128,7 @@ module Buzzer (
       .divider(divider),
       .group(group),
       .control_group(control_group),
-      .record_group(record_group),
-      .flag_start_out(flag_start_out),
-      .flag_play_out(flag_play_out)
+      .record_group(record_group)
   );
 
   Wave_Generator u4 (
