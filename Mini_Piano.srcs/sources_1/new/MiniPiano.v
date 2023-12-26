@@ -31,6 +31,8 @@ input start_button,
 input stop_button,
 input play_switch,
 input show_level,
+input adjust,//进入按键调整模式的开关
+//input commit,//按键调整时确定的按钮
 output speaker,
 output [7:0] led_out,
 output [7:0] sel,//位选信号
@@ -51,7 +53,7 @@ output [1:0] led_record_out
       default: enable = 1'b0;    
       endcase
     end
-  Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,speaker,led_out,State_of_songs,user_state,user_level,state);
+  Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,adjust,speaker,led_out,State_of_songs,user_state,user_level,state);
   Light_seg_Display light (clk,rst_n,select_mode,State_of_songs,start_play,enable,user_level,user_state,show_level,sel,seg,seg_2);
   Led_Display_Mode display (select_mode,mode_light);
   assign play_led = start_play;

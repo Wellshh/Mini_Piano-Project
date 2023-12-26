@@ -55,7 +55,6 @@ always @(*) begin
     case(select_mode)
         3'b011,3'b101: change_group = group;
         3'b010: change_group = control_group;
-        3'b001: change_group = record_group;
         3'b001: 
         case(state)
         S0,S1: change_group = group;

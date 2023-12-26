@@ -33,6 +33,8 @@ module Buzzer (
     input stop_button,
     input play_switch,//录音模式的开关，播放模式的开
     input show_level,//数码管显示用户当前的评分记录
+    input adjust,
+//    input commit,
     output speaker,
     output [7:0] led_out,
     output [1:0] State_of_songs,
@@ -51,6 +53,7 @@ module Buzzer (
   wire [1:0] record_group;
   wire [7:0] led_playmode;
   wire [7:0] led_learning_mode;
+  wire [7:0] led_keyboard_adjust;
 //  wire flag_start_out;
 //  wire flag_play_out;//两个flag信号，判断是否是在录音模式，方便输出切换
   
@@ -65,17 +68,32 @@ module Buzzer (
       .lower(lower),
       .cnt  (cnt)
   );
-  Keyboard k1(
-     .clk(clk),
-     .rst(rst_n),
-     .higher(higher),
-     .lower(lower),
-     .note(note_in),
-     .select_mode(select_mode),
-     .enable(enable),
-     .note_out(music_freemode),
-     .group(group)
-     );
+  
+  Key_Adjustment(
+        .enable(enable),
+        .keys(note_in),
+        .rst(rst_n),
+        .clk(clk),
+        .trigger(adjust),
+        .commit(songs_select),
+        .music(music_freemode),
+        .higher(higher),
+        .lower(lower),
+        .group(group),
+        .state_out(led_keyboard_adjust)
+        );
+        
+//  Keyboard k1(
+//     .clk(clk),
+//     .rst(rst_n),
+//     .higher(higher),
+//     .lower(lower),
+//     .note(note_in),
+//     .select_mode(select_mode),
+//     .enable(enable),
+//     .note_out(music_freemode),
+//     .group(group)
+//     );
   
   Record b1 (
     .note(note_in),
@@ -145,11 +163,11 @@ module Buzzer (
   Led l1(
   .clk(clk),
   .rst_n(rst_n),
-  .led_in(note_in),
   .led_in_playmode(led_playmode),
   .led_in_learning_mode(led_learning_mode),
   .select_mode(select_mode),
-  .led_out(led_out)
+  .led_out(led_out),
+  .led_keyboard_adjust(led_keyboard_adjust)
   );
 
 

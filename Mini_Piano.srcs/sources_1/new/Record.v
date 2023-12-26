@@ -140,7 +140,7 @@ output reg [1:0] state
     
     /*使用keyboard模块转换用户输入*/
     Keyboard k_record(.note(note), .higher(higher), .lower(lower), .rst(rst), .clk(clk), .note_out(note_out), .group(group),.select_mode(select_mode),.enable(enable));
-    
+//    Key_Adjustment key_adjustment(.keys(note),.music(note_out),.trigger(trigger),.rst(rst),.clk(clk),.commit(commit),.higher(higher),.lower(lower),.group(group),.state_out(state_out));
     always @(posedge clk,negedge rst)begin //时钟的控制
         if(~rst) begin
             count <= 24'd0; 

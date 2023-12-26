@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 19:48:50 2023
+| Date         : Tue Dec 26 22:00:28 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MiniPiano_control_sets_placed.rpt
 | Design       : MiniPiano
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    44 |
-| Unused register locations in slices containing registers |   230 |
+| Number of unique control sets                            |   307 |
+| Unused register locations in slices containing registers |   517 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,80 +33,343 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              91 |           35 |
-| No           | No                    | Yes                    |             147 |           80 |
-| No           | Yes                   | No                     |              80 |           33 |
-| Yes          | No                    | No                     |              14 |            5 |
-| Yes          | No                    | Yes                    |              31 |           16 |
-| Yes          | Yes                   | No                     |               7 |            4 |
+| No           | No                    | No                     |             103 |           43 |
+| No           | No                    | Yes                    |             148 |           79 |
+| No           | Yes                   | No                     |              90 |           35 |
+| Yes          | No                    | No                     |            1750 |          632 |
+| Yes          | No                    | Yes                    |             129 |           48 |
+| Yes          | Yes                   | No                     |               7 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+
-|                   Clock Signal                  |               Enable Signal              |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+-------------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+
-|  light/mode_reg[0]_LDC_i_1_n_1                  |                                          | light/mode_reg[0]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[4]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[5]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
-|  light/mode_reg[2]_LDC_i_1_n_1                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
-|  light/seg_reg[4]_LDC_i_1_n_1                   |                                          | light/seg_reg[4]_LDC_i_2_n_1      |                1 |              1 |
-|  light/mode_reg[1]_LDC_i_1_n_1                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
-|  light/seg_reg[2]_LDC_i_1_n_1                   |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[1]_LDC_i_1_n_1                   |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[4]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[2]_LDC_i_1_n_1      |                1 |              1 |
-|  light/seg_reg[5]_LDC_i_1_n_1                   |                                          | light/seg_reg[5]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[6]_LDC_i_1_n_1                   |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[7]_LDC_i_1_n_1                   |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[1]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[5]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[6]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[7]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | buzzer/b1/k_record/group_reg[1]_0 |                2 |              2 |
-|  light/nextstate                                |                                          |                                   |                1 |              4 |
-|  buzzer/u2/cd1/clk_out                          | buzzer/u2/level_reg_0_3_0_0_i_2_n_1      |                                   |                2 |              7 |
-|  buzzer/u2/cd1/clk_out                          |                                          | buzzer/u2/user_level[6]_i_1_n_1   |                2 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/u1/is_Reaching_125ms_carry__1_n_2 | buzzer/u1/cnt0                    |                4 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/u2/cnt_learning_mode[6]_i_1_n_1   | buzzer/b1/k_record/group_reg[1]_0 |                3 |              7 |
-|  clk_IBUF_BUFG                                  | light/seg_2[7]_i_1_n_1                   |                                   |                3 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/u1/T_final_next                   |                                   |                2 |              7 |
-|  clk_IBUF_BUFG                                  | light/nextstate                          | buzzer/b1/k_record/group_reg[1]_0 |                3 |              8 |
-|  clk_IBUF_BUFG                                  | buzzer/b1/temp_addr[7]_i_1_n_1           | buzzer/b1/k_record/group_reg[1]_0 |                2 |              8 |
-|  buzzer/b1/input_note_record_out_reg[6]_i_2_n_1 |                                          |                                   |                3 |              9 |
-|  buzzer/b1/E[0]                                 |                                          |                                   |                4 |             11 |
-|  clk_IBUF_BUFG                                  |                                          |                                   |               10 |             13 |
-|  clk_IBUF_BUFG                                  |                                          | buzzer/u1/count[0]_i_1__0_n_1     |                8 |             32 |
-|  clk_IBUF_BUFG                                  |                                          | buzzer/u2/cd1/count[31]_i_1_n_1   |               15 |             33 |
-|  n_0_949_BUFG                                   |                                          |                                   |               17 |             54 |
-|  clk_IBUF_BUFG                                  |                                          | buzzer/b1/k_record/group_reg[1]_0 |               67 |            134 |
-+-------------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+
++------------------------------------------------------------+-----------------------------------------------+---------------------------------------------+------------------+----------------+
+|                        Clock Signal                        |                 Enable Signal                 |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++------------------------------------------------------------+-----------------------------------------------+---------------------------------------------+------------------+----------------+
+|  light/seg_reg[2]_LDC_i_1_n_2                              |                                               | light/seg_reg[2]_LDC_i_2_n_2                |                1 |              1 |
+|  light/seg_reg[5]_LDC_i_1_n_2                              |                                               | light/seg_reg[5]_LDC_i_2_n_2                |                1 |              1 |
+|  n_0_2613_BUFG                                             |                                               | buzzer/nolabel_line72/next_state[7]_i_2_n_2 |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[1]_LDC_i_1_n_2               |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[0]_LDC_i_1_n_2               |                1 |              1 |
+|  light/mode_reg[0]_LDC_i_1_n_2                             |                                               | light/mode_reg[0]_LDC_i_2_n_2               |                1 |              1 |
+|  light/mode_reg[1]_LDC_i_1_n_2                             |                                               | light/mode_reg[1]_LDC_i_2_n_2               |                1 |              1 |
+|  light/seg_reg[1]_LDC_i_1_n_2                              |                                               | light/seg_reg[1]_LDC_i_2_n_2                |                1 |              1 |
+|  light/mode_reg[2]_LDC_i_1_n_2                             |                                               | light/mode_reg[2]_LDC_i_2_n_2               |                1 |              1 |
+|  light/seg_reg[7]_LDC_i_1_n_2                              |                                               | light/seg_reg[7]_LDC_i_2_n_2                |                1 |              1 |
+|  light/seg_reg[6]_LDC_i_1_n_2                              |                                               | light/seg_reg[6]_LDC_i_2_n_2                |                1 |              1 |
+|  light/seg_reg[4]_LDC_i_1_n_2                              |                                               | light/seg_reg[4]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[1]_LDC_i_2_n_2               |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[0]_LDC_i_2_n_2               |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[2]_LDC_i_1_n_2               |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[1]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/mode_reg[2]_LDC_i_2_n_2               |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[6]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[4]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[5]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[2]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             |                                               | light/seg_reg[7]_LDC_i_2_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[1]_LDC_i_1_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[7]_LDC_i_1_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[6]_LDC_i_1_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[4]_LDC_i_1_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[2]_LDC_i_1_n_2                |                1 |              1 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | light/seg_reg[5]_LDC_i_1_n_2                |                1 |              1 |
+|  buzzer/nolabel_line72/com_pro/clk_div/clks                |                                               |                                             |                1 |              2 |
+|  clk_IBUF_BUFG                                             | light/seg[3]_i_1_n_2                          | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                1 |              2 |
+|  light/nextstate                                           |                                               |                                             |                1 |              4 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[38][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[52][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[43][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[31][7]_i_1_n_2  |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[34][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[35][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[40][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[45][7]_i_1_n_2  |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[46][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[49][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[67][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[72][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[73][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[75][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[58][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[74][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[76][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[63][7]_i_1_n_2  |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[53][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[57][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[60][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[59][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[68][7]_i_1_n_2  |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[71][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[77][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[78][7]_i_1_n_2  |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[54][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[56][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[55][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[64][7]_i_1_n_2  | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[66][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[69][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[65][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[61][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[70][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[62][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[5][7]_i_1_n_2   |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[6][7]_i_1_n_2   |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[83][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[79][7]_i_1_n_2  |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[80][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[89][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[95][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[92][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[99][7]_i_1_n_2  |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[7][7]_i_1_n_2   |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[96][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[85][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[97][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[98][7]_i_1_n_2  |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[9][7]_i_1_n_2   |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[82][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[84][7]_i_1_n_2  |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[86][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[8][7]_i_1_n_2   | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[91][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[93][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[88][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[90][7]_i_1_n_2  |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[81][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[94][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[87][7]_i_1_n_2  |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[29][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[2][7]_i_1_n_2   | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[30][7]_i_1_n_2  |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[28][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[27][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[109][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[0][7]_i_1_n_2   | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[10][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[108][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[114][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[116][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[102][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[100][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[117][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[103][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[105][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[106][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[107][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[110][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[111][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[104][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[113][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[115][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[112][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[101][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[134][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[139][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[121][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[136][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[127][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[13][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[140][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[141][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[132][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[137][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[118][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[130][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[122][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[131][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[125][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[119][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[133][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[126][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[123][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[124][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[135][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[120][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[12][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[138][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[128][7]_i_1_n_2 | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[129][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[11][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[14][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[151][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[148][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[150][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[155][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[162][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[163][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[164][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[145][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[143][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[158][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[149][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[156][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[159][7]_i_1_n_2 |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[165][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[146][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[152][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[157][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[144][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[147][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[15][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[160][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[142][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[153][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[154][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[161][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[179][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[181][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[175][7]_i_1_n_2 |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[16][7]_i_1_n_2  | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[17][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[166][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[185][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[167][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[172][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[186][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[173][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[180][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[169][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[171][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[174][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[170][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[177][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[168][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[182][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[184][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[176][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[183][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[178][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[199][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[194][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[202][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[192][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[187][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[189][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[18][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[200][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[196][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[204][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[206][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[188][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[1][7]_i_1_n_2   |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[203][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[205][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[195][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[198][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[19][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[207][7]_i_1_n_2 |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[208][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[201][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[209][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[190][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[191][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[193][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[197][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[225][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[231][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[232][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[222][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[224][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[229][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[215][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[230][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[21][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[227][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[210][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[20][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[212][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[214][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[217][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[220][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[219][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[223][7]_i_1_n_2 |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[221][7]_i_1_n_2 |                                             |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[213][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[226][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[216][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[228][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[211][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[22][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[218][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[234][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[247][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[250][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[235][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[23][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[244][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[236][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[243][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[246][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[240][7]_i_1_n_2 |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[251][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[252][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[241][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[24][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[239][7]_i_1_n_2 |                                             |                7 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[233][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[237][7]_i_1_n_2 |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[242][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[245][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[248][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[249][7]_i_1_n_2 |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[238][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[25][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[26][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[254][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[253][7]_i_1_n_2 |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[255][7]_i_1_n_2 |                                             |                6 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/next_state[7]_i_1_n_2   | buzzer/nolabel_line72/next_state[7]_i_2_n_2 |                2 |              7 |
+|  buzzer/nolabel_line72/com_pro/clk_div/cnt2_reg[6]_i_2_n_2 |                                               |                                             |                2 |              7 |
+|  buzzer/u2/cd1/clk_out                                     |                                               | buzzer/u2/user_level[6]_i_1_n_2             |                2 |              7 |
+|  buzzer/u2/cd1/clk_out                                     | buzzer/u2/level_reg_0_3_0_0_i_2_n_2           |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[4][7]_i_1_n_2   | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                5 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[37][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[44][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[50][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[51][7]_i_1_n_2  |                                             |                2 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[33][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[39][7]_i_1_n_2  |                                             |                2 |              7 |
+|  clk_IBUF_BUFG                                             | buzzer/u2/cnt_learning_mode[6]_i_1_n_2        | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                3 |              7 |
+|  clk_IBUF_BUFG                                             | buzzer/u1/T_final_next                        |                                             |                2 |              7 |
+|  clk_IBUF_BUFG                                             | buzzer/u1/is_Reaching_125ms_carry__1_n_3      | buzzer/u1/cnt0                              |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[32][7]_i_1_n_2  | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[36][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[48][7]_i_1_n_2  |                                             |                3 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[3][7]_i_1_n_2   |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[42][7]_i_1_n_2  |                                             |                4 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[41][7]_i_1_n_2  |                                             |                1 |              7 |
+|  n_0_2613_BUFG                                             | buzzer/nolabel_line72/convert[47][7]_i_1_n_2  |                                             |                7 |              7 |
+|  clk_IBUF_BUFG                                             | light/seg_2[7]_i_1_n_2                        |                                             |                5 |              7 |
+|  clk_IBUF_BUFG                                             | buzzer/b1/temp_addr[7]_i_1_n_2                | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                3 |              8 |
+|  clk_IBUF_BUFG                                             | light/nextstate                               | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |                3 |              8 |
+|  buzzer/b1/input_note_record_out_reg[6]_i_2_n_2            |                                               |                                             |                6 |              9 |
+|  clk_IBUF_BUFG                                             |                                               | buzzer/nolabel_line72/com_pro/clk_div/clear |                3 |             10 |
+|  buzzer/b1/E[0]                                            |                                               |                                             |                4 |             11 |
+|  clk_IBUF_BUFG                                             |                                               |                                             |                9 |             16 |
+|  clk_IBUF_BUFG                                             |                                               | buzzer/u1/count[0]_i_1__0_n_2               |                8 |             32 |
+|  clk_IBUF_BUFG                                             |                                               | buzzer/u2/cd1/count[31]_i_1_n_2             |               14 |             33 |
+|  clk_IBUF_BUFG                                             | buzzer/nolabel_line72/state[7]_i_1_n_2        | buzzer/nolabel_line72/state[7]_i_3_n_2      |               11 |             35 |
+|  n_1_2147_BUFG                                             |                                               |                                             |               20 |             54 |
+|  clk_IBUF_BUFG                                             |                                               | buzzer/u4/state20_in                        |               36 |             60 |
+|  clk_IBUF_BUFG                                             |                                               | buzzer/nolabel_line72/k2/note_out_reg[2]_0  |               29 |             74 |
++------------------------------------------------------------+-----------------------------------------------+---------------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                    27 |
-| 2      |                     1 |
+| 1      |                    28 |
+| 2      |                     2 |
 | 4      |                     1 |
-| 7      |                     6 |
+| 7      |                   264 |
 | 8      |                     2 |
 | 9      |                     1 |
+| 10     |                     1 |
 | 11     |                     1 |
-| 13     |                     1 |
-| 16+    |                     4 |
+| 16+    |                     7 |
 +--------+-----------------------+
 
 
