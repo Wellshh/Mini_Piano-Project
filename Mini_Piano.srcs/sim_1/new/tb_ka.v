@@ -56,7 +56,7 @@ module tb_ka(
         #40 keys = 8'b01100000;
         #42 commit = 1'b1;
                 #44 commit = 1'b0;
-        #60 keys = 8'b00100000;
+        #60 keys = 8'b01000000;
         #62 commit = 1'b1;
                 #64 commit = 1'b0;
         #80 keys = 8'b00010000;
@@ -88,7 +88,7 @@ module tb_ka(
     end
     
     initial fork
-    #0 trigger = 1'b1;
+    #1 trigger = 1'b1;
     join
     
 endmodule

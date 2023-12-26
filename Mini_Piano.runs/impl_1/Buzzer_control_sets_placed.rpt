@@ -1,0 +1,326 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Dec 26 12:49:15 2023
+| Host         : dell running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Buzzer_control_sets_placed.rpt
+| Design       : Buzzer
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   262 |
+| Unused register locations in slices containing registers |   284 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            5 |
+| No           | No                    | Yes                    |              66 |           39 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            1736 |          586 |
+| Yes          | No                    | Yes                    |              98 |           33 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+----------------------------------------+--------------------------------------+------------------+----------------+
+|      Clock Signal     |              Enable Signal             |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++-----------------------+----------------------------------------+--------------------------------------+------------------+----------------+
+|  commit_out_OBUF_BUFG |                                        | nolabel_line70/next_state[7]_i_2_n_0 |                1 |              1 |
+|  clk_IBUF_BUFG        |                                        |                                      |                2 |              5 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[114][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[9][7]_i_1_n_0   |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[98][7]_i_1_n_0  |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[110][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[102][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[111][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[101][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[106][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[107][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[112][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[100][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[103][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[105][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[108][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[104][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[109][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[10][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[126][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[118][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[124][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[130][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[135][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[137][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[125][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[138][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[11][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[139][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[13][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[140][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[113][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[141][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[121][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[122][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[123][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[127][7]_i_1_n_0 |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[134][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[136][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[132][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[120][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[129][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[12][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[119][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[117][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[133][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[115][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[131][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[116][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[159][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[15][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[144][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[161][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[143][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[149][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[14][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[145][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[156][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[158][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[160][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[155][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[162][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[163][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[164][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/next_state              | nolabel_line70/next_state[7]_i_2_n_0 |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[150][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[152][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[153][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[147][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[154][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[142][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[148][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[151][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[146][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[157][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[168][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[187][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[185][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[176][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[169][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[171][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[17][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[188][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[180][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[172][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[173][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[174][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[179][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[178][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[183][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[186][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[182][7]_i_1_n_0 |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[184][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[166][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[167][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[165][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[170][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[177][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[175][7]_i_1_n_0 |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[181][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[190][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[1][7]_i_1_n_0   |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[204][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[207][7]_i_1_n_0 |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[210][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[195][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[212][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[205][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[202][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[214][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[19][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[198][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[197][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[18][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[194][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[208][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[196][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[192][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[20][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[203][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[206][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[201][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[213][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[200][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[211][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[209][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[193][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[189][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[191][7]_i_1_n_0 |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[199][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[220][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[233][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[228][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[235][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[236][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[237][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[227][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[216][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[230][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[238][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[239][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[21][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[218][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[229][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[222][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[225][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[223][7]_i_1_n_0 |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[219][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[234][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[221][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[217][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[231][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[226][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[22][7]_i_1_n_0  |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[224][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[232][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[215][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[245][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[250][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[246][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[253][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[249][7]_i_1_n_0 |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[254][7]_i_1_n_0 |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[251][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[255][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[244][7]_i_1_n_0 |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[24][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[248][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[252][7]_i_1_n_0 |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[26][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[242][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[25][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[23][7]_i_1_n_0  |                                      |                5 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[247][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[241][7]_i_1_n_0 |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[240][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[243][7]_i_1_n_0 |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[48][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[50][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[52][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[37][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[41][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[44][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[30][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[49][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[27][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[3][7]_i_1_n_0   |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[38][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[39][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[43][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[45][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[47][7]_i_1_n_0  |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[35][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[51][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[53][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[54][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[42][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[33][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[34][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[28][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[31][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[29][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[40][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[36][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[46][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[76][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[61][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[70][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[56][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[65][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[6][7]_i_1_n_0   |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[71][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[55][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[63][7]_i_1_n_0  |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[72][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[79][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[7][7]_i_1_n_0   |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[80][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[59][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[57][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[5][7]_i_1_n_0   |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[66][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[68][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[60][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[58][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[69][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[78][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[77][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[62][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[67][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[74][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[75][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[73][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[82][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[83][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[99][7]_i_1_n_0  |                                      |                6 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[81][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[88][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[128]_7      | nolabel_line70/k1/note_out_reg[0]_0  |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[85][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[2]_2        | nolabel_line70/k1/note_out_reg[0]_0  |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[96][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[0]_3        | nolabel_line70/k1/note_out_reg[0]_0  |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[8]_1        | nolabel_line70/k1/note_out_reg[0]_0  |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[84][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[94][7]_i_1_n_0  |                                      |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[87][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[97][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[92][7]_i_1_n_0  |                                      |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[16]_4       | nolabel_line70/k1/note_out_reg[0]_0  |                2 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[32]_5       | nolabel_line70/k1/note_out_reg[0]_0  |                3 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[64]_6       | nolabel_line70/k1/note_out_reg[0]_0  |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[93][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert_reg[4]_0        | nolabel_line70/k1/note_out_reg[0]_0  |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[86][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[89][7]_i_1_n_0  |                                      |                4 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[95][7]_i_1_n_0  |                                      |                7 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[91][7]_i_1_n_0  |                                      |                1 |              7 |
+|  commit_out_OBUF_BUFG | nolabel_line70/convert[90][7]_i_1_n_0  |                                      |                1 |              7 |
+|  u3//i__n_0           |                                        |                                      |                3 |             11 |
+|  clk_IBUF_BUFG        | nolabel_line70/state[7]_i_1_n_0        | nolabel_line70/state[7]_i_3_n_0      |               12 |             35 |
+|  clk_IBUF_BUFG        |                                        | nolabel_line70/k1/note_out_reg[0]_0  |               38 |             65 |
++-----------------------+----------------------------------------+--------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 5      |                     1 |
+| 7      |                   257 |
+| 11     |                     1 |
+| 16+    |                     2 |
++--------+-----------------------+
+
+

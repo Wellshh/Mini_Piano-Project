@@ -38,11 +38,10 @@ output reg [1:0] group
     group<=group_next;
     end
     
-    always @(posedge clk,posedge higher, posedge lower)begin
+    always @(posedge clk)begin
     case(group)
-    2'd1:if(higher) group_next <= 2'd2;else if(lower) group_next <= 2'd1;else group_next <= group;
-    2'd2:if(higher) group_next <= 2'd3;else if(lower) group_next <= 2'd1;else group_next <= group;
-    2'd3:if(higher) group_next <= group;else if(lower) group_next <= 2'd2;else group_next <= group;
+    2'd1:if(higher) group_next <= 2'd2;else group_next <= group;
+    2'd2:if(lower) group_next <= 2'd1;else group_next <= group;
     endcase
     end
     

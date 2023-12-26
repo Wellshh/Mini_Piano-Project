@@ -52,7 +52,7 @@ output commit_out
     A = 8'b0000_0100,
     B = 8'b0000_0010;
     reg [7:0] convert [8'b11111111:0];
-    reg [7:0] state,next_state;
+    reg [7:0] state = O,next_state = O;
     
     //显示状态
     assign state_out = state;
@@ -60,20 +60,26 @@ output commit_out
      //trigger打开，开始学习
      //按下reset，重置结果
      
-     always @(negedge rst,posedge trigger,posedge commit,negedge commit)begin
+     always @(negedge rst,posedge clk,posedge trigger)begin
      //重置
-     if(rst==1'b0&trigger==1'b0)//不处于学习状态且按下重置键
-     {convert[O],convert[C],convert[D],convert[E],convert[F],convert[G],convert[A],convert[B],state}<={O,C,D,E,F,G,A,B,O};
-     else if(rst==1'b0&trigger==1'b1)//处于学习状态且按下重置键
-     {convert[O],convert[C],convert[D],convert[E],convert[F],convert[G],convert[A],convert[B],state}<={O,C,D,E,F,G,A,B,C};
-     else if(trigger==1'b1&commit==1'b1)//学习状态
-     convert[keys] <= state;
-     else if(trigger&~commit) state<=next_state;
+     if(~rst&~trigger)//不处于学习状态且按下重置键
+     state<=O;
+     else if(~rst&trigger)//处于学习状态且按下重置键
+     state<=C;
+     else if(trigger&~ifFinish&state==O)
+     state<=C;
+     else
+     state=next_state;
      end
      
+     //打开commit，记录此时键位
+     always @(negedge rst,posedge commit)begin
+     if(~rst) {convert[O],convert[C],convert[D],convert[E],convert[F],convert[G],convert[A],convert[B]}<={O,C,D,E,F,G,A,B};
+     else if(commit) convert[keys]<=state;
+     end
      
-     //学下一个
-     always @(negedge rst,posedge commit)begin//不能加clk，否则会跳一个音
+     //找下一个
+     always @(negedge rst,posedge commit,posedge trigger)begin//不能加clk，否则会跳一个音
      if(~rst&trigger)
      {ifFinish,next_state}<={1'b0,C};
      else if(commit)
@@ -86,6 +92,7 @@ output commit_out
      A:next_state<=B;
      B:{next_state,ifFinish}<={O,1'b1};
      endcase
+     else next_state<=state;
      end
      
      //连接原键盘
