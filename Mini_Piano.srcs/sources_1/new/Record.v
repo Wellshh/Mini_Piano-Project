@@ -33,11 +33,12 @@ input [2:0] select_mode,
 input enable,
 //output reg confirm, //表示用户确认结束录制
 output reg [6:0] input_note_record_out,  //input的note_out
-output reg [1:0] note_group_out //input为高/中/低音
+output reg [1:0] note_group_out, //input为高/中/低音
+output reg [1:0] state
     );
     
     parameter S0 = 2'b00, S1 = 2'b01, S2 = 2'b10, S3 = 2'b11; // 均初始，录音，待播放，播放
-    reg [1:0] state, next_state;
+    reg [1:0] next_state;
     wire [6:0] note_out; //目前的输出
     wire [1:0] group; 
     reg [26:0] count; //用来记录目前走过的时间, 每clk就加一
@@ -138,7 +139,7 @@ output reg [1:0] note_group_out //input为高/中/低音
     end
     
     /*使用keyboard模块转换用户输入*/
-    Keyboard k_record(.note(note), .higher(higher), .lower(lower), .rst(rst), .clk(clk), .note_out(note_out), .group(group));
+    Keyboard k_record(.note(note), .higher(higher), .lower(lower), .rst(rst), .clk(clk), .note_out(note_out), .group(group),.select_mode(select_mode),.enable(enable));
     
     always @(posedge clk,negedge rst)begin //时钟的控制
         if(~rst) begin

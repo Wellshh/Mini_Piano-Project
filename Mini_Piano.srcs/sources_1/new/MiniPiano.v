@@ -44,13 +44,14 @@ output [1:0] led_record_out
   reg enable;//创建全局enable信号
   wire [6:0] user_level;
   wire [2:0] user_state;
+  wire [1:0] state;//表示录音模式的状态
   always @(*) begin
       case(select_mode)
       3'b011,3'b010,3'b101,3'b001: enable = 1'b1;
       default: enable = 1'b0;    
       endcase
     end
-  Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,speaker,led_out,State_of_songs,,user_state,user_level);
+  Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,speaker,led_out,State_of_songs,user_state,user_level);
   Light_seg_Display light (clk,rst_n,select_mode,State_of_songs,start_play,enable,user_level,user_state,show_level,sel,seg,seg_2);
   Led_Display_Mode display (select_mode,mode_light);
   assign play_led = start_play;

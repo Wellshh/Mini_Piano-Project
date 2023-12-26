@@ -46,10 +46,10 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/clk_div.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/MiniPiano.v}
 }
-read_ip -quiet {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
+read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being

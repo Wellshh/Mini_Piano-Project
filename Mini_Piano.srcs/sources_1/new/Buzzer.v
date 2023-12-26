@@ -52,6 +52,7 @@ module Buzzer (
   wire [7:0] led_learning_mode;
 //  wire flag_start_out;
 //  wire flag_play_out;//两个flag信号，判断是否是在录音模式，方便输出切换
+  wire [1:0] state;
   
 
   Speed_Control u1 (
@@ -77,7 +78,7 @@ module Buzzer (
      );
   
   Record b1 (
-    .note(music_freemode),
+    .note(note_in),
     .higher(higher),
     .lower(lower),
     .clk(clk),
@@ -88,7 +89,8 @@ module Buzzer (
     .select_mode(select_mode),
     .enable(enable),
     .input_note_record_out(music_recordmode),
-    .note_group_out(record_group)
+    .note_group_out(record_group),
+    .state(state)
   );
 
   Library u2 (
@@ -128,7 +130,8 @@ module Buzzer (
       .divider(divider),
       .group(group),
       .control_group(control_group),
-      .record_group(record_group)
+      .record_group(record_group),
+      .state(state)
   );
 
   Wave_Generator u4 (
