@@ -1,14 +1,14 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7bd561f562a94c63831aafc33541f1aa --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_ka_behav xil_defaultlib.tb_ka xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 7bd561f562a94c63831aafc33541f1aa --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_button_behav xil_defaultlib.tb_button xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Keyboard
-Compiling module xil_defaultlib.Key_Adjustment
-Compiling module xil_defaultlib.tb_ka
+Compiling module xil_defaultlib.clock_div
+Compiling module xil_defaultlib.button
+Compiling module xil_defaultlib.tb_button
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_ka_behav
+Built simulation snapshot tb_button_behav

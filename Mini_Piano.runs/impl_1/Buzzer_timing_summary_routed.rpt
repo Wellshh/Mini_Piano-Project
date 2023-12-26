@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 12:50:03 2023
+| Date         : Tue Dec 26 17:43:43 2023
 | Host         : dell running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Buzzer_timing_summary_routed.rpt -rpx Buzzer_timing_summary_routed.rpx -warn_on_violation
 | Design       : Buzzer
@@ -52,9 +52,49 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 105 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 115 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 1800 register/latch pins with no clock driven by root clock pin: commit (HIGH)
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[0]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[1]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[2]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[3]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[4]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[5]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[6]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[7]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[8]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt1_reg[9]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[1]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[2]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[3]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[4]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[5]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[6]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[7]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[8]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/clk_div/cnt2_reg[9]/Q (HIGH)
+
+ There are 1800 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/temp1_reg/Q (HIGH)
+
+ There are 1800 register/latch pins with no clock driven by root clock pin: nolabel_line70/com_pro/temp2_reg/Q (HIGH)
 
  There are 11 register/latch pins with no clock driven by root clock pin: nolabel_line70/k1/group_reg[0]/Q (HIGH)
 
@@ -79,21 +119,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 3913 pins that are not constrained for maximum delay. (HIGH)
+ There are 3945 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 12 input ports with no input delay specified. (HIGH)
+ There are 13 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 8 ports with no output delay specified. (HIGH)
+ There are 9 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -127,7 +167,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 0 combinational latch loops in the design through latch input
+ There are 10 combinational latch loops in the design through latch input (HIGH)
 
 
 

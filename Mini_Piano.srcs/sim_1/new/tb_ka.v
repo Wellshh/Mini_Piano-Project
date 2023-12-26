@@ -30,6 +30,7 @@ module tb_ka(
     wire [7:0] state_out;
     wire [6:0] piano;
     reg commit;
+    wire clks;
     
     Key_Adjustment dut(
     .keys(keys),
@@ -40,7 +41,8 @@ module tb_ka(
     .group(group),
     .commit(commit),
     .state_out(state_out),
-    .music_keyboard(piano)
+    .music_keyboard(piano),
+    .clks(clks)
     );
     
     initial begin

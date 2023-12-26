@@ -36,8 +36,8 @@ output wire [7:0] state_out,
 output wire [6:0] music_keyboard,
 output commit_out
     );
-    
-    assign commit_out = commit;
+    wire commit_pro;
+    assign commit_out = commit_pro;
     
     //reg [7:0] notes;
     //wire [6:0] music_keyboard;
@@ -57,6 +57,12 @@ output commit_out
     //显示状态
     assign state_out = state;
     
+    button com_pro(
+    .clk(clk),
+    .button_in(commit),
+    .button_out(commit_pro)
+    );
+    
      //trigger打开，开始学习
      //按下reset，重置结果
      
@@ -73,16 +79,16 @@ output commit_out
      end
      
      //打开commit，记录此时键位
-     always @(negedge rst,posedge commit)begin
+     always @(negedge rst,posedge commit_pro)begin
      if(~rst) {convert[O],convert[C],convert[D],convert[E],convert[F],convert[G],convert[A],convert[B]}<={O,C,D,E,F,G,A,B};
-     else if(commit) convert[keys]<=state;
+     else if(commit_pro) convert[keys]<=state;
      end
      
      //找下一个
-     always @(negedge rst,posedge commit,posedge trigger)begin//不能加clk，否则会跳一个音
+     always @(negedge rst,posedge commit_pro,posedge trigger)begin//不能加clk，否则会跳一个音
      if(~rst&trigger)
      {ifFinish,next_state}<={1'b0,C};
-     else if(commit)
+     else if(commit_pro)
      case(state)
      C:next_state<=D;
      D:next_state<=E;
@@ -170,4 +176,51 @@ output commit_out
            
            
    
+endmodule
+
+module clock_div(
+input clk,
+output clks
+);
+reg [9:0] cnt1 = 10'd0;
+reg [9:0] cnt2 = 10'd0;
+
+always @(posedge clk)begin
+    if(cnt1<10'd100)
+        cnt1<=cnt1+10'd1;
+    else
+        cnt1<=10'd0;
+end
+
+always @(cnt1)begin
+if(cnt1==10'd100&cnt2<10'd100)
+cnt2 = cnt2+10'd1;
+else if(cnt2==10'd100)
+cnt2 = 10'd0;
+end
+
+assign clks = cnt2>=10'd50;
+
+endmodule
+
+module button(
+input clk,
+input button_in,
+output button_out
+);
+
+reg temp1,temp2;
+wire clks;
+
+clock_div clk_div(
+    .clk(clk),
+    .clks(clks)
+    );
+
+always @(posedge clks)begin
+temp1<=button_in;
+temp2<=temp1;
+end
+
+assign button_out = temp1&~temp2;
 endmodule
