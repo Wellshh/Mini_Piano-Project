@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+`include "Constants.vh"
 module Keyboard(
 input [7:0] note,
 input higher,
@@ -54,14 +54,14 @@ output reg [1:0] group
         if(~rst || enable == 1'b0) note_out <= 7'd0;
         else 
         case(note)
-        8'b0000_0000: note_out <= 7'd0;
-        8'b0000_0010: note_out <= 7'd7;
-        8'b0000_0100: note_out <= 7'd6;
-        8'b0000_1000: note_out <= 7'd5;
-        8'b0001_0000: note_out <= 7'd4;
-        8'b0010_0000: note_out <= 7'd3;
-        8'b0100_0000: note_out <= 7'd2;
-        8'b1000_0000: note_out <= 7'd1;
+        `O: note_out <= `m0;
+            `B: note_out <= `m7;
+            `A: note_out <= `m6;
+            `G: note_out <= `m5;
+            `F: note_out <= `m4;
+            `E: note_out <= `m3;
+            `D: note_out <= `m2;
+            `C: note_out <= `m1;
         default: note_out<= note_out;
         endcase
         end    

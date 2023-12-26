@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 22:47:48 2023
+| Date         : Tue Dec 26 23:19:22 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_drc -file MiniPiano_drc_routed.rpt -pb MiniPiano_drc_routed.pb -rpx MiniPiano_drc_routed.rpx
 | Design       : MiniPiano
@@ -128,8 +128,8 @@ Related violations: <none>
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
 A LUT buzzer/nolabel_line72/com_pro/clk_div/temp1_i_1 is driving clock pin of 2 cells. This could lead to large hold time violations. First few involved cells are:
-    buzzer/nolabel_line72/com_pro/temp2_reg {FDRE}
     buzzer/nolabel_line72/com_pro/temp1_reg {FDRE}
+    buzzer/nolabel_line72/com_pro/temp2_reg {FDRE}
 
 Related violations: <none>
 

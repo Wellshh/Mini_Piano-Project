@@ -19,8 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module Key_Adjustment(
+`include "Constants.vh"
 input enable,
 input [7:0] keys,
 output reg [6:0] music,
@@ -36,15 +36,15 @@ output wire [7:0] state_out//ÁÁµÆÂß¼­
     wire [6:0] music_keyboard;
     reg ifFinish = 1'b0;
     parameter 
-    O = 8'b0000_0000,
-    C = 8'b1000_0000,
-    D = 8'b0100_0000,
-    E = 8'b0010_0000,
-    F = 8'b0001_0000,
-    G = 8'b0000_1000,
-    A = 8'b0000_0100,
-    B = 8'b0000_0010;
-    reg [7:0] convert [8'b11111111:0];
+        O = `O,
+        C = `C,
+        D = `D,
+        E = `E,
+        F = `F,
+        G = `G,
+        A = `A,
+        B = `B;
+    reg [7:0] convert [`convert_size:0];
     reg [7:0] state = O,next_state = O;
     
     //ÏÔÊ¾×´Ì¬
@@ -108,17 +108,18 @@ output wire [7:0] state_out//ÁÁµÆÂß¼­
      
      //²¥·Å
      always @(posedge clk)begin
-     case(state)
-     O:music<=music_keyboard;
-     C:music <= 7'd1;
-     D:music <= 7'd2;
-     E:music <= 7'd3;
-     F:music <= 7'd4;
-     G:music <= 7'd5;
-     A:music <= 7'd6;
-     B:music <= 7'd7;
-     endcase
-     end
+          case(state)
+          O:music<=music_keyboard;
+          C:music <= `m1;
+          D:music <= `m2;
+          E:music <= `m3;
+          F:music <= `m4;
+          G:music <= `m5;
+          A:music <= `m6;
+          B:music <= `m7;
+          endcase
+      end
+      
 endmodule
 
 module clock_div(
@@ -145,4 +146,5 @@ end
 assign clks = cnt2>=10'd50;
 
 endmodule
+
 
