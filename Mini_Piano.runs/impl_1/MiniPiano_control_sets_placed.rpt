@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 19:28:38 2023
+| Date         : Tue Dec 26 19:48:50 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MiniPiano_control_sets_placed.rpt
 | Design       : MiniPiano
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              91 |           34 |
-| No           | No                    | Yes                    |             147 |           84 |
-| No           | Yes                   | No                     |              80 |           34 |
+| No           | No                    | No                     |              91 |           35 |
+| No           | No                    | Yes                    |             147 |           80 |
+| No           | Yes                   | No                     |              80 |           33 |
 | Yes          | No                    | No                     |              14 |            5 |
-| Yes          | No                    | Yes                    |              31 |           15 |
+| Yes          | No                    | Yes                    |              31 |           16 |
 | Yes          | Yes                   | No                     |               7 |            4 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -49,49 +49,49 @@ Table of Contents
 |                   Clock Signal                  |               Enable Signal              |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
 +-------------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+
 |  light/mode_reg[0]_LDC_i_1_n_1                  |                                          | light/mode_reg[0]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[2]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[5]_LDC_i_1_n_1      |                1 |              1 |
-|  light/seg_reg[2]_LDC_i_1_n_1                   |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
-|  light/mode_reg[2]_LDC_i_1_n_1                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
-|  light/mode_reg[1]_LDC_i_1_n_1                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
-|  light/seg_reg[5]_LDC_i_1_n_1                   |                                          | light/seg_reg[5]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[6]_LDC_i_1_n_1                   |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[6]_LDC_i_1_n_1      |                1 |              1 |
-|  light/seg_reg[1]_LDC_i_1_n_1                   |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[7]_LDC_i_1_n_1                   |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
-|  light/seg_reg[4]_LDC_i_1_n_1                   |                                          | light/seg_reg[4]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[1]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[7]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[4]_LDC_i_1_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_1_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
-|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
 |  clk_IBUF_BUFG                                  |                                          | light/seg_reg[4]_LDC_i_2_n_1      |                1 |              1 |
 |  clk_IBUF_BUFG                                  |                                          | light/seg_reg[5]_LDC_i_2_n_1      |                1 |              1 |
-|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | buzzer/b1/k_record/group_reg[1]_0 |                1 |              2 |
+|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
+|  light/mode_reg[2]_LDC_i_1_n_1                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
+|  light/seg_reg[4]_LDC_i_1_n_1                   |                                          | light/seg_reg[4]_LDC_i_2_n_1      |                1 |              1 |
+|  light/mode_reg[1]_LDC_i_1_n_1                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
+|  light/seg_reg[2]_LDC_i_1_n_1                   |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
+|  light/seg_reg[1]_LDC_i_1_n_1                   |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[4]_LDC_i_1_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[2]_LDC_i_1_n_1      |                1 |              1 |
+|  light/seg_reg[5]_LDC_i_1_n_1                   |                                          | light/seg_reg[5]_LDC_i_2_n_1      |                1 |              1 |
+|  light/seg_reg[6]_LDC_i_1_n_1                   |                                          | light/seg_reg[6]_LDC_i_2_n_1      |                1 |              1 |
+|  light/seg_reg[7]_LDC_i_1_n_1                   |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[1]_LDC_i_1_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[5]_LDC_i_1_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[6]_LDC_i_1_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_2_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | light/seg_reg[7]_LDC_i_1_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_1_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[2]_LDC_i_2_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[0]_LDC_i_1_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[7]_LDC_i_2_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_1_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/mode_reg[1]_LDC_i_2_n_1     |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[1]_LDC_i_2_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  |                                          | light/seg_reg[2]_LDC_i_2_n_1      |                1 |              1 |
+|  clk_IBUF_BUFG                                  | light/seg[3]_i_1_n_1                     | buzzer/b1/k_record/group_reg[1]_0 |                2 |              2 |
 |  light/nextstate                                |                                          |                                   |                1 |              4 |
 |  buzzer/u2/cd1/clk_out                          | buzzer/u2/level_reg_0_3_0_0_i_2_n_1      |                                   |                2 |              7 |
-|  buzzer/u2/cd1/clk_out                          |                                          | buzzer/u2/user_level[6]_i_1_n_1   |                3 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/u2/cnt_learning_mode[6]_i_1_n_1   | buzzer/b1/k_record/group_reg[1]_0 |                3 |              7 |
+|  buzzer/u2/cd1/clk_out                          |                                          | buzzer/u2/user_level[6]_i_1_n_1   |                2 |              7 |
 |  clk_IBUF_BUFG                                  | buzzer/u1/is_Reaching_125ms_carry__1_n_2 | buzzer/u1/cnt0                    |                4 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/u1/T_final_next                   |                                   |                1 |              7 |
-|  clk_IBUF_BUFG                                  | light/seg_2[7]_i_1_n_1                   |                                   |                4 |              7 |
-|  clk_IBUF_BUFG                                  | buzzer/b1/temp_addr[7]_i_1_n_1           | buzzer/b1/k_record/group_reg[1]_0 |                3 |              8 |
-|  clk_IBUF_BUFG                                  | light/nextstate                          | buzzer/b1/k_record/group_reg[1]_0 |                2 |              8 |
-|  buzzer/b1/input_note_record_out_reg[6]_i_2_n_1 |                                          |                                   |                4 |              9 |
-|  buzzer/b1/E[0]                                 |                                          |                                   |                3 |             11 |
-|  clk_IBUF_BUFG                                  |                                          |                                   |                6 |             13 |
-|  clk_IBUF_BUFG                                  |                                          | buzzer/u1/count[0]_i_1_n_1        |                8 |             32 |
+|  clk_IBUF_BUFG                                  | buzzer/u2/cnt_learning_mode[6]_i_1_n_1   | buzzer/b1/k_record/group_reg[1]_0 |                3 |              7 |
+|  clk_IBUF_BUFG                                  | light/seg_2[7]_i_1_n_1                   |                                   |                3 |              7 |
+|  clk_IBUF_BUFG                                  | buzzer/u1/T_final_next                   |                                   |                2 |              7 |
+|  clk_IBUF_BUFG                                  | light/nextstate                          | buzzer/b1/k_record/group_reg[1]_0 |                3 |              8 |
+|  clk_IBUF_BUFG                                  | buzzer/b1/temp_addr[7]_i_1_n_1           | buzzer/b1/k_record/group_reg[1]_0 |                2 |              8 |
+|  buzzer/b1/input_note_record_out_reg[6]_i_2_n_1 |                                          |                                   |                3 |              9 |
+|  buzzer/b1/E[0]                                 |                                          |                                   |                4 |             11 |
+|  clk_IBUF_BUFG                                  |                                          |                                   |               10 |             13 |
+|  clk_IBUF_BUFG                                  |                                          | buzzer/u1/count[0]_i_1__0_n_1     |                8 |             32 |
 |  clk_IBUF_BUFG                                  |                                          | buzzer/u2/cd1/count[31]_i_1_n_1   |               15 |             33 |
-|  n_0_930_BUFG                                   |                                          |                                   |               20 |             54 |
-|  clk_IBUF_BUFG                                  |                                          | buzzer/b1/k_record/group_reg[1]_0 |               71 |            134 |
+|  n_0_949_BUFG                                   |                                          |                                   |               17 |             54 |
+|  clk_IBUF_BUFG                                  |                                          | buzzer/b1/k_record/group_reg[1]_0 |               67 |            134 |
 +-------------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+
 
 

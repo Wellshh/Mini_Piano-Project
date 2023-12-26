@@ -37,7 +37,8 @@ module Buzzer (
     output [7:0] led_out,
     output [1:0] State_of_songs,
     output [2:0] user_state,
-    output [6:0] user_level
+    output [6:0] user_level,
+    output [1:0] state
 );
     
   wire [6:0] cnt;
@@ -52,7 +53,6 @@ module Buzzer (
   wire [7:0] led_learning_mode;
 //  wire flag_start_out;
 //  wire flag_play_out;//两个flag信号，判断是否是在录音模式，方便输出切换
-  wire [1:0] state;
   
 
   Speed_Control u1 (
