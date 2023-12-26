@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Dec 26 22:00:45 2023
+| Date             : Tue Dec 26 22:47:50 2023
 | Host             : LegionWells running 64-bit major release  (build 9200)
 | Command          : report_power -file MiniPiano_power_routed.rpt -pb MiniPiano_power_summary_routed.pb -rpx MiniPiano_power_routed.rpx
 | Design           : MiniPiano
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 29.726 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 29.126 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 29.239                           |
+| Dynamic (W)              | 28.639                           |
 | Device Static (W)        | 0.487                            |
 | Effective TJA (C/W)      | 4.8                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |    10.660 |     5078 |       --- |             --- |
-|   LUT as Logic           |     9.091 |     2017 |     20800 |            9.70 |
-|   CARRY4                 |     1.435 |      242 |      8150 |            2.97 |
-|   Register               |     0.056 |     2227 |     41600 |            5.35 |
-|   F7/F8 Muxes            |     0.050 |      359 |     32600 |            1.10 |
-|   BUFG                   |     0.015 |        3 |        32 |            9.38 |
+| Slice Logic              |    10.654 |     5086 |       --- |             --- |
+|   LUT as Logic           |     9.086 |     2021 |     20800 |            9.72 |
+|   CARRY4                 |     1.436 |      243 |      8150 |            2.98 |
+|   Register               |     0.056 |     2230 |     41600 |            5.36 |
+|   F7/F8 Muxes            |     0.050 |      361 |     32600 |            1.11 |
+|   BUFG                   |     0.014 |        3 |        32 |            9.38 |
 |   LUT as Distributed RAM |     0.012 |        7 |      9600 |            0.07 |
 |   Others                 |     0.000 |       37 |       --- |             --- |
-| Signals                  |    10.275 |     4005 |       --- |             --- |
+| Signals                  |     9.481 |     4004 |       --- |             --- |
 | Block RAM                |     0.117 |        1 |        50 |            2.00 |
-| I/O                      |     8.187 |       61 |       210 |           29.05 |
+| I/O                      |     8.387 |       61 |       210 |           29.05 |
 | Static Power             |     0.487 |          |           |                 |
-| Total                    |    29.726 |          |           |                 |
+| Total                    |    29.126 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    21.464 |      21.122 |      0.341 |
-| Vccaux    |       1.800 |     0.350 |       0.297 |      0.053 |
-| Vcco33    |       3.300 |     2.296 |       2.295 |      0.001 |
+| Vccint    |       1.000 |    20.664 |      20.323 |      0.341 |
+| Vccaux    |       1.800 |     0.358 |       0.304 |      0.053 |
+| Vcco33    |       3.300 |     2.352 |       2.351 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -141,41 +141,41 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| MiniPiano                                        |    29.239 |
-|   buzzer                                         |    19.028 |
-|     b1                                           |     0.737 |
-|       k_record                                   |     0.119 |
-|       u_ram1                                     |     0.072 |
-|         U0                                       |     0.072 |
-|           inst_blk_mem_gen                       |     0.072 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.072 |
-|               valid.cstr                         |     0.072 |
-|                 ramloop[0].ram.r                 |     0.072 |
-|                   prim_noinit.ram                |     0.072 |
-|       u_ram2                                     |     0.061 |
-|         U0                                       |     0.061 |
-|           inst_blk_mem_gen                       |     0.061 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.061 |
-|               valid.cstr                         |     0.061 |
-|                 ramloop[0].ram.r                 |     0.061 |
-|                   prim_noinit.ram                |     0.061 |
-|     nolabel_line72                               |     2.939 |
+| MiniPiano                                        |    28.639 |
+|   buzzer                                         |    18.263 |
+|     b1                                           |     0.659 |
+|       k_record                                   |     0.109 |
+|       u_ram1                                     |     0.070 |
+|         U0                                       |     0.070 |
+|           inst_blk_mem_gen                       |     0.070 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.070 |
+|               valid.cstr                         |     0.070 |
+|                 ramloop[0].ram.r                 |     0.070 |
+|                   prim_noinit.ram                |     0.070 |
+|       u_ram2                                     |     0.060 |
+|         U0                                       |     0.060 |
+|           inst_blk_mem_gen                       |     0.060 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.060 |
+|               valid.cstr                         |     0.060 |
+|                 ramloop[0].ram.r                 |     0.060 |
+|                   prim_noinit.ram                |     0.060 |
+|     nolabel_line72                               |     3.020 |
 |       com_pro                                    |     0.028 |
 |         clk_div                                  |     0.022 |
-|       k2                                         |     1.033 |
-|     u1                                           |     0.136 |
-|     u2                                           |     0.577 |
-|       cd1                                        |     0.152 |
-|       level_reg_0_3_0_0                          |     0.005 |
-|       level_reg_0_3_1_1                          |     0.016 |
-|       level_reg_0_3_2_2                          |     0.017 |
-|       level_reg_0_3_3_3                          |     0.015 |
-|       level_reg_0_3_4_4                          |     0.009 |
-|       level_reg_0_3_5_5                          |     0.006 |
-|       level_reg_0_3_6_6                          |     0.005 |
-|     u3                                           |    13.899 |
-|     u4                                           |     0.739 |
-|   light                                          |     0.418 |
+|       k2                                         |     1.036 |
+|     u1                                           |     0.102 |
+|     u2                                           |     0.495 |
+|       cd1                                        |     0.153 |
+|       level_reg_0_3_0_0                          |     0.003 |
+|       level_reg_0_3_1_1                          |     0.012 |
+|       level_reg_0_3_2_2                          |     0.011 |
+|       level_reg_0_3_3_3                          |     0.012 |
+|       level_reg_0_3_4_4                          |     0.011 |
+|       level_reg_0_3_5_5                          |     0.009 |
+|       level_reg_0_3_6_6                          |     0.006 |
+|     u3                                           |    13.430 |
+|     u4                                           |     0.556 |
+|   light                                          |     0.381 |
 +--------------------------------------------------+-----------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Dec 26 22:00:46 2023
+| Date         : Tue Dec 26 22:47:50 2023
 | Host         : LegionWells running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file MiniPiano_timing_summary_routed.rpt -rpx MiniPiano_timing_summary_routed.rpx -warn_on_violation
 | Design       : MiniPiano
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 328 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 331 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 9 register/latch pins with no clock driven by root clock pin: rst_n (HIGH)
 
@@ -61,6 +61,8 @@ Table of Contents
  There are 12 register/latch pins with no clock driven by root clock pin: select_mode[1] (HIGH)
 
  There are 12 register/latch pins with no clock driven by root clock pin: select_mode[2] (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: show_level (HIGH)
 
  There are 54 register/latch pins with no clock driven by root clock pin: start_play (HIGH)
 
@@ -150,6 +152,20 @@ Table of Contents
 
  There are 11 register/latch pins with no clock driven by root clock pin: buzzer/u2/music_reg[2]/Q (HIGH)
 
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[0]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[1]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[2]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[3]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[4]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[5]/Q (HIGH)
+
+ There are 54 register/latch pins with no clock driven by root clock pin: buzzer/u2/user_level_reg[6]/Q (HIGH)
+
  There are 4 register/latch pins with no clock driven by root clock pin: light/FSM_sequential_state_reg[0]/Q (HIGH)
 
  There are 4 register/latch pins with no clock driven by root clock pin: light/FSM_sequential_state_reg[1]/Q (HIGH)
@@ -201,7 +217,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 4547 pins that are not constrained for maximum delay. (HIGH)
+ There are 4553 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

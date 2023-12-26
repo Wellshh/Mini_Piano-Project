@@ -190,7 +190,7 @@ module Light_seg_Display (
          Practice_mode: begin
                         case(start_play)
                         //没有开始播放，选择用户
-                            1'b0: 
+                            1'b1: 
                             case(user_state)
                             User_0: begin 
                                 display[7] = u;
@@ -224,7 +224,7 @@ module Light_seg_Display (
                             end
                             endcase
                         //开始练习模式的播放，一直显示Practice直到show_level
-                            1'b1: 
+                            1'b0: 
                             case(show_level)
                             //show_level没有激活，一直显示录音提示。
                                 1'b0:begin

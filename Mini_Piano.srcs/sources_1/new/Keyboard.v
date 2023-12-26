@@ -64,8 +64,7 @@ output reg [1:0] group
         8'b1000_0000: note_out <= 7'd1;
         default: note_out<= note_out;
         endcase
-        end
-    
+        end    
 endmodule
 
 

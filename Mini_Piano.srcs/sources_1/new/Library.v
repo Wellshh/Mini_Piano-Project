@@ -71,20 +71,20 @@ button b1(
     end
     
     //是否需要当start_play后不能切换
-//    always @(posedge clk,posedge songs_select) begin
-//        case(user_state)
-//            User_0: if(songs_select && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
-//            User_1: if(songs_select && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
-//            User_2: if(songs_select && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
-//        endcase
-//    end
-always @(posedge clk,posedge songs_select_button_out) begin
+    always @(posedge clk,posedge songs_select) begin
         case(user_state)
-            User_0: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
-            User_1: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
-            User_2: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
+            User_0: if(songs_select && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
+            User_1: if(songs_select && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
+            User_2: if(songs_select && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
         endcase
     end
+//always @(posedge clk,posedge songs_select_button_out) begin
+//        case(user_state)
+//            User_0: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_1; else user_next_state <= user_state;
+//            User_1: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_2; else user_next_state <= user_state;
+//            User_2: if(songs_select_button_out && button_select == 1'b1) user_next_state <= User_0; else user_next_state <= user_state;
+//        endcase
+//    end
 
     
     
@@ -141,26 +141,26 @@ always @(posedge clk,posedge songs_select_button_out) begin
     end
     
  //组合逻辑，切换状态
-//    always @(posedge clk, posedge songs_select) begin
-//        case(State_of_songs)
-//            Little_Star: if(songs_select && button_select == 1'b0) next_State_of_songs <= Happy_Birthday; 
-//                         else next_State_of_songs <= State_of_songs;
-//            Happy_Birthday: if(songs_select && button_select == 1'b0 ) next_State_of_songs <= His_Theme; 
-//                            else next_State_of_songs <= State_of_songs;
-//            His_Theme: if(songs_select && button_select == 1'b0) next_State_of_songs <= Little_Star;
-//                       else next_State_of_songs <= State_of_songs;
-//        endcase
-//    end
-    always @(posedge clk, posedge songs_select_button_out) begin
-            case(State_of_songs)
-                Little_Star: if(songs_select_button_out && button_select == 1'b0) next_State_of_songs <= Happy_Birthday; 
-                             else next_State_of_songs <= State_of_songs;
-                Happy_Birthday: if(songs_select_button_out && button_select == 1'b0 ) next_State_of_songs <= His_Theme; 
-                                else next_State_of_songs <= State_of_songs;
-                His_Theme: if(songs_select_button_out && button_select == 1'b0) next_State_of_songs <= Little_Star;
-                           else next_State_of_songs <= State_of_songs;
-            endcase
-        end
+    always @(posedge clk, posedge songs_select) begin
+        case(State_of_songs)
+            Little_Star: if(songs_select && button_select == 1'b0) next_State_of_songs <= Happy_Birthday; 
+                         else next_State_of_songs <= State_of_songs;
+            Happy_Birthday: if(songs_select && button_select == 1'b0 ) next_State_of_songs <= His_Theme; 
+                            else next_State_of_songs <= State_of_songs;
+            His_Theme: if(songs_select && button_select == 1'b0) next_State_of_songs <= Little_Star;
+                       else next_State_of_songs <= State_of_songs;
+        endcase
+    end
+//    always @(posedge clk, posedge songs_select_button_out) begin
+//            case(State_of_songs)
+//                Little_Star: if(songs_select_button_out && button_select == 1'b0) next_State_of_songs <= Happy_Birthday; 
+//                             else next_State_of_songs <= State_of_songs;
+//                Happy_Birthday: if(songs_select_button_out && button_select == 1'b0 ) next_State_of_songs <= His_Theme; 
+//                                else next_State_of_songs <= State_of_songs;
+//                His_Theme: if(songs_select_button_out && button_select == 1'b0) next_State_of_songs <= Little_Star;
+//                           else next_State_of_songs <= State_of_songs;
+//            endcase
+//        end
     
 //always @(*) begin
 //    case(State_of_songs)
