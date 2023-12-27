@@ -76,10 +76,11 @@ set rc [catch {
   set_property parent.project_path {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.xpr} [current_project]
   set_property ip_output_repo {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.runs/synth_1/MiniPiano.dcp}}
   read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
   read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
+  read_ip -quiet {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25.xci}}
   read_xdc {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/constrs_1/new/Buzzer_cs.xdc}}
   link_design -top MiniPiano -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
@@ -157,7 +158,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force MiniPiano.mmi }
   write_bitstream -force MiniPiano.bit 
   catch {write_debug_probes -quiet -force MiniPiano}

@@ -28,7 +28,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.cache/wt} [current_project]
 set_property parent.project_path {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.xpr} [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.cache/ip} [current_project]
@@ -51,6 +51,11 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/Wave_Generator.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/button.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/clk_div.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/game_rgb_out.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/vga_character.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/vga_driver.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/vga_music_game.v}
+  {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/vga_top.v}
   {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/new/MiniPiano.v}
 }
 read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
@@ -58,6 +63,12 @@ set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Deskt
 
 read_ip -quiet {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc}}]
+
+read_ip -quiet {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25_late.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.srcs/sources_1/ip/gen_clk25/gen_clk25_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

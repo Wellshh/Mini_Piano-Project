@@ -33,6 +33,7 @@ input play_switch,
 input show_level,
 input adjust,//进入按键调整模式的开关
 //input commit,//按键调整时确定的按钮
+input vga_switch,//切换vga状态
 output speaker,
 output [7:0] led_out,
 output [7:0] sel,//位选信号
@@ -40,7 +41,10 @@ output [7:0] seg, //前四个段选信号
 output [7:0] seg_2, //后四个数码管段选信号
 output play_led,
 output [2:0] mode_light,
-output [1:0] led_record_out
+output [1:0] led_record_out,
+output wire hsync, //行信号
+output wire vsync, //列信号
+output wire [7:0] rgb //颜色信号
   );
   wire [1:0] State_of_songs;
   reg enable;//创建全局enable信号
@@ -56,6 +60,7 @@ output [1:0] led_record_out
   Buzzer buzzer (note_in,higher,lower,clk,rst_n,select_mode,start_play,songs_select,enable,start_button,stop_button,play_switch,show_level,adjust,speaker,led_out,State_of_songs,user_state,user_level,state);
   Light_seg_Display light (clk,rst_n,select_mode,State_of_songs,start_play,enable,user_level,user_state,show_level,sel,seg,seg_2);
   Led_Display_Mode display (select_mode,mode_light);
+  vga_top(clk, rst_n, select_mode, vga_switch,hsync, vsync, rgb);
   assign play_led = start_play;
   assign led_record_out = {start_button,stop_button};
 endmodule

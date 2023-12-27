@@ -60,8 +60,18 @@ set_property PACKAGE_PIN H5 [get_ports {led_record_out[1]}]
 set_property PACKAGE_PIN H6 [get_ports {led_record_out[0]}]
 set_property PACKAGE_PIN V2 [get_ports {show_level}]
 set_property PACKAGE_PIN V5 [get_ports {adjust}]
+set_property PACKAGE_PIN V4 [get_ports {vga_switch}]
 
-
+set_property PACKAGE_PIN D7 [get_ports hsync]
+set_property PACKAGE_PIN C4 [get_ports vsync]
+set_property PACKAGE_PIN F5 [get_ports {rgb[7]}]
+set_property PACKAGE_PIN C6 [get_ports {rgb[6]}]
+set_property PACKAGE_PIN C5 [get_ports {rgb[5]}]
+set_property PACKAGE_PIN B6 [get_ports {rgb[4]}]
+set_property PACKAGE_PIN A6 [get_ports {rgb[3]}]
+set_property PACKAGE_PIN A5 [get_ports {rgb[2]}]
+set_property PACKAGE_PIN C7 [get_ports {rgb[1]}]
+set_property PACKAGE_PIN E6 [get_ports {rgb[0]}]
 
 
 
