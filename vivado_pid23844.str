@@ -1605,3 +1605,63 @@ selectCodeEditor("game_rgb_out.v", 367, 281); // cd (w, cj)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Elapsed time: 65 seconds
+selectCodeEditor("game_rgb_out.v", 533, 313); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 217, 242); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 237, 292); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 261, 372); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 223, 295); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 232, 302); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 227, 304); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 228, 299); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("game_rgb_out.v", 181, 242); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 332, 367); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Light_seg_display_new.v", 9); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Light_seg.v", 8); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Light_seg_Display.v", 6); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Led.v", 5); // k (j, cj)
+selectCodeEditor("Led.v", 544, 218); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "game_rgb_out.v", 10); // k (j, cj)
+selectCodeEditor("game_rgb_out.v", 433, 190); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 10 
+// Tcl Message: [Wed Dec 27 17:37:51 2023] Launched synth_1... Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1/runme.log [Wed Dec 27 17:37:51 2023] Launched impl_1... Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)

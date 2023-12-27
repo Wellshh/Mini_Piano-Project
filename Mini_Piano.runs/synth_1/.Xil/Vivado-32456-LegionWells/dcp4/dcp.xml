@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Checkpoint Version="9" Minor="0">
+	<BUILD_NUMBER Name="2086221"/>
+	<FULL_BUILD Name="SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017"/>
+	<PRODUCT Name="Vivado v2017.4 (64-bit)"/>
+	<Part Name="xc7a35tcsg324-1"/>
+	<Top Name="blk_mem_gen_0"/>
+	<DisableAutoIOBuffers Name="1"/>
+	<OutOfContext Name="1"/>
+	<IpOocRunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<File Type="XDC_IN_CONTEXT" Name="blk_mem_gen_0_in_context.xdc" ModTime="1703563624"/>
+	<File Type="EDIF" Name="blk_mem_gen_0.edf" ModTime="1703563624"/>
+	<File Type="VERILOG_STUB" Name="blk_mem_gen_0_stub.v" ModTime="1703563624"/>
+	<File Type="VHDL_STUB" Name="blk_mem_gen_0_stub.vhdl" ModTime="1703563624"/>
+	<File Type="XN" Name="blk_mem_gen_0.xn" ModTime="1703563624"/>
+	<File Type="INCR" Name="blk_mem_gen_0.incr" ModTime="1703563624"/>
+	<File Type="RDA" Name="blk_mem_gen_0.rda" ModTime="1703563624"/>
+	<File Type="REPLAY" Name="blk_mem_gen_0_iPhysOpt.replay" ModTime="1703563624"/>
+	<File Type="WDF" Name="blk_mem_gen_0.wdf" ModTime="1703563624"/>
+</Checkpoint>
+
