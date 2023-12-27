@@ -32,16 +32,16 @@ output reg [7:0] led_out
 //根据模式选择led信号的输入
     always @(*) begin
         case(select_mode) 
-            3'b011: led <= led_keyboard_adjust;
-            3'b010: led <= led_in_playmode;
-            3'b101,3'b001: led <= led_in_learning_mode;
-            default: led <= led_keyboard_adjust;
+            3'b011: led = led_keyboard_adjust;
+            3'b010: led = led_in_playmode;
+            3'b101,3'b001: led = led_in_learning_mode;
+            default: led = led_keyboard_adjust;
         endcase   
     end
     always @(*)
-        if(~rst_n) led_out <= 8'b0000_0000;
+        if(~rst_n) led_out = 8'b0000_0000;
         else
         begin
-            led_out <= led;        
+            led_out = led;        
         end   
 endmodule

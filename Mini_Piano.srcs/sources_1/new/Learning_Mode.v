@@ -29,15 +29,15 @@ output reg [7:0] led_learning_mode
     );
    always @(music) begin
         case(music)
-            7'd0: led_learning_mode <= 8'b0000_0000;
-            7'd1: led_learning_mode <= 8'b1000_0000;
-            7'd2: led_learning_mode <= 8'b0100_0000;
-            7'd3: led_learning_mode <= 8'b0010_0000;
-            7'd4: led_learning_mode <= 8'b0001_0000;
-            7'd5: led_learning_mode <= 8'b0000_1000;
-            7'd6: led_learning_mode <= 8'b0000_0100;
-            7'd7: led_learning_mode <= 8'b0000_0010;
-            default: led_learning_mode <= 8'b0000_0000;
+            7'd0: led_learning_mode = 8'b0000_0000;
+            7'd1: led_learning_mode = 8'b1000_0000;
+            7'd2: led_learning_mode = 8'b0100_0000;
+            7'd3: led_learning_mode = 8'b0010_0000;
+            7'd4: led_learning_mode = 8'b0001_0000;
+            7'd5: led_learning_mode = 8'b0000_1000;
+            7'd6: led_learning_mode = 8'b0000_0100;
+            7'd7: led_learning_mode = 8'b0000_0010;
+            default: led_learning_mode = 8'b0000_0000;
         endcase
    end
 endmodule

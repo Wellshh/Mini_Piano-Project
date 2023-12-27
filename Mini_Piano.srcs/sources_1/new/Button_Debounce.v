@@ -96,4 +96,4 @@ module Button_Debounce(
             release_sign <= 1'd0 ;
     end       
             
-endmodule
+endmodule//本模块来自于CSDN“强化版的消抖模块”，但是我们没有用这个模块，我们自己写了一个消抖模块。

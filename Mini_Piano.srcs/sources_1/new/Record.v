@@ -57,7 +57,7 @@ output reg [1:0] state
     
     always @(posedge clk, negedge rst) begin
         if(~rst) begin
-            ram_ena = 1'b0;
+            ram_ena <= 1'b0;
         end
         else begin
             if(state == S1)begin
@@ -125,7 +125,7 @@ output reg [1:0] state
                                 end
                         2'b11: begin //²¥·Å
                                if(stop) begin
-                                    next_state <= S0;
+                                    next_state = S0;
                                end
                                else begin
                                     next_state = state;

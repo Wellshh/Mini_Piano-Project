@@ -115,7 +115,7 @@ output reg [7:0] rgb
             if(~rst_n) begin
                 // 以显示的底边 + 最长条块长度作为基准线
                 for (i = 0; i<8; i = i + 1) begin
-                        bar_bottom[i] <= bar_length*2*i + 16'd480 + 16'd240; 
+                        bar_bottom[i] = bar_length*2*i + 16'd480 + 16'd240; 
                 end
             end
             else begin

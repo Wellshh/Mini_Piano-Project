@@ -338,24 +338,24 @@ module Light_seg_Display (
   // µœ÷∂ØÃ¨…®√Ë
   always @(*) begin
     case (state)
-      S0: if (is_Reaching_5ms) nextstate <= S1;
- else nextstate <= S0;
-      S1: if (is_Reaching_5ms) nextstate <= S2;
- else nextstate <= S1;
-      S2: if (is_Reaching_5ms) nextstate <= S3;
- else nextstate <= S2;
-      S3: if (is_Reaching_5ms) nextstate <= S4;
- else nextstate <= S3;
-      S4: if (is_Reaching_5ms) nextstate <= S5;
- else nextstate <= S4;
-      S5: if (is_Reaching_5ms) nextstate <= S6;
- else nextstate <= S5;
-      S6: if (is_Reaching_5ms) nextstate <= S7;
- else nextstate <= S6;
-      S7: if (is_Reaching_5ms) nextstate <= S8;
- else nextstate <= S7;
-      S8: if (is_Reaching_5ms) nextstate <= S0;
- else nextstate <= S8;
+      S0: if (is_Reaching_5ms) nextstate = S1;
+ else nextstate = S0;
+      S1: if (is_Reaching_5ms) nextstate = S2;
+ else nextstate = S1;
+      S2: if (is_Reaching_5ms) nextstate = S3;
+ else nextstate = S2;
+      S3: if (is_Reaching_5ms) nextstate = S4;
+ else nextstate = S3;
+      S4: if (is_Reaching_5ms) nextstate = S5;
+ else nextstate = S4;
+      S5: if (is_Reaching_5ms) nextstate = S6;
+ else nextstate = S5;
+      S6: if (is_Reaching_5ms) nextstate = S7;
+ else nextstate = S6;
+      S7: if (is_Reaching_5ms) nextstate = S8;
+ else nextstate = S7;
+      S8: if (is_Reaching_5ms) nextstate = S0;
+ else nextstate = S8;
     endcase
   end
 

@@ -1446,3 +1446,162 @@ dismissDialog("Program Device"); // bs (cj)
 selectCodeEditor("Key_Adjustment.v", 203, 223); // cd (w, cj)
 selectCodeEditor("Key_Adjustment.v", 287, 220); // cd (w, cj)
 selectCodeEditor("Key_Adjustment.v", 254, 262); // cd (w, cj)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA 
+// n (cj): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 1493 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (cj)
+selectCodeEditor("Key_Adjustment.v", 163, 262); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), b1 : Record (Record.v)]", 13, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), b1 : Record (Record.v)]", 13, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("Record.v", 120, 279); // cd (w, cj)
+selectCodeEditor("Record.v", 292, 333); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("Record.v", 380, 370); // cd (w, cj)
+selectCodeEditor("Record.v", 20, 350); // cd (w, cj)
+selectCodeEditor("Record.v", 442, 358); // cd (w, cj)
+selectCodeEditor("Record.v", 287, 428); // cd (w, cj)
+selectCodeEditor("Record.v", 421, 356); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectCodeEditor("Record.v", 622, 56); // cd (w, cj)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// HMemoryUtils.trashcanNow. Engine heap size: 1,742 MB. GUI used memory: 100 MB. Current time: 12/27/23 5:29:55 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u2 : Library (Library.v)]", 17, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u2 : Library (Library.v)]", 17, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 25 seconds
+selectCodeEditor("Library.v", 23, 317); // cd (w, cj)
+selectCodeEditor("Library.v", 318, 391); // cd (w, cj)
+// Elapsed time: 36 seconds
+selectCodeEditor("Library.v", 428, 264); // cd (w, cj)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u1 : Speed_Control (Speed_Control.v)]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u1 : Speed_Control (Speed_Control.v)]", 8, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), light : Light_seg_Display (Light_seg_Display.v)]", 24, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), light : Light_seg_Display (Light_seg_Display.v)]", 24, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 32 seconds
+selectCodeEditor("Light_seg_Display.v", 250, 259); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 314, 281); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 251, 261); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 102, 276); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 250, 298); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 102, 320); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 248, 337); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 250, 336); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 100, 356); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 252, 377); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 99, 390); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 251, 414); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 100, 434); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 250, 450); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 101, 470); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 249, 431); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 251, 430); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 101, 448); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 251, 466); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 100, 488); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 251, 449); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 100, 471); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 345, 330); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Light_seg_Display.v", 86, 278); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 217, 374); // cd (w, cj)
+selectCodeEditor("Light_seg_Display.v", 260, 213); // cd (w, cj)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), Key_Adjustment : Key_Adjustment (Key_Adjustment.v), com_pro : button (button.v)]", 10, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), Key_Adjustment : Key_Adjustment (Key_Adjustment.v), com_pro : button (button.v)]", 10, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), lm1 : Learning_Mode (Learning_Mode.v)]", 19, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), lm1 : Learning_Mode (Learning_Mode.v)]", 19, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Learning_Mode.v", 43, 149); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 294, 276); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 220, 311); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 223, 332); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 221, 353); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 220, 375); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 219, 392); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 223, 414); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 220, 432); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 223, 453); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 239, 468); // cd (w, cj)
+selectCodeEditor("Learning_Mode.v", 377, 388); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u3 : Frequency_Divider (Frequency_Divider.v)]", 20, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u3 : Frequency_Divider (Frequency_Divider.v)]", 20, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u4 : Wave_Generator (Wave_Generator.v)]", 21, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u4 : Wave_Generator (Wave_Generator.v)]", 21, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), u4 : Wave_Generator (Wave_Generator.v)]", 21, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), l1 : Led (Led.v)]", 22, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), buzzer : Buzzer (Buzzer.v), l1 : Led (Led.v)]", 22, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Led.v", 23, 220); // cd (w, cj)
+selectCodeEditor("Led.v", 178, 292); // cd (w, cj)
+selectCodeEditor("Led.v", 148, 256); // cd (w, cj)
+selectCodeEditor("Led.v", 146, 279); // cd (w, cj)
+selectCodeEditor("Led.v", 149, 279, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("Led.v", 192, 301); // cd (w, cj)
+selectCodeEditor("Led.v", 158, 320); // cd (w, cj)
+selectCodeEditor("Led.v", 166, 395); // cd (w, cj)
+selectCodeEditor("Led.v", 125, 456); // cd (w, cj)
+selectCodeEditor("Led.v", 123, 446); // cd (w, cj)
+selectCodeEditor("Led.v", 237, 433); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), light : Light_seg_Display (Light_seg_Display.v)]", 23, true); // B (D, cj) - Node
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), light : Light_seg_Display (Light_seg_Display.v)]", 23, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Button_Debounce (Button_Debounce.v)]", 37, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Button_Debounce (Button_Debounce.v)]", 37, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("Button_Debounce.v", 97, 503); // cd (w, cj)
+// Elapsed time: 44 seconds
+selectCodeEditor("Button_Debounce.v", 264, 306); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Light_seg (Light_seg.v)]", 40, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Light_seg (Light_seg.v)]", 40, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Light_seg_display_new (Light_seg_display_new.v)]", 41, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Light_seg_display_new (Light_seg_display_new.v)]", 41, false, false, false, false, false, true); // B (D, cj) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 43); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), vga_top : vga_top (vga_top.v), u_game : vga_music_game (vga_music_game.v), u_game_rgb_out : game_rgb_out (game_rgb_out.v)]", 29, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MiniPiano (MiniPiano.v), vga_top : vga_top (vga_top.v), u_game : vga_music_game (vga_music_game.v), u_game_rgb_out : game_rgb_out (game_rgb_out.v)]", 29, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("game_rgb_out.v", 231, 243); // cd (w, cj)
+selectCodeEditor("game_rgb_out.v", 367, 281); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
