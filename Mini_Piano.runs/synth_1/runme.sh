@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.runs/synth_1'
+HD_PWD='C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

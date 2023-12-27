@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Dec 26 00:59:18 2023
+# Process ID: 21984
+# Current directory: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30780 C:\Users\Wells\Desktop\Major CS\Digital Logic\Mini_Piano\Mini_Piano.xpr
+# Log file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/vivado.log
+# Journal file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.xpr}
+update_compile_order -fileset sources_1

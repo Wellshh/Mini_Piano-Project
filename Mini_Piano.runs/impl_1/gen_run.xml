@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703632777">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1703667506">
   <File Type="PWROPT-DCP" Name="MiniPiano_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="MiniPiano_power_routed.rpt"/>
   <File Type="PA-TCL" Name="MiniPiano.tcl"/>
@@ -185,6 +185,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/pic_data_littlestar.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/vga_character.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -200,6 +207,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/vga_music_game.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_pic_littlestar.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -260,6 +274,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ComponentName/pic_vga_data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="MiniPiano"/>
@@ -293,5 +313,6 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="rom_pic1"/>
   <BlockFileSet Type="BlockSrcs" Name="gen_clk25"/>
 </GenRun>

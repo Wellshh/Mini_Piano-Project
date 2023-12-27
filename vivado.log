@@ -2,21 +2,267 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Dec 26 00:59:18 2023
-# Process ID: 21984
-# Current directory: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30780 C:\Users\Wells\Desktop\Major CS\Digital Logic\Mini_Piano\Mini_Piano.xpr
-# Log file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/vivado.log
-# Journal file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano\vivado.jou
+# Start of session at: Wed Dec 27 15:44:41 2023
+# Process ID: 23844
+# Current directory: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9316 C:\Users\Wells\Desktop\Major CS\Digital Logic\Mini\Mini_Piano.xpr
+# Log file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/vivado.log
+# Journal file: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano/Mini_Piano.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/Wells/Desktop/Major CS/Digital Logic/NEW MINI/Mini_Piano-Project' since last save.
+open_project {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini_Piano' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_Vivado_SDK_2017.4_1216_1/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 964.180 ; gain = 197.562
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 26 01:03:06 2023...
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Wed Dec 27 16:01:04 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Wed Dec 27 16:01:56 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Dec 27 16:02:57 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Wed Dec 27 16:15:58 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Wed Dec 27 16:16:53 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Wed Dec 27 16:17:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+close [ open {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/new/vga_pic_littlestar.v} w ]
+add_files {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/new/vga_pic_littlestar.v}}
+update_compile_order -fileset sources_1
+close [ open {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/new/pic_data_littlestar.v} w ]
+add_files {{C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/new/pic_data_littlestar.v}}
+update_compile_order -fileset sources_1
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name rom_pic1 -dir {c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {rom_pic1} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {76800} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ComponentName/pic_vga_data.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips rom_pic1]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'rom_pic1' to 'rom_pic1' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ComponentName/pic_vga_data.coe' provided. It will be converted relative to IP Instance files '../../ComponentName/pic_vga_data.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip/rom_pic1/rom_pic1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'rom_pic1'...
+generate_target all [get_files  {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip/rom_pic1/rom_pic1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rom_pic1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'rom_pic1'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'rom_pic1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'rom_pic1'...
+catch { config_ip_cache -export [get_ips -all rom_pic1] }
+export_ip_user_files -of_objects [get_files {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip/rom_pic1/rom_pic1.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip/rom_pic1/rom_pic1.xci}}]
+launch_runs -jobs 10 rom_pic1_synth_1
+[Wed Dec 27 16:30:11 2023] Launched rom_pic1_synth_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/rom_pic1_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.srcs/sources_1/ip/rom_pic1/rom_pic1.xci}}] -directory {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.ip_user_files} -ipstatic_source_dir {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.cache/compile_simlib/modelsim} {questa=C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.cache/compile_simlib/questa} {riviera=C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.cache/compile_simlib/riviera} {activehdl=C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Wed Dec 27 16:42:54 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Wed Dec 27 16:43:44 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Dec 27 16:44:51 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-tul-1234-tulA" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+[Wed Dec 27 16:57:37 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Wed Dec 27 16:58:26 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Wed Dec 27 16:59:46 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Labtools 27-2058] connect_hw_server command cancelled.
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 1929.039 ; gain = 0.000
+INFO: [Common 17-344] 'connect_hw_server' was cancelled
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtools 27-3366] Cannot support older hw_server version 
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Wells/Desktop/Major CS/Digital Logic/Mini/Mini_Piano.runs/impl_1/MiniPiano.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).

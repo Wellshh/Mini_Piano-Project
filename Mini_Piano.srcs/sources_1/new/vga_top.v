@@ -24,18 +24,21 @@ module vga_top(
 input wire clk,
 input wire rst_n,
 input wire [2:0] state_in, //转换状态
-input wire switch, //调整vga输出
+input wire switch, //调整vga输出为下落方块
+input wire switch_pic, //调整输出为图片
 output reg hsync, //行信号
 output reg vsync, //列信号
 output reg [7:0] rgb
     );
     
-     wire hsync_character, vsync_character, hsync_game, vsync_game;
-     wire [7:0] rgb_character, rgb_game;
+     wire hsync_character, vsync_character, hsync_game, vsync_game, hsync_pic, vsync_pic;
+     wire [7:0] rgb_character, rgb_game, rgb_pic;
      
      vga_character u_character(.clk(clk), .rst_n(rst_n),.hsync(hsync_character), .input_state(state_in),.vsync(vsync_character), .rgb(rgb_character));
      
      vga_music_game u_game(.clk(clk), .rst_n(rst_n),.hsync(hsync_game), .vsync(vsync_game), .rgb(rgb_game));
+     
+     vga_pic_littlestar u_pic(.clk(clk), .rst_n(rst_n), .hsync(hsync_pic), .vsync(vsync_pic), .rgb(rgb_pic));
      
      reg [2:0] state, next_state; 
      parameter S0 = 3'b00, S1 = 3'b01; //S0表示基础显示，S1表示更多显示
@@ -52,13 +55,19 @@ output reg [7:0] rgb
      always @(*) begin
         case(state) 
         S0: begin 
-            if(switch) begin
+            if(switch) begin //显示下落条块
                 next_state = S0;
                 hsync = hsync_game; 
                 vsync = vsync_game;  
                 rgb = rgb_game;                
             end
-            else begin
+            else if(switch_pic == 1'b1 && state_in == 3'b010) begin //显示自动播放模式的图片
+                            next_state = S0;
+                            hsync = hsync_pic; 
+                            vsync = vsync_pic;  
+                            rgb = rgb_pic; 
+            end
+            else begin //否则就是最开始的输出
                 hsync = hsync_character; 
                 vsync = vsync_character;  
                 rgb = rgb_character; 

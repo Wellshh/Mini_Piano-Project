@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed Dec 27 07:21:10 2023
+| Date             : Wed Dec 27 16:59:25 2023
 | Host             : LegionWells running 64-bit major release  (build 9200)
 | Command          : report_power -file MiniPiano_power_routed.rpt -pb MiniPiano_power_summary_routed.pb -rpx MiniPiano_power_routed.rpx
 | Design           : MiniPiano
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 41.737 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 47.389 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 41.250                           |
-| Device Static (W)        | 0.487                            |
+| Dynamic (W)              | 46.885                           |
+| Device Static (W)        | 0.503                            |
 | Effective TJA (C/W)      | 4.8                              |
 | Max Ambient (C)          | 0.0                              |
 | Junction Temperature (C) | 125.0                            |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |    11.936 |     6217 |       --- |             --- |
-|   LUT as Logic           |    10.114 |     2648 |     20800 |           12.73 |
-|   CARRY4                 |     1.655 |      338 |      8150 |            4.15 |
-|   Register               |     0.067 |     2410 |     41600 |            5.79 |
-|   F7/F8 Muxes            |     0.051 |      365 |     32600 |            1.12 |
-|   BUFG                   |     0.037 |        7 |        32 |           21.88 |
+| Slice Logic              |    11.950 |     6523 |       --- |             --- |
+|   LUT as Logic           |    10.102 |     2762 |     20800 |           13.28 |
+|   CARRY4                 |     1.659 |      343 |      8150 |            4.21 |
+|   Register               |     0.076 |     2491 |     41600 |            5.99 |
+|   F7/F8 Muxes            |     0.052 |      381 |     32600 |            1.17 |
+|   BUFG                   |     0.049 |        9 |        32 |           28.13 |
 |   LUT as Distributed RAM |     0.012 |        7 |      9600 |            0.07 |
-|   Others                 |     0.000 |       47 |       --- |             --- |
-| Signals                  |    10.503 |     4802 |       --- |             --- |
-| Block RAM                |     0.117 |        1 |        50 |            2.00 |
-| MMCM                     |     8.131 |        2 |         5 |           40.00 |
-| I/O                      |    10.563 |       72 |       210 |           34.29 |
-| Static Power             |     0.487 |          |           |                 |
-| Total                    |    41.737 |          |           |                 |
+|   Others                 |     0.000 |      139 |       --- |             --- |
+| Signals                  |    11.100 |     5047 |       --- |             --- |
+| Block RAM                |     0.539 |     27.5 |        50 |           55.00 |
+| MMCM                     |    12.197 |        3 |         5 |           60.00 |
+| I/O                      |    11.099 |       72 |       210 |           34.29 |
+| Static Power             |     0.503 |          |           |                 |
+| Total                    |    47.389 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    23.024 |      22.683 |      0.341 |
-| Vccaux    |       1.800 |     4.926 |       4.872 |      0.053 |
-| Vcco33    |       3.300 |     2.967 |       2.966 |      0.001 |
+| Vccint    |       1.000 |    24.054 |      23.705 |      0.349 |
+| Vccaux    |       1.800 |     7.189 |       7.136 |      0.053 |
+| Vcco33    |       3.300 |     3.119 |       3.118 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.019 |       0.009 |      0.010 |
+| Vccbram   |       1.000 |     0.065 |       0.047 |      0.019 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -139,54 +139,114 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------------------------+-----------+
-| Name                                             | Power (W) |
-+--------------------------------------------------+-----------+
-| MiniPiano                                        |    41.250 |
-|   buzzer                                         |    18.541 |
-|     b1                                           |     0.697 |
-|       k_record                                   |     0.105 |
-|       u_ram1                                     |     0.070 |
-|         U0                                       |     0.070 |
-|           inst_blk_mem_gen                       |     0.070 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.070 |
-|               valid.cstr                         |     0.070 |
-|                 ramloop[0].ram.r                 |     0.070 |
-|                   prim_noinit.ram                |     0.070 |
-|       u_ram2                                     |     0.060 |
-|         U0                                       |     0.060 |
-|           inst_blk_mem_gen                       |     0.060 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.060 |
-|               valid.cstr                         |     0.060 |
-|                 ramloop[0].ram.r                 |     0.060 |
-|                   prim_noinit.ram                |     0.060 |
-|     nolabel_line72                               |     3.023 |
-|       com_pro                                    |     0.029 |
-|         clk_div                                  |     0.023 |
-|       k2                                         |     1.060 |
-|     u1                                           |     0.088 |
-|     u2                                           |     0.511 |
-|       cd1                                        |     0.148 |
-|       level_reg_0_3_0_0                          |     0.004 |
-|       level_reg_0_3_1_1                          |     0.015 |
-|       level_reg_0_3_2_2                          |     0.017 |
-|       level_reg_0_3_3_3                          |     0.014 |
-|       level_reg_0_3_4_4                          |     0.006 |
-|       level_reg_0_3_5_5                          |     0.003 |
-|       level_reg_0_3_6_6                          |     0.002 |
-|     u3                                           |    13.684 |
-|     u4                                           |     0.538 |
-|   light                                          |     0.362 |
-|   nolabel_line63                                 |    10.202 |
-|     u_character                                  |     4.548 |
-|       u_clk25                                    |     4.089 |
-|         inst                                     |     4.089 |
-|       vga_driver_character                       |     0.356 |
-|     u_game                                       |     5.654 |
-|       u2_clk25                                   |     4.092 |
-|         inst                                     |     4.092 |
-|       u_game_rgb_out                             |     1.562 |
-|         vga_driver_moving_block                  |     0.260 |
-+--------------------------------------------------+-----------+
++----------------------------------------------------+-----------+
+| Name                                               | Power (W) |
++----------------------------------------------------+-----------+
+| MiniPiano                                          |    46.885 |
+|   buzzer                                           |    18.688 |
+|     b1                                             |     0.755 |
+|       k_record                                     |     0.115 |
+|       u_ram1                                       |     0.071 |
+|         U0                                         |     0.071 |
+|           inst_blk_mem_gen                         |     0.071 |
+|             gnbram.gnativebmg.native_blk_mem_gen   |     0.071 |
+|               valid.cstr                           |     0.071 |
+|                 ramloop[0].ram.r                   |     0.071 |
+|                   prim_noinit.ram                  |     0.071 |
+|       u_ram2                                       |     0.062 |
+|         U0                                         |     0.062 |
+|           inst_blk_mem_gen                         |     0.062 |
+|             gnbram.gnativebmg.native_blk_mem_gen   |     0.062 |
+|               valid.cstr                           |     0.062 |
+|                 ramloop[0].ram.r                   |     0.062 |
+|                   prim_noinit.ram                  |     0.062 |
+|     nolabel_line72                                 |     2.879 |
+|       com_pro                                      |     0.028 |
+|         clk_div                                    |     0.022 |
+|       k1                                           |     1.070 |
+|     u1                                             |     0.095 |
+|     u2                                             |     0.486 |
+|       cd1                                          |     0.151 |
+|       level_reg_0_3_0_0                            |     0.004 |
+|       level_reg_0_3_1_1                            |     0.013 |
+|       level_reg_0_3_2_2                            |     0.013 |
+|       level_reg_0_3_3_3                            |     0.010 |
+|       level_reg_0_3_4_4                            |     0.007 |
+|       level_reg_0_3_5_5                            |     0.004 |
+|       level_reg_0_3_6_6                            |     0.003 |
+|     u3                                             |    13.917 |
+|     u4                                             |     0.555 |
+|   light                                            |     0.359 |
+|   nolabel_line63                                   |    15.038 |
+|     u_character                                    |     4.499 |
+|       u_clk25                                      |     4.096 |
+|         inst                                       |     4.096 |
+|       vga_driver_character                         |     0.311 |
+|     u_game                                         |     5.666 |
+|       u2_clk25                                     |     4.092 |
+|         inst                                       |     4.092 |
+|       u_game_rgb_out                               |     1.574 |
+|         vga_driver_moving_block                    |     0.287 |
+|     u_pic                                          |     4.873 |
+|       u3_clk25                                     |     4.124 |
+|         inst                                       |     4.124 |
+|       u_pic_data                                   |     0.579 |
+|         nolabel_line78                             |     0.520 |
+|           U0                                       |     0.520 |
+|             inst_blk_mem_gen                       |     0.520 |
+|               gnbram.gnativebmg.native_blk_mem_gen |     0.520 |
+|                 valid.cstr                         |     0.520 |
+|                   bindec_a.bindec_inst_a           |     0.004 |
+|                   has_mux_a.A                      |     0.035 |
+|                   ramloop[0].ram.r                 |     0.120 |
+|                     prim_init.ram                  |     0.120 |
+|                   ramloop[10].ram.r                |     0.004 |
+|                     prim_init.ram                  |     0.004 |
+|                   ramloop[11].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[12].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[13].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[14].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[15].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[16].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[17].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[18].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[19].ram.r                |     0.004 |
+|                     prim_init.ram                  |     0.004 |
+|                   ramloop[1].ram.r                 |     0.011 |
+|                     prim_init.ram                  |     0.011 |
+|                   ramloop[20].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[21].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[22].ram.r                |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[23].ram.r                |     0.004 |
+|                     prim_init.ram                  |     0.004 |
+|                   ramloop[2].ram.r                 |     0.121 |
+|                     prim_init.ram                  |     0.121 |
+|                   ramloop[3].ram.r                 |     0.015 |
+|                     prim_init.ram                  |     0.015 |
+|                   ramloop[4].ram.r                 |     0.122 |
+|                     prim_init.ram                  |     0.122 |
+|                   ramloop[5].ram.r                 |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[6].ram.r                 |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[7].ram.r                 |     0.004 |
+|                     prim_init.ram                  |     0.004 |
+|                   ramloop[8].ram.r                 |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|                   ramloop[9].ram.r                 |     0.005 |
+|                     prim_init.ram                  |     0.005 |
+|       vga_driver_pic1                              |     0.169 |
++----------------------------------------------------+-----------+
 
 

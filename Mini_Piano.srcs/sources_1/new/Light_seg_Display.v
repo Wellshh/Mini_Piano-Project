@@ -131,7 +131,7 @@ module Light_seg_Display (
                   end
         Playmode: begin
                   case(start_play)
-                        1'b0: begin
+                        1'b1: begin
                                 display[7] = p;
                                 display[6] = l;
                                 display[5] = a;
@@ -141,7 +141,7 @@ module Light_seg_Display (
                                 display[1] = d;
                                 display[0] = e;
                               end
-                        1'b1: begin
+                        1'b0: begin
                                 case(State_of_songs)
                                     2'd0: begin
                                             display[7] = l;

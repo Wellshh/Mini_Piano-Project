@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/12/26 20:10:14
+// Create Date: 2023/12/23 13:39:44
 // Design Name: 
 // Module Name: Key_Adjustment
 // Project Name: 
@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
 module Key_Adjustment(
 `include "Constants.vh"
 input enable,
@@ -30,21 +31,29 @@ input commit,
 input higher,
 input lower,
 output wire [1:0] group,
-output wire [7:0] state_out//ÁÁµÆÂß¼­
+output wire [7:0] state_out,
+
+
+//debugÓÃ
+output wire [6:0] music_keyboard,
+output commit_out
     );
     wire commit_pro;
-    wire [6:0] music_keyboard;
+    assign commit_out = commit_pro;
+    
+    //reg [7:0] notes;
+    //wire [6:0] music_keyboard;
     reg ifFinish = 1'b0;
     parameter 
-        O = `O,
-        C = `C,
-        D = `D,
-        E = `E,
-        F = `F,
-        G = `G,
-        A = `A,
-        B = `B;
-    reg [7:0] convert [`convert_size:0];
+    O = `O,
+    C = `C,
+    D = `D,
+    E = `E,
+    F = `F,
+    G = `G,
+    A = `A,
+    B = `B;
+    reg [7:0] convert [8'b11111111:0];
     reg [7:0] state = O,next_state = O;
     
     //ÏÔÊ¾×´Ì¬
@@ -68,13 +77,13 @@ output wire [7:0] state_out//ÁÁµÆÂß¼­
      else if(trigger&~ifFinish&state==O)
      state<=C;
      else
-     state=next_state;
+     state<=next_state;
      end
      
      //´ò¿ªcommit£¬¼ÇÂ¼´ËÊ±¼üÎ»
      always @(negedge rst,posedge commit_pro)begin
      if(~rst) {convert[O],convert[C],convert[D],convert[E],convert[F],convert[G],convert[A],convert[B]}<={O,C,D,E,F,G,A,B};
-     else if(commit_pro&&trigger) convert[keys]<=state;
+     else if(commit_pro) convert[keys]<=state;
      end
      
      //ÕÒÏÂÒ»¸ö
@@ -95,8 +104,8 @@ output wire [7:0] state_out//ÁÁµÆÂß¼­
      end
      
      //Á¬½ÓÔ­¼üÅÌ
-     Keyboard k2(
-       .enable(enable),
+     Keyboard k1(
+     .enable(enable),
        .clk(clk),
        .rst(rst),
        .higher(higher),
@@ -108,18 +117,28 @@ output wire [7:0] state_out//ÁÁµÆÂß¼­
      
      //²¥·Å
      always @(posedge clk)begin
-          case(state)
-          O:music<=music_keyboard;
-          C:music <= `m1;
-          D:music <= `m2;
-          E:music <= `m3;
-          F:music <= `m4;
-          G:music <= `m5;
-          A:music <= `m6;
-          B:music <= `m7;
-          endcase
-      end
-      
+     case(state)
+     O:music<=music_keyboard;
+     C:music <= 7'd1;
+     D:music <= 7'd2;
+     E:music <= 7'd3;
+     F:music <= 7'd4;
+     G:music <= 7'd5;
+     A:music <= 7'd6;
+     B:music <= 7'd7;
+     endcase
+     end
+    
+    
+    
+    
+    
+    
+    
+           
+           
+           
+   
 endmodule
 
 module clock_div(
@@ -146,5 +165,3 @@ end
 assign clks = cnt2>=10'd50;
 
 endmodule
-
-
