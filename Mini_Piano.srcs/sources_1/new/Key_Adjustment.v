@@ -77,7 +77,7 @@ output commit_out
      else if(trigger&~ifFinish&state==O)
      state<=C;
      else
-     state<=next_state;
+     state=next_state;
      end
      
      //打开commit，记录此时键位
