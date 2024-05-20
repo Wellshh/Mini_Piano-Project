@@ -1,4 +1,4 @@
-### Mini_Piano Project
+### Mini_Piano Project(Please see `master` branch)
 > When writing code, please write some comments for collaborators to easy understand!!!!.
 
 
