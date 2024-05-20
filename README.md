@@ -19,3 +19,6 @@ About version control:
    git push -f Mini_Piano master:main
    # If you succeed, you will see # Already up to date.
   ```
+
+**Project document is here:**
+[Mini-Piano project document](./数字逻辑电子钢琴项目文档.pdf)
